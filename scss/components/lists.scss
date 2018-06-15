@@ -16,7 +16,6 @@
 .list.list-thumb-l {
 
   ul > li {
-    border-bottom: $listSeparatorColor;
     background-color: $listBackgroundColor;
 
     &.linked:active {
@@ -31,12 +30,16 @@
       font-size: $titleSize;
     	font-weight: $titleWeight;
       color: $titleColor;
+
+      p {
+        font-size: $descriptionSize;
+        font-weight: $descriptionWeight;
+        color: $descriptionColor;
+      }
     }
 
-    p + p {
-      font-size: $descriptionSize;
-    	font-weight: $descriptionWeight;
-      color: $descriptionColor;
+    .list-image {
+      border-radius: $listImageBorderRadius;
     }
 
   }
