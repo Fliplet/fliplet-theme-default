@@ -238,6 +238,10 @@
     introOverlayPaddingLeftDesktop: $introOverlayPaddingLeftDesktop
   ), $options);
 
+  .fl-with-top-menu .fl-intro-layout {
+    height: calc(100vh - 44px);
+  }
+
   .fl-intro-layout {
     position: relative;
     height: 100vh;
