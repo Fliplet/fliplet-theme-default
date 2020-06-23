@@ -28668,7 +28668,7 @@
               },
               {
                 "name": "smallCardDescriptionFontColor",
-                "default": "$bodyTextColor",
+                "default": "$lfdFontColor",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-card']",
@@ -28886,7 +28886,7 @@
               },
               {
                 "name": "smallCardSecondDescriptionFontColor",
-                "default": "rgba(51, 51, 51, 0.5)",
+                "default": "$lfdFontColor",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-card']",
@@ -29103,7 +29103,7 @@
                 "label": "Font size"
               },
               {
-                "name": "lfdDetailFontColor",
+                "name": "smallCardDetailTitleFontSizeColor",
                 "default": "$lfdFontColor",
                 "styles": [
                   {
@@ -29114,11 +29114,11 @@
                 ],
                 "breakpoints": {
                   "tablet": {
-                    "name": "lfdDetailFontColorTablet",
+                    "name": "smallCardDetailTitleFontSizeColorTablet",
                     "default": "inherit-mobile"
                   },
                   "desktop": {
-                    "name": "lfdDetailFontColorDesktop",
+                    "name": "smallCardDetailTitleFontSizeColorDesktop",
                     "default": "inherit-tablet"
                   }
                 },
@@ -29322,7 +29322,7 @@
               },
               {
                 "name": "smallCardDetailDescriptionFontColor",
-                "default": "rgba(51, 51, 51, 0.6)",
+                "default": "$smallCardDescriptionFontColor",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-card']",
@@ -29415,7 +29415,7 @@
               },
               {
                 "name": "smallCardDetailDescriptionLineHeight",
-                "default": "$bodyLineHeight",
+                "default": "36px",
                 "columns": 12,
                 "styles": [
                   {
@@ -29540,7 +29540,7 @@
               },
               {
                 "name": "smallCardDetailSecondDescriptionFontColor",
-                "default": "rgba(51, 51, 51, 0.4)",
+                "default": "$smallCardSecondDescriptionFontColor",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-card']",
@@ -29633,7 +29633,7 @@
               },
               {
                 "name": "smallCardDetailSecondDescriptionLineHeight",
-                "default": "$bodyLineHeight",
+                "default": "24px",
                 "columns": 12,
                 "styles": [
                   {
@@ -29711,7 +29711,7 @@
             "fields": [
               {
                 "name": "smallCardDetailTextFontFamily",
-                "default": "$smallCardDescriptionFontFamily",
+                "default": "$smallCardTitleFontFamily",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-card']",
@@ -29734,7 +29734,7 @@
               },
               {
                 "name": "smallCardDetailTextFontSize",
-                "default": "16px",
+                "default": "$smallCardTitleFontSize",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-card']",
@@ -29757,8 +29757,8 @@
                 "label": "Font size"
               },
               {
-                "name": "smallCardDetailTextFontColor",
-                "default": "$smallCardDescriptionFontColor",
+                "name": "lfdDetailFontColor",
+                "default": "$lfdFontColor",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-card']",
@@ -29768,11 +29768,11 @@
                 ],
                 "breakpoints": {
                   "tablet": {
-                    "name": "smallCardDetailTextFontColorTablet",
+                    "name": "lfdDetailFontColorTablet",
                     "default": "inherit-mobile"
                   },
                   "desktop": {
-                    "name": "smallCardDetailTextFontColorDesktop",
+                    "name": "lfdDetailFontColorDesktop",
                     "default": "inherit-tablet"
                   }
                 },
@@ -29781,7 +29781,7 @@
               },
               {
                 "name": "smallCardDetailTextFontWeight",
-                "default": "$smallCardDescriptionFontWeight",
+                "default": "$smallCardTitleFontWeight",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-card']",
@@ -29804,7 +29804,7 @@
               },
               {
                 "name": "smallCardDetailTextItalic",
-                "default": "$smallCardDescriptionItalic",
+                "default": "$smallCardTitleItalic",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-card']",
@@ -29827,7 +29827,7 @@
               },
               {
                 "name": "smallCardDetailTextUnderline",
-                "default": "$smallCardDescriptionUnderline",
+                "default": "$smallCardTitleUnderline",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-card']",
@@ -29851,7 +29851,7 @@
               },
               {
                 "name": "smallCardDetailTextLineHeight",
-                "default": "$bodyLineHeight",
+                "default": "$smallCardTitleLineHeight",
                 "columns": 12,
                 "styles": [
                   {
@@ -29929,7 +29929,7 @@
             "fields": [
               {
                 "name": "smallCardDetailLabelsFontFamily",
-                "default": "$smallCardDescriptionFontFamily",
+                "default": "$smallCardSecondDescriptionFontFamily",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-card']",
@@ -29952,7 +29952,7 @@
               },
               {
                 "name": "smallCardDetailLabelsFontSize",
-                "default": "12px",
+                "default": "$smallCardSecondDescriptionFontSize",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-card']",
@@ -29999,7 +29999,7 @@
               },
               {
                 "name": "smallCardDetailLabelsFontWeight",
-                "default": "$smallCardDescriptionFontWeight",
+                "default": "$smallCardSecondDescriptionFontWeight",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-card']",
@@ -30022,7 +30022,7 @@
               },
               {
                 "name": "smallCardDetailLabelsItalic",
-                "default": "$smallCardDescriptionItalic",
+                "default": "$smallCardSecondDescriptionItalic",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-card']",
@@ -30045,7 +30045,7 @@
               },
               {
                 "name": "smallCardDetailLabelsUnderline",
-                "default": "$smallCardDescriptionUnderline",
+                "default": "$smallCardSecondDescriptionUnderline",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-card']",
@@ -30069,7 +30069,7 @@
               },
               {
                 "name": "smallCardDetailLabelsLineHeight",
-                "default": "$bodyLineHeight",
+                "default": "18px",
                 "columns": 12,
                 "styles": [
                   {
@@ -30171,7 +30171,7 @@
               },
               {
                 "name": "lfdDetailBackgroundColor",
-                "default": "rgba(255, 255, 255, 1)",
+                "default": "$lfdBackgroundColor",
                 "column": 12,
                 "styles": [
                   {
@@ -30243,7 +30243,7 @@
               },
               {
                 "name": "lfdOverlayBackgroundColor",
-                "default": "$bodyTextColor",
+                "default": "$lfdBackgroundColor",
                 "column": 12,
                 "styles": [
                   {
@@ -30274,7 +30274,7 @@
               },
               {
                 "name": "lfdOverlayFontColor",
-                "default": "$bodyBackground",
+                "default": "$lfdFontColor",
                 "columns": 12,
                 "styles": [
                   {
@@ -30303,7 +30303,7 @@
               },
               {
                 "name": "smallCardFilterIconColor",
-                "default": "$highlightColor",
+                "default": "$smallCardDetailLabelsFontColor",
                 "columns": 12,
                 "styles": [
                   {
@@ -30326,6 +30326,32 @@
                   }
                 },
                 "label": "Filter icon",
+                "type": "color"
+              }, {
+                "name": "smallCardFilterIconActiveColor",
+                "default": "$highlightColor",
+                "columns": 12,
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-card']",
+                    "selectors": [
+                      ".new-small-card-list-container .section-top-wrapper .list-search-icon.active .fa-sliders",
+                      ".new-small-card-list-container .section-top-wrapper .list-search-icon.active .fa-times"
+                    ],
+                    "properties": ["color"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "smallCardFilterIconActiveColorTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "smallCardFilterIconActiveColorDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "label": "Filter icon active",
                 "type": "color"
               },
               {
@@ -30353,8 +30379,56 @@
                 "type": "color"
               },
               {
+                "name": "smallCardSearchFieldBorderColor",
+                "default": "$formInputBorderColor",
+                "columns": 12,
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-card']",
+                    "selectors": [".new-small-card-list-container .section-top-wrapper .search-holder input[type='search']"],
+                    "properties": ["border-color"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "smallCardSearchFieldBorderColorTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "smallCardSearchFieldBorderColorDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "label": "Search field border color",
+                "type": "color"
+              },
+              {
+                "name": "smallCardSearchFieldBorderActiveColor",
+                "default": "$formInputBorderFocusColor",
+                "columns": 12,
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-card']",
+                    "selectors": [".new-small-card-list-container .section-top-wrapper .search-holder input[type='search']:focus"],
+                    "properties": ["border-color"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "smallCardSearchFieldBorderActiveColorTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "smallCardSearchFieldBorderActiveColorDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "label": "Search field border color active",
+                "type": "color"
+              },
+              {
                 "name": "smallCardBookmarkIconColor",
-                "default": "$highlightColor",
+                "default": "$smallCardDetailLabelsFontColor",
                 "columns": 12,
                 "styles": [
                   {
@@ -30370,6 +30444,30 @@
                   },
                   "desktop": {
                     "name": "smallCardBookmarkIconColorDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "label": "Bookmark icon",
+                "type": "color"
+              },
+              {
+                "name": "smallCardBookmarkIconActiveColor",
+                "default": "$highlightColor",
+                "columns": 12,
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-card']",
+                    "selectors": [".new-small-card-list-container .section-top-wrapper .list-search-icon .toggle-bookmarks.mixitup-control-active .fa"],
+                    "properties": ["color"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "smallCardBookmarkIconActiveColorTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "smallCardBookmarkIconActiveColorDesktop",
                     "default": "inherit-tablet"
                   }
                 },
@@ -30484,7 +30582,7 @@
               },
               {
                 "name": "smallCardListItemBorder",
-                "default":"$bodyTextColor",
+                "default":"$lfdFontColor",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-card']",
@@ -30967,7 +31065,7 @@
               },
               {
                 "name": "newsFeedDisplay",
-                "default": "block",
+                "default": "$lfdDisplay",
                 "columns": 12,
                 "logic": {
                   "block": {
@@ -31282,7 +31380,7 @@
             "fields": [
               {
                 "name": "newsFeedPaddingTop",
-                "default": "0px",
+                "default": "$smallCardPaddingTop",
                 "columns": 6,
                 "styles": [
                   {
@@ -31306,7 +31404,7 @@
               },
               {
                 "name": "newsFeedPaddingRight",
-                "default": "0px",
+                "default": "$smallCardPaddingRight",
                 "columns": 6,
                 "styles": [
                   {
@@ -31330,7 +31428,7 @@
               },
               {
                 "name": "newsFeedPaddingBottom",
-                "default": "0px",
+                "default": "$smallCardPaddingBottom",
                 "columns": 6,
                 "styles": [
                   {
@@ -31354,7 +31452,7 @@
               },
               {
                 "name": "newsFeedPaddingLeft",
-                "default": "0px",
+                "default": "$smallCardPaddingLeft",
                 "columns": 6,
                 "styles": [
                   {
@@ -31383,7 +31481,7 @@
             "fields": [
               {
                 "name": "newsFeedTitleFontFamily",
-                "default": "$bodyFontFamily",
+                "default": "$headingTwoFontFamily",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
@@ -31406,7 +31504,7 @@
               },
               {
                 "name": "newsFeedTitleFontSize",
-                "default": "30px",
+                "default": "$headingTwoSize",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
@@ -31453,7 +31551,7 @@
               },
               {
                 "name": "newsFeedTitleFontWeight",
-                "default": "bold",
+                "default": "$headingTwoWeight",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
@@ -31476,7 +31574,7 @@
               },
               {
                 "name": "newsFeedTitleItalic",
-                "default": "normal",
+                "default": "$headingTwoStyle",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
@@ -31499,7 +31597,7 @@
               },
               {
                 "name": "newsFeedTitleUnderline",
-                "default": "none",
+                "default": "$headingTwoDecoration",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
@@ -31523,7 +31621,7 @@
               },
               {
                 "name": "newsFeedTitleLineHeight",
-                "default": "1.3",
+                "default": "$headingTwoHeight",
                 "columns": 12,
                 "styles": [
                   {
@@ -31601,7 +31699,7 @@
             "fields": [
               {
                 "name": "newsFeedDescriptionFontFamily",
-                "default": "$bodyFontFamily",
+                "default": "$smallCardDescriptionFontFamily",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
@@ -31648,7 +31746,7 @@
               },
               {
                 "name": "newsFeedDescriptionFontColor",
-                "default": "$bodyTextColor",
+                "default": "$smallCardDescriptionFontColor",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
@@ -31671,7 +31769,7 @@
               },
               {
                 "name": "newsFeedDescriptionFontWeight",
-                "default": "normal",
+                "default": "$smallCardDescriptionFontWeight",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
@@ -31694,7 +31792,7 @@
               },
               {
                 "name": "newsFeedDescriptionItalic",
-                "default": "normal",
+                "default": "$smallCardDescriptionItalic",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
@@ -31717,7 +31815,7 @@
               },
               {
                 "name": "newsFeedDescriptionUnderline",
-                "default": "none",
+                "default": "$smallCardDescriptionUnderline",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
@@ -31741,7 +31839,7 @@
               },
               {
                 "name": "newsFeedDescriptionLineHeight",
-                "default": "1.5",
+                "default": "$smallCardDescriptionLineHeight",
                 "columns": 12,
                 "styles": [
                   {
@@ -31766,7 +31864,7 @@
               },
               {
                 "name": "newsFeedDescriptionMarginTop",
-                "default": "0px",
+                "default": "$smallCardDescriptionMarginTop",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
@@ -31790,7 +31888,7 @@
               },
               {
                 "name": "newsFeedDescriptionMarginBottom",
-                "default": "0px",
+                "default": "$smallCardDescriptionMarginBottom",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
@@ -31819,7 +31917,7 @@
             "fields": [
               {
                 "name": "newsFeedSecondDescriptionFontFamily",
-                "default": "$bodyFontFamily",
+                "default": "$smallCardSecondDescriptionFontFamily",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
@@ -31842,7 +31940,7 @@
               },
               {
                 "name": "newsFeedSecondDescriptionFontSize",
-                "default": "12px",
+                "default": "$smallCardSecondDescriptionFontSize",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
@@ -31889,7 +31987,7 @@
               },
               {
                 "name": "newsFeedSecondDescriptionFontWeight",
-                "default": "normal",
+                "default": "$smallCardSecondDescriptionFontWeight",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
@@ -31912,7 +32010,7 @@
               },
               {
                 "name": "newsFeedSecondDescriptionItalic",
-                "default": "normal",
+                "default": "$smallCardSecondDescriptionItalic",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
@@ -31935,7 +32033,7 @@
               },
               {
                 "name": "newsFeedSecondDescriptionUnderline",
-                "default": "none",
+                "default": "$smallCardSecondDescriptionUnderline",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
@@ -31959,7 +32057,7 @@
               },
               {
                 "name": "newsFeedSecondDescriptionLineHeight",
-                "default": "1.6",
+                "default": "$smallCardSecondDescriptionLineHeight",
                 "columns": 12,
                 "styles": [
                   {
@@ -31984,7 +32082,7 @@
               },
               {
                 "name": "newsFeedSecondDescriptionMarginTop",
-                "default": "0px",
+                "default": "$smallCardSecondDescriptionMarginTop",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
@@ -32008,7 +32106,7 @@
               },
               {
                 "name": "newsFeedSecondDescriptionMarginBottom",
-                "default": "0px",
+                "default": "$smallCardSecondDescriptionMarginBottom",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
@@ -32084,7 +32182,7 @@
               },
               {
                 "name": "newsFeedDetailTitleFontColor",
-                "default": "$lfdDetailFontColor",
+                "default": "$newsFeedTitleFontColor",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
@@ -32177,7 +32275,7 @@
               },
               {
                 "name": "newsFeedDetailTitleLineHeight",
-                "default": "1.3",
+                "default": "$newsFeedTitleLineHeight",
                 "columns": 12,
                 "styles": [
                   {
@@ -32230,7 +32328,7 @@
               },
               {
                 "name": "newsFeedDetailDescriptionFontSize",
-                "default": "24px",
+                "default": "$newsFeedDescriptionFontSize",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
@@ -32254,7 +32352,7 @@
               },
               {
                 "name": "newsFeedDetailDescriptionFontColor",
-                "default": "rgba(51, 51, 51, 0.6)",
+                "default": "$newsFeedDescriptionFontColor",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
@@ -32347,7 +32445,7 @@
               },
               {
                 "name": "newsFeedDetailDescriptionLineHeight",
-                "default": "$bodyLineHeight",
+                "default": "$newsFeedDescriptionLineHeight",
                 "columns": 12,
                 "styles": [
                   {
@@ -32372,7 +32470,7 @@
               },
               {
                 "name": "newsFeedDetailDescriptionMarginTop",
-                "default": "0px",
+                "default": "$newsFeedDescriptionMarginTop",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
@@ -32396,7 +32494,7 @@
               },
               {
                 "name": "newsFeedDetailDescriptionMarginBottom",
-                "default": "5px",
+                "default": "$newsFeedDescriptionMarginBottom",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
@@ -32448,7 +32546,7 @@
               },
               {
                 "name": "newsFeedDetailSecondDescriptionFontSize",
-                "default": "12px",
+                "default": "$newsFeedSecondDescriptionFontSize",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
@@ -32472,7 +32570,7 @@
               },
               {
                 "name": "newsFeedDetailSecondDescriptionFontColor",
-                "default": "rgba(51, 51, 51, 0.4)",
+                "default": "$newsFeedSecondDescriptionFontColor",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
@@ -32565,7 +32663,7 @@
               },
               {
                 "name": "newsFeedDetailSecondDescriptionLineHeight",
-                "default": "$bodyLineHeight",
+                "default": "$newsFeedSecondDescriptionLineHeight",
                 "columns": 12,
                 "styles": [
                   {
@@ -32590,7 +32688,7 @@
               },
               {
                 "name": "newsFeedDetailSecondDescriptionMarginTop",
-                "default": "0px",
+                "default": "$newsFeedSecondDescriptionMarginTop",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
@@ -32614,7 +32712,7 @@
               },
               {
                 "name": "newsFeedDetailSecondDescriptionMarginBottom",
-                "default": "0px",
+                "default": "$newsFeedSecondDescriptionMarginBottom",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
@@ -32907,11 +33005,11 @@
                   }
                 },
                 "type": "color",
-                "label": "Details overlay background "
+                "label": "Details overlay background"
               },
               {
                 "name": "newsFeedListDetailOverlayLineUnderTitleColor",
-                "default": "$highlightColor",
+                "default": "$smallCardListDetailOverlayLineUnderTitleColor",
                 "column": 12,
                 "styles": [
                   {
@@ -32935,7 +33033,7 @@
               },
               {
                 "name": "newsFeedListDetailOverlayIconsColor",
-                "default": "rgba(51, 51, 51, 0.3)",
+                "default": "$smallCardListDetailOverlayIconsColor",
                 "column": 12,
                 "styles": [
                   {
@@ -32962,7 +33060,7 @@
               },
               {
                 "name": "newsFeedFiltersOverlayBackground",
-                "default": "$bodyTextColor",
+                "default": "$lfdOverlayBackgroundColor",
                 "column": 12,
                 "styles": [
                   {
@@ -32991,7 +33089,7 @@
               },
               {
                 "name": "newsFeedOverlayFontColor",
-                "default": "$bodyBackground",
+                "default": "$lfdOverlayFontColor",
                 "columns": 12,
                 "styles": [
                   {
@@ -33016,6 +33114,261 @@
                   }
                 },
                 "label": "Filters overlay text",
+                "type": "color"
+              },
+              {
+                "name": "newsFeedFilterIconColor",
+                "default": "$smallCardFilterIconColor",
+                "columns": 12,
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
+                    "selectors": [
+                      ".new-news-feed-list-container .section-top-wrapper .list-search-icon .fa-sliders",
+                      ".new-news-feed-list-container .section-top-wrapper .list-search-icon .list-search-cancel .fa-times"
+                    ],
+                    "properties": ["color"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "newsFeedFilterIconColorTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "newsFeedFilterIconColorDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "label": "Filter icon",
+                "type": "color"
+              },
+              {
+                "name": "newsFeedFilterIconActiveColor",
+                "default": "$smallCardFilterIconActiveColor",
+                "columns": 12,
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
+                    "selectors": [
+                      ".new-news-feed-list-container .section-top-wrapper .list-search-icon.active .fa-sliders",
+                      ".new-news-feed-list-container .section-top-wrapper .list-search-icon.active .list-search-cancel .fa-times"
+                    ],
+                    "properties": ["color"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "newsFeedFilterIconActiveColorTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "newsFeedFilterIconActiveColorDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "label": "Filter icon active",
+                "type": "color"
+              },
+              {
+                "name": "newsFeedSearchIconColor",
+                "default": "$smallCardSearchIconColor",
+                "columns": 12,
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
+                    "selectors": [".new-news-feed-list-container .section-top-wrapper .search-holder .fa"],
+                    "properties": ["color"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "newsFeedSearchIconColorTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "newsFeedSearchIconColorDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "label": "Search icon",
+                "type": "color"
+              },
+              {
+                "name": "newsFeedSearchFieldBorderColor",
+                "default": "$smallCardSearchFieldBorderColor",
+                "columns": 12,
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
+                    "selectors": [".new-news-feed-list-container .section-top-wrapper .search-holder input[type='search']"],
+                    "properties": ["border-color"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "newsFeedSearchFieldBorderColorTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "newsFeedSearchFieldBorderColorDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "label": "Search field border color",
+                "type": "color"
+              },
+              {
+                "name": "newsFeedSearchFieldBorderActiveColor",
+                "default": "$smallCardSearchFieldBorderActiveColor",
+                "columns": 12,
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
+                    "selectors": [".new-news-feed-list-container .section-top-wrapper .search-holder input[type='search']:focus"],
+                    "properties": ["border-color"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "newsFeedSearchFieldBorderActiveColorTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "newsFeedSearchFieldBorderActiveColorDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "label": "Search field border color active",
+                "type": "color"
+              },
+              {
+                "name": "newsFeedBookmarkIconColor",
+                "default": "$smallCardBookmarkIconColor",
+                "columns": 12,
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
+                    "selectors": [".new-news-feed-list-container .section-top-wrapper .list-search-icon .toggle-bookmarks .fa"],
+                    "properties": ["color"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "newsFeedBookmarkIconColorTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "newsFeedBookmarkIconColorDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "label": "Bookmark icon",
+                "type": "color"
+              },
+              {
+                "name": "newsFeedBookmarkIconActiveColor",
+                "default": "$smallCardBookmarkIconActiveColor",
+                "columns": 12,
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
+                    "selectors": [".new-news-feed-list-container .section-top-wrapper .list-search-icon .toggle-bookmarks.mixitup-control-active .fa"],
+                    "properties": ["color"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "newsFeedBookmarkIconActiveColorTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "newsFeedBookmarkIconActiveColorDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "label": "Bookmark icon active",
+                "type": "color"
+              },
+              {
+                "name": "newsFeedLikeIconColor",
+                "default": "$newsFeedBookmarkIconColor",
+                "columns": 12,
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
+                    "selectors": [
+                      ".news-feed-like-holder .fa",
+                      ".news-feed-like-wrapper .fa"
+                    ],
+                    "properties": ["color"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "newsFeedLikeIconColorTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "newsFeedLikeIconColorDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "label": "Like icon",
+                "type": "color"
+              },
+              {
+                "name": "newsFeedLikeIconActiveColor",
+                "default": "#ed4956",
+                "columns": 12,
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
+                    "selectors": [
+                      ".news-feed-like-holder .fa.animated",
+                      ".news-feed-like-wrapper .fa.animated"
+                    ],
+                    "properties": ["color"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "newsFeedLikeIconActiveColorTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "newsFeedLikeIconActiveColorDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "label": "Like icon active",
+                "type": "color"
+              },
+              {
+                "name": "newsFeedImageBackground",
+                "default": "$smallCardImageBackground",
+                "columns": 12,
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
+                    "selectors": [
+                      ".new-news-feed-list-container .news-feed-list-wrapper .news-feed-list-item .news-feed-item-content .slide-under",
+                      ".news-feed-detail-overlay .news-feed-detail-overlay-wrapper .news-feed-list-detail-image-wrapper"
+                    ],
+                    "properties": ["background-color"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "newsFeedImageBackgroundTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "newsFeedImageBackgroundDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "label": "Image area background",
                 "type": "color"
               },
               {
@@ -33081,108 +33434,6 @@
                 },
                 "label": "Comments overlay text",
                 "type": "color"
-              },
-              {
-                "name": "newsFeedFilterIconColor",
-                "default": "$highlightColor",
-                "columns": 12,
-                "styles": [
-                  {
-                    "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
-                    "selectors": [
-                      ".new-news-feed-list-container .section-top-wrapper .list-search-icon .fa-sliders",
-                      ".new-news-feed-list-container .section-top-wrapper .list-search-icon .list-search-cancel .fa-times"
-                    ],
-                    "properties": ["color"]
-                  }
-                ],
-                "breakpoints": {
-                  "tablet": {
-                    "name": "newsFeedFilterIconColorTablet",
-                    "default": "inherit-mobile"
-                  },
-                  "desktop": {
-                    "name": "newsFeedFilterIconColorDesktop",
-                    "default": "inherit-tablet"
-                  }
-                },
-                "label": "Filter icon",
-                "type": "color"
-              },
-              {
-                "name": "newsFeedSearchIconColor",
-                "default": "$highlightColor",
-                "columns": 12,
-                "styles": [
-                  {
-                    "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
-                    "selectors": [".new-news-feed-list-container .section-top-wrapper .search-holder .fa"],
-                    "properties": ["color"]
-                  }
-                ],
-                "breakpoints": {
-                  "tablet": {
-                    "name": "newsFeedSearchIconColorTablet",
-                    "default": "inherit-mobile"
-                  },
-                  "desktop": {
-                    "name": "newsFeedSearchIconColorDesktop",
-                    "default": "inherit-tablet"
-                  }
-                },
-                "label": "Search icon",
-                "type": "color"
-              },
-              {
-                "name": "newsFeedBookmarkIconColor",
-                "default": "$highlightColor",
-                "columns": 12,
-                "styles": [
-                  {
-                    "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
-                    "selectors": [".new-news-feed-list-container .section-top-wrapper .list-search-icon .toggle-bookmarks .fa"],
-                    "properties": ["color"]
-                  }
-                ],
-                "breakpoints": {
-                  "tablet": {
-                    "name": "newsFeedBookmarkIconColorTablet",
-                    "default": "inherit-mobile"
-                  },
-                  "desktop": {
-                    "name": "newsFeedBookmarkIconColorDesktop",
-                    "default": "inherit-tablet"
-                  }
-                },
-                "label": "Bookmark icon",
-                "type": "color"
-              },
-              {
-                "name": "newsFeedImageBackground",
-                "default": "rgba(51, 51, 51, 0.05)",
-                "columns": 12,
-                "styles": [
-                  {
-                    "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
-                    "selectors": [
-                      ".new-news-feed-list-container .news-feed-list-wrapper .news-feed-list-item .news-feed-item-content .slide-under",
-                      ".news-feed-detail-overlay .news-feed-detail-overlay-wrapper .news-feed-list-detail-image-wrapper"
-                    ],
-                    "properties": ["background-color"]
-                  }
-                ],
-                "breakpoints": {
-                  "tablet": {
-                    "name": "newsFeedImageBackgroundTablet",
-                    "default": "inherit-mobile"
-                  },
-                  "desktop": {
-                    "name": "newsFeedImageBackgroundDesktop",
-                    "default": "inherit-tablet"
-                  }
-                },
-                "label": "Image area background",
-                "type": "color"
               }
             ]
           },
@@ -33191,7 +33442,7 @@
             "fields": [
               {
                 "name": "newsFeedListItemBorderSides",
-                "default": "none",
+                "default": "$smallCardListItemBorderSides",
                 "logic": {
                   "none": {
                     "hide": [
@@ -33265,7 +33516,7 @@
               },
               {
                 "name": "newsFeedListItemBorder",
-                "default":"$bodyTextColor",
+                "default":"$smallCardListItemBorder",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
@@ -33294,7 +33545,7 @@
               },
               {
                 "name": "newsFeedListItemBorderWidth",
-                "default": "1px",
+                "default": "$smallCardListItemBorderWidth",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
@@ -33324,7 +33575,7 @@
               },
               {
                 "name": "newsFeedListItemBorderStyle",
-                "default": "solid",
+                "default": "$smallCardListItemBorderStyle",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
@@ -33353,7 +33604,7 @@
               },
               {
                 "name": "newsFeedListItemBorderRadius",
-                "default": "15px",
+                "default": "20px",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
@@ -33381,7 +33632,7 @@
             "fields": [
               {
                 "name": "newsFeedListItemShadowStyle",
-                "default": "outset",
+                "default": "smallCardListItemShadowStyle",
                 "logic": {
                   "none": {
                     "hide": [
@@ -33442,7 +33693,7 @@
               },
               {
                 "name": "newsFeedListItemShadowXoffset",
-                "default": "0px",
+                "default": "$smallCardListItemShadowXoffset",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
@@ -33476,7 +33727,7 @@
               },
               {
                 "name": "newsFeedListItemShadowYoffset",
-                "default": "10px",
+                "default": "$smallCardListItemShadowYoffset",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
@@ -33510,7 +33761,7 @@
               },
               {
                 "name": "newsFeedListItemShadowBlur",
-                "default": "30px",
+                "default": "$smallCardListItemShadowBlur",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
@@ -33543,7 +33794,7 @@
               },
               {
                 "name": "newsFeedListItemShadowSpread",
-                "default": "0px",
+                "default": "$smallCardListItemShadowSpread",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
@@ -33576,7 +33827,7 @@
               },
               {
                 "name": "newsFeedListItemShadowColor",
-                "default": "rgba(0, 0, 0, 0.1)",
+                "default": "$smallCardListItemShadowColor",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='news-feed']",
@@ -33750,7 +34001,7 @@
               },
               {
                 "name": "agendaDisplay",
-                "default": "block",
+                "default": "$lfdDisplay",
                 "columns": 12,
                 "logic": {
                   "block": {
@@ -34075,7 +34326,7 @@
             "fields": [
               {
                 "name": "agendaPaddingTop",
-                "default": "0px",
+                "default": "$smallCardPaddingTop",
                 "columns": 6,
                 "styles": [
                   {
@@ -34100,7 +34351,7 @@
               },
               {
                 "name": "agendaPaddingRight",
-                "default": "0px",
+                "default": "$smallCardPaddingRight",
                 "columns": 6,
                 "styles": [
                   {
@@ -34125,7 +34376,7 @@
               },
               {
                 "name": "agendaPaddingBottom",
-                "default": "0px",
+                "default": "$smallCardPaddingBottom",
                 "columns": 6,
                 "styles": [
                   {
@@ -34150,7 +34401,7 @@
               },
               {
                 "name": "agendaPaddingLeft",
-                "default": "0px",
+                "default": "$smallCardPaddingLeft",
                 "columns": 6,
                 "styles": [
                   {
@@ -34180,7 +34431,7 @@
             "fields": [
               {
                 "name": "agendaTitleFontFamily",
-                "default": "$bodyFontFamily",
+                "default": "$headingTwoFontFamily",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
@@ -34250,7 +34501,7 @@
               },
               {
                 "name": "agendaTitleFontWeight",
-                "default": "bold",
+                "default": "$headingTwoWeight",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
@@ -34273,7 +34524,7 @@
               },
               {
                 "name": "agendaTitleItalic",
-                "default": "normal",
+                "default": "$headingTwoStyle",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
@@ -34296,7 +34547,7 @@
               },
               {
                 "name": "agendaTitleUnderline",
-                "default": "none",
+                "default": "$headingTwoDecoration",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
@@ -34320,7 +34571,7 @@
               },
               {
                 "name": "agendaTitleLineHeight",
-                "default": "1.2",
+                "default": "1.2em",
                 "columns": 12,
                 "styles": [
                   {
@@ -34398,7 +34649,7 @@
             "fields": [
               {
                 "name": "agendaDescriptionFontFamily",
-                "default": "$bodyFontFamily",
+                "default": "$smallCardDescriptionFontFamily",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
@@ -34421,7 +34672,7 @@
               },
               {
                 "name": "agendaDescriptionFontSize",
-                "default": "14.4px",
+                "default": "$smallCardDescriptionFontSize",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
@@ -34445,7 +34696,7 @@
               },
               {
                 "name": "agendaDescriptionFontColor",
-                "default": "$bodyTextColor",
+                "default": "$smallCardDescriptionFontColor",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
@@ -34468,7 +34719,7 @@
               },
               {
                 "name": "agendaDescriptionFontWeight",
-                "default": "normal",
+                "default": "$smallCardDescriptionFontWeight",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
@@ -34491,7 +34742,7 @@
               },
               {
                 "name": "agendaDescriptionItalic",
-                "default": "normal",
+                "default": "$smallCardDescriptionItalic",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
@@ -34514,7 +34765,7 @@
               },
               {
                 "name": "agendaDescriptionUnderline",
-                "default": "none",
+                "default": "$smallCardDescriptionUnderline",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
@@ -34538,7 +34789,7 @@
               },
               {
                 "name": "agendaDescriptionLineHeight",
-                "default": "1.4",
+                "default": "$smallCardDescriptionLineHeight",
                 "columns": 12,
                 "styles": [
                   {
@@ -34563,7 +34814,7 @@
               },
               {
                 "name": "agendaDescriptionMarginTop",
-                "default": "0px",
+                "default": "$smallCardDescriptionMarginTop",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
@@ -34587,7 +34838,7 @@
               },
               {
                 "name": "agendaDescriptionMarginBottom",
-                "default": "0px",
+                "default": "$smallCardDescriptionMarginBottom",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
@@ -34616,7 +34867,7 @@
             "fields": [
               {
                 "name": "agendaItemTimeFontFamily",
-                "default": "$bodyFontFamily",
+                "default": "$smallCardDescriptionFontFamily",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
@@ -34639,7 +34890,7 @@
               },
               {
                 "name": "agendaItemTimeFontSize",
-                "default": "14px",
+                "default": "$smallCardDescriptionFontSize",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
@@ -34663,7 +34914,7 @@
               },
               {
                 "name": "agendaItemTimeFontColor",
-                "default": "rgba(51, 51, 51, 0.5)",
+                "default": "$smallCardDescriptionFontColor",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
@@ -34686,7 +34937,7 @@
               },
               {
                 "name": "agendaItemTimeFontWeight",
-                "default": "normal",
+                "default": "$smallCardDescriptionFontWeight",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
@@ -34709,7 +34960,7 @@
               },
               {
                 "name": "agendaItemTimeItalic",
-                "default": "normal",
+                "default": "$smallCardDescriptionItalic",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
@@ -34732,7 +34983,7 @@
               },
               {
                 "name": "agendaItemTimeUnderline",
-                "default": "none",
+                "default": "$smallCardDescriptionUnderline",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
@@ -34756,7 +35007,7 @@
               },
               {
                 "name": "agendaItemTimeLineHeight",
-                "default": "1.4",
+                "default": "$smallCardDescriptionLineHeight",
                 "columns": 12,
                 "styles": [
                   {
@@ -34781,7 +35032,7 @@
               },
               {
                 "name": "agendaItemTimeMarginTop",
-                "default": "0px",
+                "default": "$smallCardDescriptionMarginTop",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
@@ -34805,7 +35056,7 @@
               },
               {
                 "name": "agendaItemTimeMarginBottom",
-                "default": "0px",
+                "default": "$smallCardDescriptionMarginBottom",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
@@ -34881,7 +35132,7 @@
               },
               {
                 "name": "agendaDetailTitleFontColor",
-                "default": "$lfdDetailFontColor",
+                "default": "$agendaTitleFontColor",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
@@ -34974,7 +35225,7 @@
               },
               {
                 "name": "agendaDetailTitleLineHeight",
-                "default": "1.2",
+                "default": "$agendaTitleLineHeight",
                 "columns": 12,
                 "styles": [
                   {
@@ -35051,7 +35302,7 @@
               },
               {
                 "name": "agendaDetailDescriptionFontColor",
-                "default": "rgba(51, 51, 51, 0.7)",
+                "default": "$agendaDescriptionFontColor",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
@@ -35144,7 +35395,7 @@
               },
               {
                 "name": "agendaDetailDescriptionLineHeight",
-                "default": "1.4",
+                "default": "28px",
                 "columns": 12,
                 "styles": [
                   {
@@ -35222,7 +35473,7 @@
             "fields": [
               {
                 "name": "agendaDetailSecondDescriptionFontFamily",
-                "default": "$agendaItemTimeFontFamily",
+                "default": "$smallCardDescriptionFontFamily",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
@@ -35245,7 +35496,7 @@
               },
               {
                 "name": "agendaDetailSecondDescriptionFontSize",
-                "default": "14.4px",
+                "default": "$smallCardDescriptionFontSize",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
@@ -35269,7 +35520,7 @@
               },
               {
                 "name": "agendaDetailSecondDescriptionFontColor",
-                "default": "rgba(51, 51, 51, 0.5)",
+                "default": "$smallCardDescriptionFontColor",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
@@ -35292,7 +35543,7 @@
               },
               {
                 "name": "agendaDetailSecondDescriptionFontWeight",
-                "default": "$agendaItemTimeFontWeight",
+                "default": "$smallCardDescriptionFontWeight",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
@@ -35315,7 +35566,7 @@
               },
               {
                 "name": "agendaDetailSecondDescriptionItalic",
-                "default": "$agendaItemTimeItalic",
+                "default": "$smallCardDescriptionItalic",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
@@ -35338,7 +35589,7 @@
               },
               {
                 "name": "agendaDetailSecondDescriptionUnderline",
-                "default": "$agendaItemTimeUnderline",
+                "default": "$smallCardDescriptionUnderline",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
@@ -35362,7 +35613,7 @@
               },
               {
                 "name": "agendaDetailSecondDescriptionLineHeight",
-                "default": "1.4",
+                "default": "$smallCardDescriptionLineHeight",
                 "columns": 12,
                 "styles": [
                   {
@@ -35440,7 +35691,7 @@
             "fields": [
               {
                 "name": "agendaDetailTextFontFamily",
-                "default": "$agendaDescriptionFontFamily",
+                "default": "$smallCardDetailTextFontFamily",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
@@ -35465,7 +35716,7 @@
               },
               {
                 "name": "agendaDetailTextFontSize",
-                "default": "16px",
+                "default": "$smallCardDetailTextFontSize",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
@@ -35489,7 +35740,7 @@
               },
               {
                 "name": "agendaDetailTextFontColor",
-                "default": "$agendaDescriptionFontColor",
+                "default": "$lfdDetailFontColor",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
@@ -35512,7 +35763,7 @@
               },
               {
                 "name": "agendaDetailTextFontWeight",
-                "default": "$agendaDescriptionFontWeight",
+                "default": "$smallCardDetailTextFontWeight",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
@@ -35535,7 +35786,7 @@
               },
               {
                 "name": "agendaDetailTextItalic",
-                "default": "$agendaDescriptionItalic",
+                "default": "$smallCardDetailTextItalic",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
@@ -35582,7 +35833,7 @@
               },
               {
                 "name": "agendaDetailTextLineHeight",
-                "default": "1.6",
+                "default": "$smallCardDetailTextLineHeight",
                 "columns": 12,
                 "styles": [
                   {
@@ -35607,7 +35858,7 @@
               },
               {
                 "name": "agendaDetailTextMarginTop",
-                "default": "0px",
+                "default": "$smallCardDetailTextMarginTop",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
@@ -35631,7 +35882,7 @@
               },
               {
                 "name": "agendaDetailTextMarginBottom",
-                "default": "10px",
+                "default": "$smallCardDetailTextMarginBottom",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
@@ -35708,7 +35959,7 @@
               },
               {
                 "name": "agendaListDetailOverlayLineUnderTitleColor",
-                "default": "$highlightColor",
+                "default": "$smallCardListDetailOverlayLineUnderTitleColor",
                 "column": 12,
                 "styles": [
                   {
@@ -35756,7 +36007,7 @@
               },
               {
                 "name": "agendaFiltersOverlayBackground",
-                "default": "$bodyTextColor",
+                "default": "$lfdOverlayBackgroundColor",
                 "column": 12,
                 "styles": [
                   {
@@ -35784,7 +36035,7 @@
               },
               {
                 "name": "agendaOverlayFontColor",
-                "default": "$bodyBackground",
+                "default": "$lfdOverlayFontColor",
                 "columns": 12,
                 "styles": [
                   {
@@ -35812,7 +36063,7 @@
               },
               {
                 "name": "agendaFilterIconColor",
-                "default": "$highlightColor",
+                "default": "$smallCardFilterIconColor",
                 "columns": 12,
                 "styles": [
                   {
@@ -35838,8 +36089,35 @@
                 "type": "color"
               },
               {
+                "name": "agendaFilterIconActiveColor",
+                "default": "$smallCardFilterIconActiveColor",
+                "columns": 12,
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
+                    "selectors": [
+                      ".new-agenda-list-container .section-top-wrapper .list-search-icon.active .fa-sliders",
+                      ".new-agenda-list-container .section-top-wrapper .list-search-icon.active .list-search-cancel .fa-times"
+                    ],
+                    "properties": ["color"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "agendaFilterIconActiveColorTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "agendaFilterIconActiveColorDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "label": "Filter icon active",
+                "type": "color"
+              },
+              {
                 "name": "agendaSearchIconColor",
-                "default": "$highlightColor",
+                "default": "$smallCardSearchIconColor",
                 "columns": 12,
                 "styles": [
                   {
@@ -35862,8 +36140,56 @@
                 "type": "color"
               },
               {
+                "name": "agendaSearchFieldBorderColor",
+                "default": "$smallCardSearchFieldBorderColor",
+                "columns": 12,
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
+                    "selectors": [".new-agenda-list-container .section-top-wrapper .search-holder input[type='search']"],
+                    "properties": ["border-color"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "agendaSearchFieldBorderColorTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "agendaSearchFieldBorderColorDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "label": "Search field border color",
+                "type": "color"
+              },
+              {
+                "name": "agendaSearchFieldBorderActiveColor",
+                "default": "$smallCardSearchFieldBorderActiveColor",
+                "columns": 12,
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
+                    "selectors": [".new-agenda-list-container .section-top-wrapper .search-holder input[type='search']:focus"],
+                    "properties": ["border-color"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "agendaSearchFieldBorderActiveColorTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "agendaSearchFieldBorderActiveColorDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "label": "Search field border active color",
+                "type": "color"
+              },
+              {
                 "name": "agendaBookmarkIconColor",
-                "default": "$highlightColor",
+                "default": "$smallCardBookmarkIconColor",
                 "columns": 12,
                 "styles": [
                   {
@@ -35886,8 +36212,32 @@
                 "type": "color"
               },
               {
+                "name": "agendaBookmarkIconActiveColor",
+                "default": "$smallCardBookmarkIconActiveColor",
+                "columns": 12,
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
+                    "selectors": [".new-agenda-list-container .section-top-wrapper .list-search-icon .toggle-bookmarks.mixitup-control-active .fa"],
+                    "properties": ["color"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "agendaBookmarkIconActiveColorTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "agendaBookmarkIconActiveColorDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "label": "Bookmark icon active",
+                "type": "color"
+              },
+              {
                 "name": "lfdAgendaTopBackgroundColor",
-                "default": "$bodyBackground",
+                "default": "$lfdBackgroundColor",
                 "columns": 12,
                 "styles": [
                   {
@@ -35911,7 +36261,7 @@
               },
               {
                 "name": "lfdAgendaTopTextColor",
-                "default": "rgba(102,102,102,0.7)",
+                "default": "$lfdFontColor",
                 "columns": 12,
                 "styles": [
                   {
@@ -35965,7 +36315,7 @@
               },
               {
                 "name": "lfdAgendaDatesBackgroundColor",
-                "default": "rgba(255, 255, 255, 1)",
+                "default": "$lfdBackgroundColor",
                 "columns": 12,
                 "styles": [
                   {
@@ -35994,7 +36344,7 @@
               },
               {
                 "name": "lfdAgendaDatesFontColor",
-                "default": "$highlightColor",
+                "default": "$lfdFontColor",
                 "columns": 12,
                 "styles": [
                   {
@@ -36027,7 +36377,7 @@
             "fields": [
               {
                 "name": "agendaListItemBorderSides",
-                "default": "none",
+                "default": "$smallCardListItemBorderSides",
                 "logic": {
                   "none": {
                     "hide": [
@@ -36101,7 +36451,7 @@
               },
               {
                 "name": "agendaListItemBorder",
-                "default":"$bodyTextColor",
+                "default":"$smallCardListItemBorder",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
@@ -36130,7 +36480,7 @@
               },
               {
                 "name": "agendaListItemBorderWidth",
-                "default": "1px",
+                "default": "$smallCardListItemBorderWidth",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
@@ -36160,7 +36510,7 @@
               },
               {
                 "name": "agendaListItemBorderStyle",
-                "default": "solid",
+                "default": "$smallCardListItemBorderStyle",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
@@ -36189,7 +36539,7 @@
               },
               {
                 "name": "agendaListItemBorderRadius",
-                "default": "15px",
+                "default": "20px",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
@@ -36217,7 +36567,7 @@
             "fields": [
               {
                 "name": "agendaListItemShadowStyle",
-                "default": "outset",
+                "default": "$smallCardListItemShadowStyle",
                 "logic": {
                   "none": {
                     "hide": [
@@ -36278,7 +36628,7 @@
               },
               {
                 "name": "agendaListItemShadowXoffset",
-                "default": "0px",
+                "default": "$smallCardListItemShadowXoffset",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
@@ -36312,7 +36662,7 @@
               },
               {
                 "name": "agendaListItemShadowYoffset",
-                "default": "6px",
+                "default": "$smallCardListItemShadowYoffset",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
@@ -36346,7 +36696,7 @@
               },
               {
                 "name": "agendaListItemShadowBlur",
-                "default": "20px",
+                "default": "$smallCardListItemShadowBlur",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
@@ -36379,7 +36729,7 @@
               },
               {
                 "name": "agendaListItemShadowSpread",
-                "default": "0px",
+                "default": "$smallCardListItemShadowSpread",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
@@ -36412,7 +36762,7 @@
               },
               {
                 "name": "agendaListItemShadowColor",
-                "default": "rgba(0, 0, 0, 0.1)",
+                "default": "$smallCardListItemShadowColor",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='agenda']",
@@ -36583,7 +36933,7 @@
               },
               {
                 "name": "smallHCardDisplay",
-                "default": "block",
+                "default": "$lfdDisplay",
                 "columns": 12,
                 "logic": {
                   "block": {
@@ -36898,7 +37248,7 @@
             "fields": [
               {
                 "name": "smallHCardPaddingTop",
-                "default": "0px",
+                "default": "$smallCardPaddingTop",
                 "columns": 6,
                 "styles": [
                   {
@@ -36922,7 +37272,7 @@
               },
               {
                 "name": "smallHCardPaddingRight",
-                "default": "0px",
+                "default": "$smallCardPaddingRight",
                 "columns": 6,
                 "styles": [
                   {
@@ -36946,7 +37296,7 @@
               },
               {
                 "name": "smallHCardPaddingBottom",
-                "default": "0px",
+                "default": "$smallCardPaddingBottom",
                 "columns": 6,
                 "styles": [
                   {
@@ -36970,7 +37320,7 @@
               },
               {
                 "name": "smallHCardPaddingLeft",
-                "default": "0px",
+                "default": "$smallCardPaddingLeft",
                 "columns": 6,
                 "styles": [
                   {
@@ -36999,7 +37349,7 @@
             "fields": [
               {
                 "name": "smallHCardTitleFontFamily",
-                "default": "$bodyFontFamily",
+                "default": "$smallCardTitleFontFamily",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -37022,7 +37372,7 @@
               },
               {
                 "name": "smallHCardTitleFontSize",
-                "default": "10px",
+                "default": "$smallCardTitleFontSize",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -37069,7 +37419,7 @@
               },
               {
                 "name": "smallHCardTitleFontWeight",
-                "default": "normal",
+                "default": "$smallCardTitleFontWeight",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -37092,7 +37442,7 @@
               },
               {
                 "name": "smallHCardTitleItalic",
-                "default": "normal",
+                "default": "$smallCardTitleItalic",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -37115,7 +37465,7 @@
               },
               {
                 "name": "smallHCardTitleUnderline",
-                "default": "none",
+                "default": "$smallCardTitleUnderline",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -37164,7 +37514,7 @@
               },
               {
                 "name": "smallHCardTitleMarginTop",
-                "default": "0px",
+                "default": "$smallCardTitleMarginTop",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -37188,7 +37538,7 @@
               },
               {
                 "name": "smallHCardTitleMarginBottom",
-                "default": "0px",
+                "default": "$smallCardTitleMarginBottom",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -37217,7 +37567,7 @@
             "fields": [
               {
                 "name": "smallHCardDetailTitleFontFamily",
-                "default": "$smallHCardTitleFontFamily",
+                "default": "$smallCardDetailTitleFontFamily",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -37240,7 +37590,7 @@
               },
               {
                 "name": "smallHCardDetailTitleFontSize",
-                "default": "32px",
+                "default": "$smallCardDetailTitleFontSize",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -37287,7 +37637,7 @@
               },
               {
                 "name": "smallHCardDetailTitleFontWeight",
-                "default": "bold",
+                "default": "$smallCardDetailTitleFontWeight",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -37310,7 +37660,7 @@
               },
               {
                 "name": "smallHCardDetailTitleItalic",
-                "default": "$smallHCardTitleItalic",
+                "default": "$smallCardDetailTitleItalic",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -37333,7 +37683,7 @@
               },
               {
                 "name": "smallHCardDetailTitleUnderline",
-                "default": "$smallHCardTitleUnderline",
+                "default": "$smallCardDetailTitleUnderline",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -37357,7 +37707,7 @@
               },
               {
                 "name": "smallHCardDetailTitleLineHeight",
-                "default": "1.3",
+                "default": "$smallCardDetailTitleLineHeight",
                 "columns": 12,
                 "styles": [
                   {
@@ -37387,7 +37737,7 @@
             "fields": [
               {
                 "name": "smallHCardDetailDescriptionFontFamily",
-                "default": "$bodyFontFamily",
+                "default": "$smallCardDetailDescriptionFontFamily",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -37410,7 +37760,7 @@
               },
               {
                 "name": "smallHCardDetailDescriptionFontSize",
-                "default": "24px",
+                "default": "$smallCardDetailDescriptionFontSize",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -37434,7 +37784,7 @@
               },
               {
                 "name": "smallHCardDetailDescriptionFontColor",
-                "default": "rgba(51, 51, 51, 0.6)",
+                "default": "$smallCardDetailDescriptionFontColor",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -37457,7 +37807,7 @@
               },
               {
                 "name": "smallHCardDetailDescriptionFontWeight",
-                "default": "normal",
+                "default": "$smallCardDetailDescriptionFontWeight",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -37480,7 +37830,7 @@
               },
               {
                 "name": "smallHCardDetailDescriptionItalic",
-                "default": "normal",
+                "default": "$smallCardDetailDescriptionItalic",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -37503,7 +37853,7 @@
               },
               {
                 "name": "smallHCardDetailDescriptionUnderline",
-                "default": "none",
+                "default": "$smallCardDetailDescriptionUnderline",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -37527,7 +37877,7 @@
               },
               {
                 "name": "smallHCardDetailDescriptionLineHeight",
-                "default": "$bodyLineHeight",
+                "default": "$smallCardDetailDescriptionLineHeight",
                 "columns": 12,
                 "styles": [
                   {
@@ -37552,7 +37902,7 @@
               },
               {
                 "name": "smallHCardDetailDescriptionMarginTop",
-                "default": "0px",
+                "default": "$smallCardDetailDescriptionMarginTop",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -37576,7 +37926,7 @@
               },
               {
                 "name": "smallHCardDetailDescriptionMarginBottom",
-                "default": "5px",
+                "default": "$smallCardDescriptionMarginBottom",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -37605,7 +37955,7 @@
             "fields": [
               {
                 "name": "smallHCardDetailSecondDescriptionFontFamily",
-                "default": "$bodyFontFamily",
+                "default": "$smallCardDetailSecondDescriptionFontFamily",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -37628,7 +37978,7 @@
               },
               {
                 "name": "smallHCardDetailSecondDescriptionFontSize",
-                "default": "16px",
+                "default": "$smallCardDetailSecondDescriptionFontSize",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -37652,7 +38002,7 @@
               },
               {
                 "name": "smallHCardDetailSecondDescriptionFontColor",
-                "default": "rgba(51, 51, 51, 0.4)",
+                "default": "$smallCardDetailSecondDescriptionFontColor",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -37675,7 +38025,7 @@
               },
               {
                 "name": "smallHCardDetailSecondDescriptionFontWeight",
-                "default": "normal",
+                "default": "$smallCardDetailSecondDescriptionFontWeight",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -37698,7 +38048,7 @@
               },
               {
                 "name": "smallHCardDetailSecondDescriptionItalic",
-                "default": "normal",
+                "default": "$smallCardDetailSecondDescriptionItalic",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -37721,7 +38071,7 @@
               },
               {
                 "name": "smallHCardDetailSecondDescriptionUnderline",
-                "default": "none",
+                "default": "$smallCardDetailSecondDescriptionUnderline",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -37745,7 +38095,7 @@
               },
               {
                 "name": "smallHCardDetailSecondDescriptionLineHeight",
-                "default": "$bodyLineHeight",
+                "default": "$smallCardDetailSecondDescriptionLineHeight",
                 "columns": 12,
                 "styles": [
                   {
@@ -37770,7 +38120,7 @@
               },
               {
                 "name": "smallHCardDetailSecondDescriptionMarginTop",
-                "default": "0px",
+                "default": "$smallCardDetailSecondDescriptionMarginTop",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -37794,7 +38144,7 @@
               },
               {
                 "name": "smallHCardDetailSecondDescriptionMarginBottom",
-                "default": "10px",
+                "default": "$smallCardDetailSecondDescriptionMarginBottom",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -37823,7 +38173,7 @@
             "fields": [
               {
                 "name": "smallHCardDetailTextFontFamily",
-                "default": "$bodyFontFamily",
+                "default": "$smallCardDetailTextFontFamily",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -37848,7 +38198,7 @@
               },
               {
                 "name": "smallHCardDetailTextFontSize",
-                "default": "16px",
+                "default": "$smallCardDetailTextFontSize",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -37872,7 +38222,7 @@
               },
               {
                 "name": "smallHCardDetailTextFontColor",
-                "default": "$bodyTextColor",
+                "default": "$lfdDetailFontColor",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -37895,7 +38245,7 @@
               },
               {
                 "name": "smallHCardDetailTextFontWeight",
-                "default": "normal",
+                "default": "$smallCardDetailTextFontWeight",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -37918,7 +38268,7 @@
               },
               {
                 "name": "smallHCardDetailTextItalic",
-                "default": "normal",
+                "default": "$smallCardDetailTextItalic",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -37941,7 +38291,7 @@
               },
               {
                 "name": "smallHCardDetailTextUnderline",
-                "default": "none",
+                "default": "$smallCardDetailTextUnderline",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -37965,7 +38315,7 @@
               },
               {
                 "name": "smallHCardDetailTextLineHeight",
-                "default": "$bodyLineHeight",
+                "default": "$smallCardDetailTextLineHeight",
                 "columns": 12,
                 "styles": [
                   {
@@ -37990,7 +38340,7 @@
               },
               {
                 "name": "smallHCardDetailTextMarginTop",
-                "default": "0px",
+                "default": "$smallCardDetailTextMarginTop",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -38014,7 +38364,7 @@
               },
               {
                 "name": "smallHCardDetailTextMarginBottom",
-                "default": "0px",
+                "default": "$smallCardDetailTextMarginBottom",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -38043,7 +38393,7 @@
             "fields": [
               {
                 "name": "smallHCardDetailLabelsFontFamily",
-                "default": "$bodyFontFamily",
+                "default": "$smallCardDetailLabelsFontFamily",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -38068,7 +38418,7 @@
               },
               {
                 "name": "smallHCardDetailLabelsFontSize",
-                "default": "12px",
+                "default": "$smallCardDetailLabelsFontSize",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -38092,7 +38442,7 @@
               },
               {
                 "name": "smallHCardDetailLabelsFontColor",
-                "default": "rgba(51, 51, 51, 0.5)",
+                "default": "$smallCardDetailLabelsFontColor",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -38115,7 +38465,7 @@
               },
               {
                 "name": "smallHCardDetailLabelsFontWeight",
-                "default": "normal",
+                "default": "$smallCardDetailLabelsFontWeight",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -38138,7 +38488,7 @@
               },
               {
                 "name": "smallHCardDetailLabelsItalic",
-                "default": "normal",
+                "default": "$smallCardDetailLabelsItalic",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -38161,7 +38511,7 @@
               },
               {
                 "name": "smallHCardDetailLabelsUnderline",
-                "default": "none",
+                "default": "$smallCardDetailLabelsUnderline",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -38185,7 +38535,7 @@
               },
               {
                 "name": "smallHCardDetailLabelsLineHeight",
-                "default": "$bodyLineHeight",
+                "default": "$smallCardDetailLabelsLineHeight",
                 "columns": 12,
                 "styles": [
                   {
@@ -38210,7 +38560,7 @@
               },
               {
                 "name": "smallHCardDetailLabelsMarginTop",
-                "default": "20px",
+                "default": "$smallCardDetailLabelsMarginTop",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -38234,7 +38584,7 @@
               },
               {
                 "name": "smallHCardDetailLabelsMarginBottom",
-                "default": "0px",
+                "default": "$smallCardDetailLabelsMarginBottom",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -38311,7 +38661,7 @@
               },
               {
                 "name": "smallHCardListDetailOverlayLineUnderTitleColor",
-                "default": "$highlightColor",
+                "default": "$smallCardListDetailOverlayLineUnderTitleColor",
                 "column": 12,
                 "styles": [
                   {
@@ -38335,7 +38685,7 @@
               },
               {
                 "name": "smallHCardListDetailOverlayIconsColor",
-                "default": "rgba(51, 51, 51, 0.3)",
+                "default": "$smallCardListDetailOverlayIconsColor",
                 "column": 12,
                 "styles": [
                   {
@@ -38359,7 +38709,7 @@
               },
               {
                 "name": "smallHCardListImageBackground",
-                "default": "rgba(51, 51, 51, 0.05)",
+                "default": "$smallCardImageBackground",
                 "columns": 12,
                 "styles": [
                   {
@@ -38391,7 +38741,7 @@
             "fields": [
               {
                 "name": "smallHCardListItemBorderSides",
-                "default": "none",
+                "default": "$smallCardListItemBorderSides",
                 "logic": {
                   "none": {
                     "hide": [
@@ -38465,7 +38815,7 @@
               },
               {
                 "name": "smallHCardListItemBorder",
-                "default":"$bodyTextColor",
+                "default":"$smallCardListItemBorder",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -38494,7 +38844,7 @@
               },
               {
                 "name": "smallHCardListItemBorderWidth",
-                "default": "1px",
+                "default": "$smallCardListItemBorderWidth",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -38524,7 +38874,7 @@
               },
               {
                 "name": "smallHCardListItemBorderStyle",
-                "default": "solid",
+                "default": "$smallCardListItemBorderStyle",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -38553,7 +38903,7 @@
               },
               {
                 "name": "smallHCardListItemBorderRadius",
-                "default": "15px",
+                "default": "$smallCardListItemBorderRadius",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -38581,7 +38931,7 @@
             "fields": [
               {
                 "name": "smallHCardListItemShadowStyle",
-                "default": "outset",
+                "default": "$smallCardListItemShadowStyle",
                 "logic": {
                   "none": {
                     "hide": [
@@ -38642,7 +38992,7 @@
               },
               {
                 "name": "smallHCardListItemShadowXoffset",
-                "default": "0px",
+                "default": "$smallCardListItemShadowXoffset",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -38676,7 +39026,7 @@
               },
               {
                 "name": "smallHCardListItemShadowYoffset",
-                "default": "6px",
+                "default": "$smallCardListItemShadowYoffset",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -38710,7 +39060,7 @@
               },
               {
                 "name": "smallHCardListItemShadowBlur",
-                "default": "20px",
+                "default": "$smallCardListItemShadowBlur",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -38743,7 +39093,7 @@
               },
               {
                 "name": "smallHCardListItemShadowSpread",
-                "default": "0px",
+                "default": "$smallCardListItemShadowSpread",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -38776,7 +39126,7 @@
               },
               {
                 "name": "smallHCardListItemShadowColor",
-                "default": "rgba(0, 0, 0, 0.1)",
+                "default": "$smallCardListItemShadowColor",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='small-h-card']",
@@ -38947,7 +39297,7 @@
               },
               {
                 "name": "simpleListDisplay",
-                "default": "block",
+                "default": "$lfdDisplay",
                 "columns": 12,
                 "logic": {
                   "block": {
@@ -39262,7 +39612,7 @@
             "fields": [
               {
                 "name": "simpleListPaddingTop",
-                "default": "0px",
+                "default": "$smallCardPaddingTop",
                 "columns": 6,
                 "styles": [
                   {
@@ -39286,7 +39636,7 @@
               },
               {
                 "name": "simpleListPaddingRight",
-                "default": "0px",
+                "default": "$smallCardPaddingRight",
                 "columns": 6,
                 "styles": [
                   {
@@ -39310,7 +39660,7 @@
               },
               {
                 "name": "simpleListPaddingBottom",
-                "default": "0px",
+                "default": "$smallCardPaddingBottom",
                 "columns": 6,
                 "styles": [
                   {
@@ -39334,7 +39684,7 @@
               },
               {
                 "name": "simpleListPaddingLeft",
-                "default": "0px",
+                "default": "$smallCardPaddingLeft",
                 "columns": 6,
                 "styles": [
                   {
@@ -39363,7 +39713,7 @@
             "fields": [
               {
                 "name": "simpleListTitleFontFamily",
-                "default": "$bodyFontFamily",
+                "default": "$smallCardTitleFontFamily",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='simple-list']",
@@ -39433,7 +39783,7 @@
               },
               {
                 "name": "simpleListTitleFontWeight",
-                "default": "normal",
+                "default": "$smallCardTitleFontWeight",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='simple-list']",
@@ -39456,7 +39806,7 @@
               },
               {
                 "name": "simpleListTitleItalic",
-                "default": "normal",
+                "default": "$smallCardTitleItalic",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='simple-list']",
@@ -39479,7 +39829,7 @@
               },
               {
                 "name": "simpleListTitleUnderline",
-                "default": "none",
+                "default": "$smallCardTitleUnderline",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='simple-list']",
@@ -39503,7 +39853,7 @@
               },
               {
                 "name": "simpleListTitleLineHeight",
-                "default": "$bodyLineHeight",
+                "default": "$smallCardTitleLineHeight",
                 "columns": 12,
                 "styles": [
                   {
@@ -39528,7 +39878,7 @@
               },
               {
                 "name": "simpleListTitleMarginTop",
-                "default": "0px",
+                "default": "$smallCardTitleMarginTop",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='simple-list']",
@@ -39552,7 +39902,7 @@
               },
               {
                 "name": "simpleListTitleMarginBottom",
-                "default": "0px",
+                "default": "$smallCardTitleMarginBottom",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='simple-list']",
@@ -39581,7 +39931,7 @@
             "fields": [
               {
                 "name": "simpleListDescriptionFontFamily",
-                "default": "$bodyFontFamily",
+                "default": "$smallCardDescriptionFontFamily",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='simple-list']",
@@ -39604,7 +39954,7 @@
               },
               {
                 "name": "simpleListDescriptionFontSize",
-                "default": "16px",
+                "default": "$bodyFontSize",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='simple-list']",
@@ -39651,7 +40001,7 @@
               },
               {
                 "name": "simpleListDescriptionFontWeight",
-                "default": "normal",
+                "default": "$smallCardDescriptionFontWeight",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='simple-list']",
@@ -39674,7 +40024,7 @@
               },
               {
                 "name": "simpleListDescriptionItalic",
-                "default": "normal",
+                "default": "$smallCardDescriptionItalic",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='simple-list']",
@@ -39697,7 +40047,7 @@
               },
               {
                 "name": "simpleListDescriptionUnderline",
-                "default": "none",
+                "default": "$smallCardDescriptionUnderline",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='simple-list']",
@@ -39721,7 +40071,7 @@
               },
               {
                 "name": "simpleListDescriptionLineHeight",
-                "default": "1.5",
+                "default": "$bodyLineHeight",
                 "columns": 12,
                 "styles": [
                   {
@@ -39746,7 +40096,7 @@
               },
               {
                 "name": "simpleListDescriptionMarginTop",
-                "default": "0px",
+                "default": "$smallCardDescriptionMarginTop",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='simple-list']",
@@ -39770,7 +40120,7 @@
               },
               {
                 "name": "simpleListDescriptionMarginBottom",
-                "default": "0px",
+                "default": "$smallCardDescriptionMarginBottom",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='simple-list']",
@@ -39799,7 +40149,7 @@
             "fields": [
               {
                 "name": "simpleListSecondDescriptionFontFamily",
-                "default": "$bodyFontFamily",
+                "default": "$smallCardSecondDescriptionFontFamily",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='simple-list']",
@@ -39822,7 +40172,7 @@
               },
               {
                 "name": "simpleListSecondDescriptionFontSize",
-                "default": "12px",
+                "default": "$smallCardSecondDescriptionFontSize",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='simple-list']",
@@ -39846,7 +40196,7 @@
               },
               {
                 "name": "simpleListSecondDescriptionFontColor",
-                "default": "rgba(51, 51, 51, 0.4)",
+                "default": "$smallCardSecondDescriptionFontColor",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='simple-list']",
@@ -39869,7 +40219,7 @@
               },
               {
                 "name": "simpleListSecondDescriptionFontWeight",
-                "default": "normal",
+                "default": "$smallCardSecondDescriptionFontWeight",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='simple-list']",
@@ -39892,7 +40242,7 @@
               },
               {
                 "name": "simpleListSecondDescriptionItalic",
-                "default": "normal",
+                "default": "$smallCardSecondDescriptionItalic",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='simple-list']",
@@ -39915,7 +40265,7 @@
               },
               {
                 "name": "simpleListSecondDescriptionUnderline",
-                "default": "none",
+                "default": "$smallCardSecondDescriptionUnderline",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='simple-list']",
@@ -39939,7 +40289,7 @@
               },
               {
                 "name": "simpleListSecondDescriptionLineHeight",
-                "default": "1.5",
+                "default": "$bodyLineHeight",
                 "columns": 12,
                 "styles": [
                   {
@@ -40017,7 +40367,7 @@
             "fields": [
               {
                 "name": "simpleListDetailTextFontFamily",
-                "default": "$simpleListDescriptionFontFamily",
+                "default": "$smallCardDetailTextFontFamily",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='simple-list']",
@@ -40040,7 +40390,7 @@
               },
               {
                 "name": "simpleListDetailTextFontSize",
-                "default": "18.4px",
+                "default": "1.15em",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='simple-list']",
@@ -40064,7 +40414,7 @@
               },
               {
                 "name": "simpleListDetailTextFontColor",
-                "default": "$simpleListDescriptionFontColor",
+                "default": "$lfdDetailFontColor",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='simple-list']",
@@ -40087,7 +40437,7 @@
               },
               {
                 "name": "simpleListDetailTextFontWeight",
-                "default": "$simpleListDescriptionFontWeight",
+                "default": "$smallCardDetailTextFontWeight",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='simple-list']",
@@ -40110,7 +40460,7 @@
               },
               {
                 "name": "simpleListDetailTextItalic",
-                "default": "$simpleListDescriptionItalic",
+                "default": "$smallCardDetailTextItalic",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='simple-list']",
@@ -40133,7 +40483,7 @@
               },
               {
                 "name": "simpleListDetailTextUnderline",
-                "default": "$simpleListDescriptionUnderline",
+                "default": "$smallCardDetailTextUnderline",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='simple-list']",
@@ -40157,7 +40507,7 @@
               },
               {
                 "name": "simpleListDetailTextLineHeight",
-                "default": "$bodyLineHeight",
+                "default": "$smallCardDetailTextLineHeight",
                 "columns": 12,
                 "styles": [
                   {
@@ -40182,7 +40532,7 @@
               },
               {
                 "name": "simpleListDetailTextMarginTop",
-                "default": "0px",
+                "default": "$smallCardDetailTextMarginTop",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='simple-list']",
@@ -40235,7 +40585,7 @@
             "fields": [
               {
                 "name": "simpleListDetailLabelsFontFamily",
-                "default": "$simpleListDescriptionFontFamily",
+                "default": "$smallCardDetailLabelsFontFamily",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='simple-list']",
@@ -40258,7 +40608,7 @@
               },
               {
                 "name": "simpleListDetailLabelsFontSize",
-                "default": "16px",
+                "default": "$smallCardDetailLabelsFontSize",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='simple-list']",
@@ -40305,7 +40655,7 @@
               },
               {
                 "name": "simpleListDetailLabelsFontWeight",
-                "default": "$simpleListDetailTextFontWeight",
+                "default": "$smallCardDetailLabelsFontWeight",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='simple-list']",
@@ -40328,7 +40678,7 @@
               },
               {
                 "name": "simpleListDetailLabelsItalic",
-                "default": "$simpleListDetailTextItalic",
+                "default": "$smallCardDetailLabelsItalic",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='simple-list']",
@@ -40351,7 +40701,7 @@
               },
               {
                 "name": "simpleListDetailLabelsUnderline",
-                "default": "$simpleListDetailTextUnderline",
+                "default": "$smallCardDetailLabelsUnderline",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='simple-list']",
@@ -40375,7 +40725,7 @@
               },
               {
                 "name": "simpleListDetailLabelsLineHeight",
-                "default": "$bodyLineHeight",
+                "default": "$smallCardDetailLabelsLineHeight",
                 "columns": 12,
                 "styles": [
                   {
@@ -40400,7 +40750,7 @@
               },
               {
                 "name": "simpleListDetailLabelsMarginTop",
-                "default": "0px",
+                "default": "$smallCardDetailLabelsMarginTop",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='simple-list']",
@@ -40501,7 +40851,7 @@
               },
               {
                 "name": "simpleListDetailOverlayIconsColor",
-                "default": "rgba(51, 51, 51, 0.3)",
+                "default": "$smallCardListDetailOverlayIconsColor",
                 "column": 12,
                 "styles": [
                   {
@@ -40530,7 +40880,7 @@
               },
               {
                 "name": "simpleListFiltersOverlayBackground",
-                "default": "$bodyTextColor",
+                "default": "$lfdOverlayBackgroundColor",
                 "column": 12,
                 "styles": [
                   {
@@ -40558,7 +40908,7 @@
               },
               {
                 "name": "simpleListOverlayFontColor",
-                "default": "$bodyBackground",
+                "default": "$lfdOverlayFontColor",
                 "columns": 12,
                 "styles": [
                   {
@@ -40586,7 +40936,7 @@
               },
               {
                 "name": "simpleListFilterIconColor",
-                "default": "$highlightColor",
+                "default": "$smallCardFilterIconColor",
                 "columns": 12,
                 "styles": [
                   {
@@ -40612,8 +40962,35 @@
                 "type": "color"
               },
               {
+                "name": "simpleListFilterIconActiveColor",
+                "default": "$smallCardFilterIconActiveColor",
+                "columns": 12,
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='simple-list']",
+                    "selectors": [
+                      ".simple-list-container .section-top-wrapper .list-search-icon.active .fa-sliders",
+                      ".simple-list-container .section-top-wrapper .list-search-icon.active .fa-times"
+                    ],
+                    "properties": ["color"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "simpleListFilterIconActiveColorTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "simpleListFilterIconActiveColorDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "label": "Filter icon active",
+                "type": "color"
+              },
+              {
                 "name": "simpleListSearchIconColor",
-                "default": "$highlightColor",
+                "default": "$smallCardSearchIconColor",
                 "columns": 12,
                 "styles": [
                   {
@@ -40636,8 +41013,56 @@
                 "type": "color"
               },
               {
+                "name": "simpleListSearchFieldBorderColor",
+                "default": "$smallCardSearchFieldBorderColor",
+                "columns": 12,
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='simple-list']",
+                    "selectors": ".simple-list-container .section-top-wrapper .search-holder input[type='search']",
+                    "properties": ["border-color"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "simpleListSearchFieldBorderColorTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "simpleListSearchFieldBorderColorDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "label": "Search field border color",
+                "type": "color"
+              },
+              {
+                "name": "simpleListSearchFieldBorderActiveColor",
+                "default": "$smallCardSearchFieldBorderActiveColor",
+                "columns": 12,
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='simple-list']",
+                    "selectors": ".simple-list-container .section-top-wrapper .search-holder input[type='search']:focus",
+                    "properties": ["border-color"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "simpleListSearchFieldBorderActiveColorTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "simpleListSearchFieldBorderActiveColorDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "label": "Search field border color active",
+                "type": "color"
+              },
+              {
                 "name": "simpleListBookmarkIconColor",
-                "default": "$highlightColor",
+                "default": "$smallCardBookmarkIconColor",
                 "columns": 12,
                 "styles": [
                   {
@@ -40660,8 +41085,32 @@
                 "type": "color"
               },
               {
+                "name": "simpleListBookmarkIconActiveColor",
+                "default": "$highlightColor",
+                "columns": 12,
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='simple-list']",
+                    "selectors": [".simple-list-container .section-top-wrapper .list-search-icon .toggle-bookmarks.mixitup-control-active .fa"],
+                    "properties": ["color"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "simpleListBookmarkIconActiveColorTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "simpleListBookmarkIconActiveColorDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "label": "Bookmark icon active",
+                "type": "color"
+              },
+              {
                 "name": "simpleListLikeIconColor",
-                "default": "#ed4956",
+                "default": "$simpleListBookmarkIconColor",
                 "columns": 12,
                 "styles": [
                   {
@@ -40675,11 +41124,11 @@
                 ],
                 "breakpoints": {
                   "tablet": {
-                    "name": "simpleListBookmarkIconColorTablet",
+                    "name": "simpleListLikeIconColorTablet",
                     "default": "inherit-mobile"
                   },
                   "desktop": {
-                    "name": "simpleListBookmarkIconColorDesktop",
+                    "name": "simpleListLikeIconColorDesktop",
                     "default": "inherit-tablet"
                   }
                 },
@@ -40687,65 +41136,35 @@
                 "type": "color"
               },
               {
-                "name": "simpleListCommentsBackgroundColor",
-                "default": "$simpleListDetailOverlayBackground",
+                "name": "simpleListLikeIconActiveColor",
+                "default": "#ed4956",
                 "columns": 12,
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='simple-list']",
                     "selectors": [
-                      ".simple-list-comment-panel",
-                      ".simple-list-comment-panel .simple-list-comment-panel-header",
-                      ".simple-list-comment-panel .simple-list-comment-input-holder",
-                      ".simple-list-comment-panel .top-comment-holder"
-                    ],
-                    "properties": ["background-color"]
-                  }
-                ],
-                "breakpoints": {
-                  "tablet": {
-                    "name": "simpleListCommentsBackgroundColorTablet",
-                    "default": "inherit-mobile"
-                  },
-                  "desktop": {
-                    "name": "simpleListCommentsBackgroundColorDesktop",
-                    "default": "inherit-tablet"
-                  }
-                },
-                "label": "Comments overlay background",
-                "type": "color"
-              },
-              {
-                "name": "simpleListCommentsFontColor",
-                "default": "$simpleListDetailTextFontColor",
-                "columns": 12,
-                "styles": [
-                  {
-                    "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='simple-list']",
-                    "selectors": [
-                      ".simple-list-comment-panel .comments-offline",
-                      ".simple-list-comment-panel .simple-list-comment-panel-header",
-                      ".simple-list-comment-panel .textarea[data-comment-body]"
+                      ".simple-list-container .simple-list-like-holder .fa.animated",
+                      ".simple-list-container .simple-list-like-wrapper .fa.animated"
                     ],
                     "properties": ["color"]
                   }
                 ],
                 "breakpoints": {
                   "tablet": {
-                    "name": "simpleListCommentsFontColorTablet",
+                    "name": "simpleListLikeIconActiveColorTablet",
                     "default": "inherit-mobile"
                   },
                   "desktop": {
-                    "name": "simpleListCommentsFontColorDesktop",
+                    "name": "simpleListLikeIconActiveColorDesktop",
                     "default": "inherit-tablet"
                   }
                 },
-                "label": "Comments overlay text",
+                "label": "Like icon active",
                 "type": "color"
               },
               {
                 "name": "simpleListImageBackground",
-                "default": "rgba(51, 51, 51, 0.05)",
+                "default": "$smallCardImageBackground",
                 "columns": 12,
                 "styles": [
                   {
@@ -40792,6 +41211,63 @@
                   }
                 },
                 "label": "Link arrow",
+                "type": "color"
+              },
+              {
+                "name": "simpleListCommentsBackgroundColor",
+                "default": "$lfdCommentsBackgroundColor",
+                "columns": 12,
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='simple-list']",
+                    "selectors": [
+                      ".simple-list-comment-panel",
+                      ".simple-list-comment-panel .simple-list-comment-panel-header",
+                      ".simple-list-comment-panel .simple-list-comment-input-holder",
+                      ".simple-list-comment-panel .top-comment-holder"
+                    ],
+                    "properties": ["background-color"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "simpleListCommentsBackgroundColorTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "simpleListCommentsBackgroundColorDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "label": "Comments overlay background",
+                "type": "color"
+              },
+              {
+                "name": "simpleListCommentsFontColor",
+                "default": "$lfdCommentsFontColor",
+                "columns": 12,
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='simple-list']",
+                    "selectors": [
+                      ".simple-list-comment-panel .comments-offline",
+                      ".simple-list-comment-panel .simple-list-comment-panel-header",
+                      ".simple-list-comment-panel .textarea[data-comment-body]"
+                    ],
+                    "properties": ["color"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "simpleListCommentsFontColorTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "simpleListCommentsFontColorDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "label": "Comments overlay text",
                 "type": "color"
               }
             ]
@@ -40875,7 +41351,7 @@
               },
               {
                 "name": "lfdSeparatorColor",
-                "default":"rgba(51, 51, 51, 0.2)",
+                "default":"rgba(51, 51, 51, 0.3)",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='simple-list']",
@@ -40992,7 +41468,7 @@
             "fields": [
               {
                 "name": "simpleListItemShadowStyle",
-                "default": "outset",
+                "default": "$smallCardListItemShadowStyle",
                 "logic": {
                   "none": {
                     "hide": [
@@ -41053,7 +41529,7 @@
               },
               {
                 "name": "simpleListItemShadowXoffset",
-                "default": "0px",
+                "default": "$smallCardListItemShadowXoffset",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='simple-list']",
@@ -41087,7 +41563,7 @@
               },
               {
                 "name": "simpleListItemShadowYoffset",
-                "default": "10px",
+                "default": "$smallCardListItemShadowYoffset",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='simple-list']",
@@ -41121,7 +41597,7 @@
               },
               {
                 "name": "simpleListItemShadowBlur",
-                "default": "20px",
+                "default": "$smallCardListItemShadowBlur",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='simple-list']",
@@ -41154,7 +41630,7 @@
               },
               {
                 "name": "simpleListItemShadowSpread",
-                "default": "0px",
+                "default": "$smallCardListItemShadowSpread",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='simple-list']",
@@ -41187,7 +41663,7 @@
               },
               {
                 "name": "simpleListItemShadowColor",
-                "default": "rgba(51, 51, 51, 0.2)",
+                "default": "$smallCardListItemShadowColor",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'] [data-dynamic-lists-layout='simple-list']",
