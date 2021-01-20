@@ -759,7 +759,8 @@
           shadowColor: map-get($configuration, smallCardListItemShadowColor)
         ));
 
-        .small-card-list-image, .small-card-list-detail-image {
+        .small-card-list-image,
+        .small-card-list-detail-image {
           border-top-left-radius: map-get($configuration, smallCardListItemBorderRadius);
           border-bottom-left-radius: map-get($configuration, smallCardListItemBorderRadius);
         }
@@ -794,7 +795,8 @@
             shadowColor: map-get($configuration, smallCardListItemShadowColorTablet)
           ));
 
-          .small-card-list-image, .small-card-list-detail-image {
+          .small-card-list-image,
+          .small-card-list-detail-image {
             border-top-left-radius: map-get($configuration, smallCardListItemBorderRadiusTablet);
             border-bottom-left-radius: map-get($configuration, smallCardListItemBorderRadiusTablet);
           }
@@ -830,7 +832,8 @@
             shadowColor: map-get($configuration, smallCardListItemShadowColorDesktop)
           ));
 
-          .small-card-list-image, .small-card-list-detail-image {
+          .small-card-list-image,
+          .small-card-list-detail-image {
             border-top-left-radius: map-get($configuration, smallCardListItemBorderRadiusDesktop);
             border-bottom-left-radius: map-get($configuration, smallCardListItemBorderRadiusDesktop);
           }
