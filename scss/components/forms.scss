@@ -809,6 +809,10 @@
         map-get($configuration, formInputPaddingBottom)
         map-get($configuration, formInputPaddingLeft);
 
+      &:focus-within {
+        box-shadow: 0px 0px 0px $focusOutlineWidth $focusOutlineColor !important;
+      }
+
       // Styles for tablet
       @include above($tabletBreakpoint) {
         @include borderOnly((
@@ -823,6 +827,10 @@
           map-get($configuration, formInputPaddingRightTablet)
           map-get($configuration, formInputPaddingBottomTablet)
           map-get($configuration, formInputPaddingLeftTablet);
+
+        &:focus-within {
+          box-shadow: 0px 0px 0px $focusOutlineWidthTablet $focusOutlineColorTablet !important;
+        }
       }
 
       // Styles for desktop
@@ -839,6 +847,10 @@
           map-get($configuration, formInputPaddingRightDesktop)
           map-get($configuration, formInputPaddingBottomDesktop)
           map-get($configuration, formInputPaddingLeftDesktop);
+
+        &:focus-within {
+          box-shadow: 0px 0px 0px $focusOutlineWidthDesktop $focusOutlineColorDesktop !important;
+        }
       }
     }
 
@@ -1043,6 +1055,10 @@
       border-radius: map-get($configuration, formInputBorderRadius);
       overflow: hidden;
 
+      &:focus-within {
+        box-shadow: 0px 0px 0px $focusOutlineWidth $focusOutlineColor !important;
+      }
+
       // Styles for tablet
       @include above($tabletBreakpoint) {
         @include borderOnly((
@@ -1051,6 +1067,10 @@
           borderColor: map-get($configuration, formInputBorderColorTablet),
           borderSides: map-get($configuration, formInputBorderSidesTablet)
         ));
+
+        &:focus-within {
+          box-shadow: 0px 0px 0px $focusOutlineWidthTablet $focusOutlineColorTablet !important;
+        }
       }
 
       // Styles for desktop
@@ -1061,6 +1081,10 @@
           borderColor: map-get($configuration, formInputBorderColorDesktop),
           borderSides: map-get($configuration, formInputBorderSidesDesktop)
         ));
+
+        &:focus-within {
+          box-shadow: 0px 0px 0px $focusOutlineWidthDesktop $focusOutlineColorDesktop !important;
+        }
       }
     }
 
