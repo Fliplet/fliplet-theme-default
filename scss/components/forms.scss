@@ -1055,7 +1055,7 @@
       border-radius: map-get($configuration, formInputBorderRadius);
       overflow: hidden;
 
-      &:focus-within {
+      &.tinymce-focus {
         box-shadow: 0px 0px 0px $focusOutlineWidth $focusOutlineColor !important;
       }
 
@@ -1068,7 +1068,7 @@
           borderSides: map-get($configuration, formInputBorderSidesTablet)
         ));
 
-        &:focus-within {
+        &.tinymce-focus {
           box-shadow: 0px 0px 0px $focusOutlineWidthTablet $focusOutlineColorTablet !important;
         }
       }
@@ -1082,7 +1082,7 @@
           borderSides: map-get($configuration, formInputBorderSidesDesktop)
         ));
 
-        &:focus-within {
+        &.tinymce-focus {
           box-shadow: 0px 0px 0px $focusOutlineWidthDesktop $focusOutlineColorDesktop !important;
         }
       }
