@@ -910,6 +910,27 @@
       }
     }
 
+    .input-group {
+      &:focus-within {
+        box-shadow: 0px 0px 0px $focusOutlineWidth $focusOutlineColor !important;
+      }
+
+      // Styles for tablet
+      @include above($tabletBreakpoint) {
+        &:focus-within {
+          box-shadow: 0px 0px 0px $focusOutlineWidthTablet $focusOutlineColorTablet !important;
+        }
+      }
+
+      // Styles for desktop
+      @include above($desktopBreakpoint) {
+        &:focus-within {
+          box-shadow: 0px 0px 0px $focusOutlineWidthDesktop $focusOutlineColorDesktop !important;
+        }
+      }
+      
+    }
+
     .input-group-addon {
       color: $bodyTextColor;
 
@@ -1138,4 +1159,21 @@
   ));
 
   border-radius: $formInputBorderRadius;
+}
+
+.fileUpload {
+  padding-top: $focusOutlineWidth;
+  padding-bottom: $focusOutlineWidth;
+
+  // Styles for tablet
+  @include above($tabletBreakpoint) {
+    padding-top: $focusOutlineWidthTablet;
+    padding-bottom: $focusOutlineWidthTablet;
+  }
+
+  // Styles for desktop
+  @include above($desktopBreakpoint) {
+    padding-top: $focusOutlineWidthDesktop;
+    padding-bottom: $focusOutlineWidthDesktop;
+  }
 }
