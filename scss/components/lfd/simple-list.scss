@@ -667,6 +667,8 @@
       }
 
       .section-top-wrapper {
+        margin: $focusOutlineWidth;
+
         .search-holder {
           input[type="search"] {
             border-color: map-get($configuration, simpleListSearchFieldBorderColor);

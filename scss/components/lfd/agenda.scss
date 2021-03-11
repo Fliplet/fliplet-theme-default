@@ -785,6 +785,7 @@
       }
 
       .section-top-wrapper {
+        margin: $focusOutlineWidth;
         max-width: map-get($configuration, agendaMaxWidth);
 
         .fa-sliders, .list-search-cancel .fa-times {

@@ -1199,6 +1199,8 @@
       }
 
       .section-top-wrapper {
+        margin: $focusOutlineWidth;
+
         .fa {
           color: $highlightColor;
         }
@@ -1241,6 +1243,8 @@
         }
 
         .list-search-icon {
+          margin-right: $focusOutlineWidth;
+
           .fa-sliders, .fa-times {
             color: map-get($configuration, smallCardFilterIconColor) !important;
           }
@@ -1282,6 +1286,8 @@
       }
 
       .hidden-filter-controls-filter {
+        margin-top: $focusOutlineWidth;
+        margin-left: $focusOutlineWidth;
         border-color: rgba($bodyTextColor, 0.8);
 
         &:hover,
