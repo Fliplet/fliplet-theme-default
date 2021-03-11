@@ -792,8 +792,8 @@
       // Styles for desktop
       @include above($desktopBreakpoint) {
         background-color: map-get($configuration, formToggleActiveBackgroundColorDesktop);
-      }
-    }
+      } 
+     }
 
     .select-proxy-display {
       @include borderOnly((
@@ -810,6 +810,10 @@
         map-get($configuration, formInputPaddingLeft);
 
       &:focus-within {
+        box-shadow: 0px 0px 0px $focusOutlineWidth $focusOutlineColor !important;
+      }
+
+      &.input-focused {
         box-shadow: 0px 0px 0px $focusOutlineWidth $focusOutlineColor !important;
       }
 
@@ -831,6 +835,10 @@
         &:focus-within {
           box-shadow: 0px 0px 0px $focusOutlineWidthTablet $focusOutlineColorTablet !important;
         }
+
+        &.input-focused {
+          box-shadow: 0px 0px 0px $focusOutlineWidthTablet $focusOutlineColorTablet !important;
+        }
       }
 
       // Styles for desktop
@@ -849,6 +857,10 @@
           map-get($configuration, formInputPaddingLeftDesktop);
 
         &:focus-within {
+          box-shadow: 0px 0px 0px $focusOutlineWidthDesktop $focusOutlineColorDesktop !important;
+        }
+
+        &.input-focused {
           box-shadow: 0px 0px 0px $focusOutlineWidthDesktop $focusOutlineColorDesktop !important;
         }
       }
@@ -915,9 +927,17 @@
         box-shadow: 0px 0px 0px $focusOutlineWidth $focusOutlineColor !important;
       }
 
+      &.input-focused {
+        box-shadow: 0px 0px 0px $focusOutlineWidth $focusOutlineColor !important;
+      }
+
       // Styles for tablet
       @include above($tabletBreakpoint) {
         &:focus-within {
+          box-shadow: 0px 0px 0px $focusOutlineWidthTablet $focusOutlineColorTablet !important;
+        }
+
+        &.input-focused {
           box-shadow: 0px 0px 0px $focusOutlineWidthTablet $focusOutlineColorTablet !important;
         }
       }
@@ -925,6 +945,10 @@
       // Styles for desktop
       @include above($desktopBreakpoint) {
         &:focus-within {
+          box-shadow: 0px 0px 0px $focusOutlineWidthDesktop $focusOutlineColorDesktop !important;
+        }
+        
+        &.input-focused {
           box-shadow: 0px 0px 0px $focusOutlineWidthDesktop $focusOutlineColorDesktop !important;
         }
       }
