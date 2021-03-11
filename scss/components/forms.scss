@@ -792,8 +792,8 @@
       // Styles for desktop
       @include above($desktopBreakpoint) {
         background-color: map-get($configuration, formToggleActiveBackgroundColorDesktop);
-      } 
-     }
+      }
+    }
 
     .select-proxy-display {
       @include borderOnly((
