@@ -854,11 +854,11 @@
           color: map-get($configuration, newsFeedSecondDescriptionFontColor);
         }
 
-        .news-feed-like-holder .news-feed-like-wrapper .fa {
+        .news-feed-like-holder .news-feed-like-wrapper .fa, .count {
           color: map-get($configuration, newsFeedLikeIconColor);
         }
 
-        .news-feed-like-holder .news-feed-like-wrapper .fa.animated {
+        .news-feed-like-holder .news-feed-like-wrapper .fa.animated, .count {
           color: map-get($configuration, newsFeedLikeIconActiveColor);
         }
         
