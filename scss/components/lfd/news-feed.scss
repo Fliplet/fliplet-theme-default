@@ -854,11 +854,19 @@
           color: map-get($configuration, newsFeedSecondDescriptionFontColor);
         }
 
-        .news-feed-like-holder .news-feed-like-wrapper .fa, .count {
+        .news-feed-like-holder .news-feed-like-wrapper .fa {
           color: map-get($configuration, newsFeedLikeIconColor);
         }
 
-        .news-feed-like-holder .news-feed-like-wrapper .fa.animated, .count {
+        .news-feed-like-holder .news-feed-like-wrapper .fa.animated {
+          color: map-get($configuration, newsFeedLikeIconActiveColor);
+        }
+
+        .news-feed-like-holder .news-feed-like-wrapper.btn-like > span.count {
+          color: map-get($configuration, newsFeedLikeIconColor);
+        }
+
+        .news-feed-like-holder .news-feed-like-wrapper.btn-liked > span.count {
           color: map-get($configuration, newsFeedLikeIconActiveColor);
         }
         
