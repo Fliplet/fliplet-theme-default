@@ -805,11 +805,19 @@
         .simple-list-item {
           background-color: map-get($configuration, simpleListItemBackground);
 
-          .simple-list-like-holder .simple-list-like-wrapper .fa, .count {
+          .simple-list-like-holder .simple-list-like-wrapper .fa {
             color: map-get($configuration, simpleListLikeIconColor);
           }
 
-          .simple-list-like-holder .simple-list-like-wrapper .fa.animated, .count {
+          .simple-list-like-holder .simple-list-like-wrapper .fa.animated {
+            color: map-get($configuration, simpleListLikeIconActiveColor);
+          }
+
+          .simple-list-like-holder .simple-list-like-wrapper.btn-like > span.count {
+            color: map-get($configuration, simpleListLikeIconColor);
+          }
+
+          .simple-list-like-holder .simple-list-like-wrapper.btn-liked > span.count {
             color: map-get($configuration, simpleListLikeIconActiveColor);
           }
 
