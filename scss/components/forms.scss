@@ -1208,9 +1208,8 @@
     padding-top: $focusOutlineWidthTablet;
     padding-bottom: $focusOutlineWidthTablet;
 
-    .fa-plus {
+    .btn-primary > span {
       padding-right: $primaryButtonPaddingRightTablet;
-      padding-left: $primaryButtonPaddingRightTablet;
     }
   }
 
@@ -1219,9 +1218,8 @@
     padding-top: $focusOutlineWidthDesktop;
     padding-bottom: $focusOutlineWidthDesktop;
 
-    .fa-plus {
+    .btn-primary > span {
       padding-right: $primaryButtonPaddingRightDesktop;
-      padding-left: $primaryButtonPaddingRightDesktop;
     }
   }
 }
