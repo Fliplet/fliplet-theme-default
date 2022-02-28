@@ -644,6 +644,12 @@
         }
       }
 
+      .search-query .current-query-wrapper {
+        background-color: $highlightColor;
+        color: $primaryButtonTextColor;
+        border-color: $highlightColor;
+      }
+
       .new-agenda-search-filter-overlay {
         .agenda-overlay-wrapper {
           background-color: map-get($configuration, agendaFiltersOverlayBackground);
@@ -687,6 +693,12 @@
             color: $primaryButtonTextColorTablet;
           }
 
+          .search-query .current-query-wrapper {
+            background-color: $highlightColor;
+            color: $primaryButtonTextColor;
+            border-color: $highlightColor;
+          }
+
           .hidden-filter-controls-filter {
             border-color: rgba(map-get($configuration, agendaOverlayFontColorTablet), 0.8);
 
@@ -711,6 +723,12 @@
           .apply-filters,
           .hidden-filter-controls-filter.mixitup-control-active {
             color: $primaryButtonTextColorDesktop;
+          }
+
+          .search-query .current-query-wrapper {
+            background-color: $highlightColor;
+            color: $primaryButtonTextColor;
+            border-color: $highlightColor;
           }
 
           .hidden-filter-controls-filter {
