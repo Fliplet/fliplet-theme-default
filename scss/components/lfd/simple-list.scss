@@ -912,7 +912,7 @@
 
         .search-query .current-query-wrapper {
           background-color: $primaryButtonColorTablet;
-          color: $primaryButtonTextColor;
+          color: $primaryButtonTextColorTablet;
           border-color: $primaryButtonColorTablet;
         }
 
@@ -980,7 +980,7 @@
 
         .search-query .current-query-wrapper {
           background-color: $primaryButtonColorDesktop;
-          color: $primaryButtonTextColor;
+          color: $primaryButtonTextColorDesktop;
           border-color: $primaryButtonColorDesktop;
         }
 
