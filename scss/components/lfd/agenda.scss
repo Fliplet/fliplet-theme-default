@@ -645,9 +645,9 @@
       }
 
       .search-query .current-query-wrapper {
-        background-color: $highlightColor;
+        background-color: $primaryButtonColor;
         color: $primaryButtonTextColor;
-        border-color: $highlightColor;
+        border-color: $primaryButtonColor;
       }
 
       .new-agenda-search-filter-overlay {
@@ -694,9 +694,9 @@
           }
 
           .search-query .current-query-wrapper {
-            background-color: $highlightColor;
+            background-color: $primaryButtonColorTablet;
             color: $primaryButtonTextColor;
-            border-color: $highlightColor;
+            border-color: $primaryButtonColorTablet;
           }
 
           .hidden-filter-controls-filter {
@@ -726,9 +726,9 @@
           }
 
           .search-query .current-query-wrapper {
-            background-color: $highlightColor;
+            background-color: $primaryButtonColorDesktop;
             color: $primaryButtonTextColor;
-            border-color: $highlightColor;
+            border-color: $primaryButtonColorDesktop;
           }
 
           .hidden-filter-controls-filter {
