@@ -693,12 +693,6 @@
             color: $primaryButtonTextColorTablet;
           }
 
-          .search-query .current-query-wrapper {
-            background-color: $primaryButtonColorTablet;
-            color: $primaryButtonTextColorTablet;
-            border-color: $primaryButtonColorTablet;
-          }
-
           .hidden-filter-controls-filter {
             border-color: rgba(map-get($configuration, agendaOverlayFontColorTablet), 0.8);
 
@@ -723,12 +717,6 @@
           .apply-filters,
           .hidden-filter-controls-filter.mixitup-control-active {
             color: $primaryButtonTextColorDesktop;
-          }
-
-          .search-query .current-query-wrapper {
-            background-color: $primaryButtonColorDesktop;
-            color: $primaryButtonTextColorDesktop;
-            border-color: $primaryButtonColorDesktop;
           }
 
           .hidden-filter-controls-filter {
@@ -1207,6 +1195,12 @@
         .agenda-detail-overlay-panel {
           max-width: map-get($configuration, agendaMaxWidthTablet);
         }
+
+        .search-query .current-query-wrapper {
+          background-color: $primaryButtonColorTablet;
+          color: $primaryButtonTextColorTablet;
+          border-color: $primaryButtonColorTablet;
+        }
       }
 
       // Styles for desktop
@@ -1446,6 +1440,12 @@
         .search-results,
         .agenda-detail-overlay-panel {
           max-width: map-get($configuration, agendaMaxWidthDesktop);
+        }
+
+        .search-query .current-query-wrapper {
+          background-color: $primaryButtonColorDesktop;
+          color: $primaryButtonTextColorDesktop;
+          border-color: $primaryButtonColorDesktop;
         }
       }
     }
