@@ -46451,7 +46451,7 @@
               },
               {
                 "name": "panelImageBackgroundColor",
-                "default": "#ffffff",
+                "default": "$bodyBackground",
                 "columns": 12,
                 "styles": [
                   {
