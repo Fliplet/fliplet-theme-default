@@ -22455,7 +22455,7 @@
                 "columns": 12,
                 "styles": [
                   {
-                    "parentSelector": "[data-widget-package='com.fliplet.metro'][data-widget-version='1.0.0']",
+                    "parentSelector": "[data-widget-package='com.fliplet.metro'][data-widget-version='1.1.0']",
                     "selectors": ".metro-panels ul > li .metro-image",
                     "properties": ["background-color"]
                   }
