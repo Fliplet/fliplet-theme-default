@@ -22451,7 +22451,7 @@
             "fields": [
               {
                 "name": "gridImageBackgroundColor",
-                "default": "$bodyBackground",
+                "default": "transparent",
                 "columns": 12,
                 "styles": [
                   {
@@ -46451,7 +46451,7 @@
               },
               {
                 "name": "panelImageBackgroundColor",
-                "default": "$bodyBackground",
+                "default": "transparent",
                 "columns": 12,
                 "styles": [
                   {
