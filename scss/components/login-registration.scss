@@ -280,6 +280,10 @@
         line-height: map-get($configuration, loginButtonLineHeight);
         text-decoration: map-get($configuration, loginButtonTextDecoration);
         border-radius: map-get($configuration, loginButtonBorderRadius);
+        font-family: map-get($configuration, loginButtonTextFontFamily);
+        font-size: map-get($configuration, loginButtonTextFontSize);
+        font-weight: map-get($configuration, loginButtonFontWeight);
+        font-style: map-get($configuration, loginButtonFontStyle);
         margin: map-get($configuration, loginButtonMarginTop)
           map-get($configuration, loginButtonMarginRight)
           map-get($configuration, loginButtonMarginBottom)
@@ -288,12 +292,6 @@
           map-get($configuration, loginButtonPaddingRight)
           map-get($configuration, loginButtonPaddingBottom)
           map-get($configuration, loginButtonPaddingLeft);
-        @include fontOnly((
-          fontFamily: $loginButtonTextFontFamily,
-          fontSize: $loginButtonTextFontSize,
-          fontWeight: $loginButtonFontWeight,
-          fontStyle: $loginButtonFontStyle
-        ));
         @include borderOnly((
           borderSides: map-get($configuration, loginButtonBorderSides),
           borderWidth: map-get($configuration, loginButtonBorderWidth),
@@ -353,6 +351,10 @@
           line-height: map-get($configuration, loginButtonLineHeightTablet);
           text-decoration: map-get($configuration, loginButtonTextDecorationTablet);
           border-radius: map-get($configuration, loginButtonBorderRadiusTablet);
+          font-family: map-get($configuration, loginButtonTextFontFamilyTablet);
+          font-size: map-get($configuration, loginButtonTextFontSizeTablet);
+          font-weight: map-get($configuration, loginButtonFontWeightTablet);
+          font-style: map-get($configuration, loginButtonFontStyleTablet);
           margin: map-get($configuration, loginButtonMarginTopTablet)
             map-get($configuration, loginButtonMarginRightTablet)
             map-get($configuration, loginButtonMarginBottomTablet)
@@ -361,12 +363,6 @@
             map-get($configuration, loginButtonPaddingRightTablet)
             map-get($configuration, loginButtonPaddingBottomTablet)
             map-get($configuration, loginButtonPaddingLeftTablet);
-          @include fontOnly((
-            fontFamily: $loginButtonTextFontFamilyTablet,
-            fontSize: $loginButtonTextFontSizeTablet,
-            fontWeight: $loginButtonFontWeightTablet,
-            fontStyle: $loginButtonFontStyleTablet
-          ));
           @include borderOnly((
             borderSides: map-get($configuration, loginButtonBorderSidesTablet),
             borderWidth: map-get($configuration, loginButtonBorderWidthTablet),
@@ -428,6 +424,10 @@
           line-height: map-get($configuration, loginButtonLineHeightDesktop);
           text-decoration: map-get($configuration, loginButtonTextDecorationDesktop);
           border-radius: map-get($configuration, loginButtonBorderRadiusDesktop);
+          font-family: map-get($configuration, loginButtonTextFontFamilyDesktop);
+          font-size: map-get($configuration, loginButtonTextFontSizeDesktop);
+          font-weight: map-get($configuration, loginButtonFontWeightDesktop);
+          font-style: map-get($configuration, loginButtonFontStyleDesktop);
           margin: map-get($configuration, loginButtonMarginTopDesktop)
             map-get($configuration, loginButtonMarginRightDesktop)
             map-get($configuration, loginButtonMarginBottomDesktop)
@@ -436,12 +436,6 @@
             map-get($configuration, loginButtonPaddingRightDesktop)
             map-get($configuration, loginButtonPaddingBottomDesktop)
             map-get($configuration, loginButtonPaddingLeftDesktop);
-          @include fontOnly((
-            fonFamily: $loginButtonTextFontFamilyDesktop,
-            fontSize: $loginButtonTextFontSizeDesktop,
-            fontWeight: $loginButtonFontWeightDesktop,
-            fontStyle: $loginButtonFontStyleDesktop
-          ));
           @include borderOnly((
             borderSides: map-get($configuration, loginButtonBorderSidesDesktop),
             borderWidth: map-get($configuration, loginButtonBorderWidthDesktop),
