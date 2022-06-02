@@ -44768,7 +44768,7 @@
             "fields": [
               {
                 "name": "loginButtonTextFontFamily",
-                "default": "$quickTextFontFamily",
+                "default": "$paragraphFontFamily",
                 "styles": [
                   {
                     "selectors": ".btn-login, .btn-primary",
