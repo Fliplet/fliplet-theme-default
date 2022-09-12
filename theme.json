@@ -22036,7 +22036,7 @@
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
                     "selectors": [
-                      ".radio.radio-icon input[type='radio']+label > span.check",
+                      ".radio.radio-icon.readonly input[type='radio']+label > span.check",
                       ".checkbox.checkbox-icon.readonly input[type='checkbox']+label > span.check"
                     ],
                     "properties": ["border"]
