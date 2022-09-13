@@ -1006,16 +1006,16 @@
 
     .checkbox.checkbox-icon.readonly input[type="checkbox"]+label>span.check,
     .radio.radio-icon.readonly input[type="radio"]+label>span.check {
-      border: 1px solid map-get($configuration, formReadOnlyBackgroundColor);
+      border: 1px solid map-get($configuration, formReadOnlySelectedFillColor);
 
       // Styles for tablet
       @include above($tabletBreakpoint) {
-        border: 1px solid map-get($configuration, formReadOnlyBackgroundColorTablet);
+        border: 1px solid map-get($configuration, formReadOnlySelectedFillColorTablet);
       }
 
       // Styles for desktop
       @include above($desktopBreakpoint) {
-        border: 1px solid map-get($configuration, formReadOnlyBackgroundColorDesktop);
+        border: 1px solid map-get($configuration, formReadOnlySelectedFillColorDesktop);
       }
     }
 
