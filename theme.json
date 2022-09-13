@@ -22032,14 +22032,6 @@
                       ".select-proxy-display.readonly"
                     ],
                     "properties": ["background-color"]
-                  },
-                  {
-                    "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
-                    "selectors": [
-                      ".radio.radio-icon.readonly input[type='radio']+label > span.check",
-                      ".checkbox.checkbox-icon.readonly input[type='checkbox']+label > span.check"
-                    ],
-                    "properties": ["border"]
                   }
                 ],
                 "breakpoints": {
@@ -22068,6 +22060,14 @@
                       ".fileUpload div.row label[disabled]"
                     ],
                     "properties": ["background-color"]
+                  },
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
+                    "selectors": [
+                      ".radio.radio-icon.readonly input[type='radio']+label > span.check",
+                      ".checkbox.checkbox-icon.readonly input[type='checkbox']+label > span.check"
+                    ],
+                    "properties": ["border"]
                   },
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
