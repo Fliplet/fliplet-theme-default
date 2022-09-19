@@ -1624,23 +1624,20 @@
       }
     }
 
-    .fileUpload div.row label[disabled] {
-      background-color: map-get($configuration, formReadOnlySelectedFillColor);
-      border-radius: 31px;
-      opacity: 0.5;
+    .fileUpload-disabled label {
+      background-color: map-get($configuration, formReadOnlySelectedFillColor) !important;
+      border-radius: 31px !important;
 
       // Styles for tablet
       @include above($tabletBreakpoint) {
-        background-color: map-get($configuration, formReadOnlySelectedFillColorTablet);
-        border-radius: 31px;
-        opacity: 0.5;
+        background-color: map-get($configuration, formReadOnlySelectedFillColorTablet) !important;
+        border-radius: 31px !important;
       }
 
       // Styles for desktop
       @include above($desktopBreakpoint) {
-        background-color: map-get($configuration, formReadOnlySelectedFillColorTablet);
-        border-radius: 31px;
-        opacity: 0.5;
+        background-color: map-get($configuration, formReadOnlySelectedFillColorTablet) !important;
+        border-radius: 31px !important;
       }
     }
   }

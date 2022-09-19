@@ -22057,7 +22057,7 @@
                       ".checkbox.checkbox-icon.readonly input[type='checkbox']:checked+label > span.check",
                       ".radio.radio-icon.readonly input[type='radio']:checked+label > span.check",
                       ".select-proxy-display.readonly>.icon",
-                      ".fileUpload div.row label[disabled]"
+                      ".fileUpload-disabled label"
                     ],
                     "properties": ["background-color"]
                   },
