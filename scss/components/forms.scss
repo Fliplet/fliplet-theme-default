@@ -1391,26 +1391,21 @@
 
     [_type="flStarRating"] .rating-input~.readonly.rating-star .fa {
       &:before {
-        content: "\f005";
         -webkit-text-stroke: 1px map-get($configuration, formReadOnlySelectedFillColor);
       }
 
       // Styles for tablet
       @include above($tabletBreakpoint) {
-        content: "\f005";
+        &:before {
         -webkit-text-stroke: 1px map-get($configuration, formReadOnlySelectedFillColorTablet);
+        }
       }
 
       // Styles for desktop
       @include above($desktopBreakpoint) {
-        content: "\f005";
+        &:before {
         -webkit-text-stroke: 1px map-get($configuration, formReadOnlySelectedFillColorDesktop);
-      }
-    }
-
-    [_type="flStarRating"] .rating-input:checked~.readonly.rating-star .fa {
-      &:before {
-        -webkit-text-stroke: 0px;
+        }
       }
     }
 
@@ -1520,25 +1515,29 @@
     [_type="flSignature"] .signature-editor.readonly .field-signature {
       border-bottom: 1px solid map-get($configuration, formInputBorderColor);
 
-      canvas {
-        border: none !important;
+      // Styles for tablet
+      @include above($tabletBreakpoint) {
+        border-bottom: 1px solid map-get($configuration, formInputBorderColorTablet);
       }
+
+      // Styles for desktop
+      @include above($desktopBreakpoint) {
+        border-bottom: 1px solid map-get($configuration, formInputBorderColorDesktop);
+      }
+
     }
 
     .form-group div.mce-edit-area {
       background-color: map-get($configuration, formReadOnlyBackgroundColor);
-      border-width: 0px !important;
 
       // Styles for tablet
       @include above($tabletBreakpoint) {
         background-color: map-get($configuration, formReadOnlyBackgroundColorTablet);
-        border-width: 0px !important;
       }
 
       // Styles for desktop
       @include above($desktopBreakpoint) {
         background-color: map-get($configuration, formReadOnlyBackgroundColorDesktop);
-        border-width: 0px !important;
       }
     }
 
@@ -1626,18 +1625,15 @@
 
     .fileUpload-disabled label {
       background-color: map-get($configuration, formReadOnlySelectedFillColor) !important;
-      border-radius: 31px !important;
 
       // Styles for tablet
       @include above($tabletBreakpoint) {
         background-color: map-get($configuration, formReadOnlySelectedFillColorTablet) !important;
-        border-radius: 31px !important;
       }
 
       // Styles for desktop
       @include above($desktopBreakpoint) {
         background-color: map-get($configuration, formReadOnlySelectedFillColorTablet) !important;
-        border-radius: 31px !important;
       }
     }
   }
