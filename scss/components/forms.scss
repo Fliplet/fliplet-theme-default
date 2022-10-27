@@ -245,7 +245,19 @@
       formReadOnlyBackgroundColorDesktop: $formReadOnlyBackgroundColorDesktop,
       formReadOnlySelectedFillColor: $formReadOnlySelectedFillColor,
       formReadOnlySelectedFillColorTablet: $formReadOnlySelectedFillColorTablet,
-      formReadOnlySelectedFillColorDesktop: $formReadOnlySelectedFillColorDesktop
+      formReadOnlySelectedFillColorDesktop: $formReadOnlySelectedFillColorDesktop,
+      formSliderTrack: $formSliderTrack,
+      formSliderTrackTablet: $formSliderTrackTablet,
+      formSliderTrackDesktop: $formSliderTrackDesktop,
+      formSliderFill: $formSliderFill,
+      formSliderFillTablet: $formSliderFillTablet,
+      formSliderFillDesktop: $formSliderFillDesktop,
+      formSliderHandle: $formSliderHandle,
+      formSliderHandleTablet: $formSliderHandleTablet,
+      formSliderHandleDesktop: $formSliderHandleDesktop,
+      formSliderValue: $formSliderValue,
+      formSliderValueTablet: $formSliderValueTablet,
+      formSliderValueDesktop: $formSliderValueDesktop
     ),
     $options
   );
@@ -1728,6 +1740,95 @@
       // Styles for desktop
       @include above($desktopBreakpoint) {
         background-color: map-get($configuration, formReadOnlySelectedFillColorTablet) !important;
+      }
+    }
+
+    .form-group.fl-range-slider .range-slider {
+      background-color: map-get($configuration, formSliderTrack);
+
+      // Styles for tablet
+      @include above($tabletBreakpoint) {
+        background-color: map-get($configuration, formSliderTrackTablet);
+      }
+
+      // Styles for desktop
+      @include above($desktopBreakpoint) {
+        background-color: map-get($configuration, formSliderTrackDesktop);
+      }
+    }
+
+    .form-group.fl-range-slider .range-slider-fill {
+      background-color: map-get($configuration, formSliderFill);
+
+      // Styles for tablet
+      @include above($tabletBreakpoint) {
+        background-color: map-get($configuration, formSliderFillTablet);
+      }
+
+      // Styles for desktop
+      @include above($desktopBreakpoint) {
+        background-color: map-get($configuration, formSliderFillDesktop);
+      }
+    }
+
+    .form-group.fl-range-slider .range-slider-handle {
+      background-color: map-get($configuration, formSliderHandle);
+
+      // Styles for tablet
+      @include above($tabletBreakpoint) {
+        background-color: map-get($configuration, formSliderHandleTablet);
+      }
+
+      // Styles for desktop
+      @include above($desktopBreakpoint) {
+        background-color: map-get($configuration, formSliderHandleDesktop);
+      }
+    }
+
+    .form-group.fl-range-slider .range-slider-handle-value {
+      background-color: map-get($configuration, formSliderHandle);
+      color: map-get($configuration, formSliderValue);
+
+      // Styles for tablet
+      @include above($tabletBreakpoint) {
+        background-color: map-get($configuration, formSliderHandleTablet);
+        color: map-get($configuration, formSliderValueTablet);
+      }
+
+      // Styles for desktop
+      @include above($desktopBreakpoint) {
+        background-color: map-get($configuration, formSliderHandleDesktop);
+        color: map-get($configuration, formSliderValueDesktop);
+      }
+    }
+
+    .form-group.fl-range-slider.readonly .range-slider-handle,
+    .form-group.fl-range-slider.readonly .range-slider-handle-value,
+    .form-group.fl-range-slider.readonly .range-slider-fill {
+      background-color: map-get($configuration, formReadOnlySelectedFillColor);
+
+      // Styles for tablet
+      @include above($tabletBreakpoint) {
+        background-color: map-get($configuration, formReadOnlySelectedFillColorTablet);
+      }
+
+      // Styles for desktop
+      @include above($desktopBreakpoint) {
+        background-color: map-get($configuration, formReadOnlySelectedFillColorDesktop);
+      }
+    }
+
+    .form-group.fl-range-slider.readonly .range-slider {
+      background-color: map-get($configuration, formReadOnlyBackgroundColor);
+
+      // Styles for tablet
+      @include above($tabletBreakpoint) {
+        background-color: map-get($configuration, formReadOnlyBackgroundColorTablet);
+      }
+
+      // Styles for desktop
+      @include above($desktopBreakpoint) {
+        background-color: map-get($configuration, formReadOnlyBackgroundColorDesktop);
       }
     }
   }
