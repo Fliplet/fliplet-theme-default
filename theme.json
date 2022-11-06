@@ -22071,6 +22071,11 @@
                       ".form-group.fl-range-slider .range-slider-handle-value"
                     ],
                     "properties": ["background-color"]
+                  },
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
+                    "selectors": [".form-group.fl-range-slider .range-slider-handle-value:before"],
+                    "properties": ["border-top-color"]
                   }
                 ],
                 "breakpoints": {

@@ -1789,16 +1789,28 @@
       background-color: map-get($configuration, formSliderHandle);
       color: map-get($configuration, formSliderValue);
 
+      &:before {
+        border-top-color: map-get($configuration, formSliderHandle)
+      }
+
       // Styles for tablet
       @include above($tabletBreakpoint) {
         background-color: map-get($configuration, formSliderHandleTablet);
         color: map-get($configuration, formSliderValueTablet);
+
+        &:before {
+          border-top-color: map-get($configuration, formSliderHandleTablet)
+        }
       }
 
       // Styles for desktop
       @include above($desktopBreakpoint) {
         background-color: map-get($configuration, formSliderHandleDesktop);
         color: map-get($configuration, formSliderValueDesktop);
+
+        &:before {
+          border-top-color: map-get($configuration, formSliderHandleDesktop)
+        }
       }
     }
 
