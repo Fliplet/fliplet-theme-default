@@ -3,14 +3,14 @@ html.no-touchevents.js-focus-visible {
     &.focus-outline {
       &:focus-within {
         .range-slider-handle {
-          box-shadow: 0px 0px 0px $focusOutlineWidth $highlightColor;
+          box-shadow: 0px 0px 0px $focusOutlineWidth $focusOutlineColor;
         }
       }
 
       @include above($tabletBreakpoint) {
         &:focus-within {
           .range-slider-handle {
-            box-shadow: 0px 0px 0px $focusOutlineWidthTablet $highlightColor;
+            box-shadow: 0px 0px 0px $focusOutlineWidthTablet $focusOutlineColorTablet;
           }
         }
       }
@@ -18,7 +18,7 @@ html.no-touchevents.js-focus-visible {
       @include above($desktopBreakpoint) {
         &:focus-within {
           .range-slider-handle {
-            box-shadow: 0px 0px 0px $focusOutlineWidthDesktop $highlightColor;
+            box-shadow: 0px 0px 0px $focusOutlineWidthDesktop $focusOutlineColorDesktop;
           }
         }
       }
