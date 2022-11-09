@@ -20587,7 +20587,10 @@
                       ".select-proxy-display>.icon",
                       ".field-signature canvas",
                       ".form-group .mce-tinymce > .mce-container-body.mce-stack-layout",
-                      ".form-group .tinymce-mobile-outer-container:not(.tinymce-mobile-fullscreen-maximized) .tinymce-mobile-editor-socket"
+                      ".form-group .tinymce-mobile-outer-container:not(.tinymce-mobile-fullscreen-maximized) .tinymce-mobile-editor-socket",
+                      ".fl-matrix table",
+                      ".fl-matrix table td",
+                      ".fl-matrix table th"
                     ],
                     "properties": ["border"],
                     "type": "border",
@@ -21292,7 +21295,10 @@
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
-                    "selectors": ".form-group .input-group input.form-control",
+                    "selectors": [
+                      ".form-group .input-group input.form-control",
+                      ".fl-matrix table th"
+                    ],
                     "properties": ["font-family"]
                   }
                 ],
@@ -21315,7 +21321,10 @@
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
-                    "selectors": ".form-group .input-group input.form-control",
+                    "selectors": [
+                      ".form-group .input-group input.form-control",
+                      ".fl-matrix table th"
+                    ],
                     "properties": ["font-size"]
                   }
                 ],
@@ -21339,7 +21348,10 @@
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
-                    "selectors": ".form-group .input-group input.form-control",
+                    "selectors": [
+                      ".form-group .input-group input.form-control",
+                      ".fl-matrix table th"
+                    ],
                     "properties": ["color"]
                   }
                 ],
@@ -21362,7 +21374,10 @@
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
-                    "selectors": ".form-group .input-group input.form-control",
+                    "selectors": [
+                      ".form-group .input-group input.form-control",
+                      ".fl-matrix table th"
+                    ],
                     "properties": ["font-weight"]
                   }
                 ],
@@ -21385,7 +21400,10 @@
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
-                    "selectors": ".form-group .input-group input.form-control",
+                    "selectors": [
+                      ".form-group .input-group input.form-control",
+                      ".fl-matrix table th"
+                    ],
                     "properties": ["font-style"]
                   }
                 ],
@@ -21408,7 +21426,10 @@
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
-                    "selectors": ".form-group .input-group input.form-control",
+                    "selectors": [
+                      ".form-group .input-group input.form-control",
+                      ".fl-matrix table th"
+                    ],
                     "properties": ["text-decoration"]
                   }
                 ],
@@ -21433,7 +21454,10 @@
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
-                    "selectors": ".form-group .input-group input.form-control",
+                    "selectors": [
+                      ".form-group .input-group input.form-control",
+                      ".fl-matrix table th"
+                    ],
                     "properties": ["line-height"]
                   }
                 ],

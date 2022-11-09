@@ -1730,6 +1730,87 @@
         background-color: map-get($configuration, formReadOnlySelectedFillColorTablet) !important;
       }
     }
+
+    .fl-matrix table, .fl-matrix table td, .fl-matrix table th{
+      @include borderOnly(
+        (
+          borderSides: $formInputBorderSides,
+          borderWidth: $formInputBorderWidth,
+          borderStyle: $formInputBorderStyle,
+          borderColor: $formInputBorderColor
+        )
+      );
+
+      @include above($tabletBreakpoint) {
+        @include borderOnly(
+          (
+            borderSides: map-get($configuration, formInputBorderSidesTablet),
+            borderWidth: map-get($configuration, formInputBorderWidthTablet),
+            borderStyle: map-get($configuration, formInputBorderStyleTablet),
+            borderColor: map-get($configuration, formInputBorderColorTablet)
+          )
+        );
+      }
+
+      // Styles for desktop
+      @include above($desktopBreakpoint) {
+        @include borderOnly(
+          (
+            borderSides: map-get($configuration, formInputBorderSidesDesktop),
+            borderWidth: map-get($configuration, formInputBorderWidthDesktop),
+            borderStyle: map-get($configuration, formInputBorderStyleDesktop),
+            borderColor: map-get($configuration, formInputBorderColorDesktop)
+          )
+        );
+      }
+    }
+
+    .fl-matrix table th {
+      @include fontOnly(
+          (
+            fontFamily: map-get($configuration, formTextInputsFontFamily),
+            fontSize: map-get($configuration, formTextInputsFontSize),
+            fontLineHeight: map-get($configuration, formTextInputsLineHeight),
+            fontWeight: map-get($configuration, formTextInputsFontWeight),
+            fontStyle: map-get($configuration, formTextInputsItalic),
+            fontDecoration: map-get($configuration, formTextInputsUnderline)
+          )
+      );
+
+      color: map-get($configuration, formTextInputsFontColor);
+
+      // Styles for tablet
+      @include above($tabletBreakpoint) {
+        @include fontOnly(
+          (
+            fontFamily: map-get($configuration, formTextInputsFontFamilyTablet),
+            fontSize: map-get($configuration, formTextInputsFontSizeTablet),
+            fontLineHeight: map-get($configuration, formTextInputsLineHeightTablet),
+            fontWeight: map-get($configuration, formTextInputsFontWeightTablet),
+            fontStyle: map-get($configuration, formTextInputsItalicTablet),
+            fontDecoration: map-get($configuration, formTextInputsUnderlineTablet)
+          )
+        );
+
+        color: map-get($configuration, formTextInputsFontColorTablet);
+      }
+
+      // Styles for desktop
+      @include above($desktopBreakpoint) {
+        @include fontOnly(
+          (
+            fontFamily: map-get($configuration, formTextInputsFontFamilyDesktop),
+            fontSize: map-get($configuration, formTextInputsFontSizeDesktop),
+            fontLineHeight: map-get($configuration, formTextInputsLineHeightDesktop),
+            fontWeight: map-get($configuration, formTextInputsFontWeightDesktop),
+            fontStyle: map-get($configuration, formTextInputsItalicDesktop),
+            fontDecoration: map-get($configuration, formTextInputsUnderlineDesktop)
+          )
+        );
+
+        color: map-get($configuration, formTextInputsFontColorDesktop);
+      }
+    }
   }
 }
 
