@@ -22190,7 +22190,8 @@
                       ".fileUpload-disabled label",
                       ".form-group.fl-range-slider.readonly .range-slider-handle",
                       ".form-group.fl-range-slider.readonly .range-slider-handle-value",
-                      ".form-group.fl-range-slider.readonly .range-slider-fill"
+                      ".form-group.fl-range-slider.readonly .range-slider-fill",
+                      ".form-group.fl-range-slider.readonly .range-slider-handle-value::before"
                     ],
                     "properties": ["background-color"]
                   },

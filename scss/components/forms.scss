@@ -1830,6 +1830,20 @@
       }
     }
 
+    .form-group.fl-range-slider.readonly .range-slider-handle-value::before {
+      border-top-color: map-get($configuration, formReadOnlySelectedFillColor);
+
+      // Styles for tablet
+      @include above($tabletBreakpoint) {
+        border-top-color: map-get($configuration, formReadOnlySelectedFillColorTablet);
+      }
+
+      // Styles for desktop
+      @include above($desktopBreakpoint) {
+        border-top-color: map-get($configuration, formReadOnlySelectedFillColorDesktop);
+      }
+    }
+
     .form-group.fl-range-slider .range-slider-labels-label {
       @include fontOnly(
         (
