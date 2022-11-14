@@ -21292,7 +21292,10 @@
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
-                    "selectors": ".form-group .input-group input.form-control",
+                    "selectors": [
+                      ".form-group .input-group input.form-control",
+                      ".form-group.fl-range-slider .range-slider-labels-label"
+                    ],
                     "properties": ["font-family"]
                   }
                 ],
@@ -21315,7 +21318,10 @@
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
-                    "selectors": ".form-group .input-group input.form-control",
+                    "selectors": [
+                      ".form-group .input-group input.form-control",
+                      ".form-group.fl-range-slider .range-slider-labels-label"
+                    ],
                     "properties": ["font-size"]
                   }
                 ],
@@ -21339,7 +21345,10 @@
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
-                    "selectors": ".form-group .input-group input.form-control",
+                    "selectors": [
+                      ".form-group .input-group input.form-control",
+                      ".form-group.fl-range-slider .range-slider-labels-label"
+                    ],
                     "properties": ["color"]
                   }
                 ],
@@ -21362,7 +21371,10 @@
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
-                    "selectors": ".form-group .input-group input.form-control",
+                    "selectors": [
+                      ".form-group .input-group input.form-control",
+                      ".form-group.fl-range-slider .range-slider-labels-label"
+                    ],
                     "properties": ["font-weight"]
                   }
                 ],
@@ -21385,7 +21397,10 @@
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
-                    "selectors": ".form-group .input-group input.form-control",
+                    "selectors": [
+                      ".form-group .input-group input.form-control",
+                      ".form-group.fl-range-slider .range-slider-labels-label"
+                    ],
                     "properties": ["font-style"]
                   }
                 ],
@@ -21408,7 +21423,10 @@
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
-                    "selectors": ".form-group .input-group input.form-control",
+                    "selectors": [
+                      ".form-group .input-group input.form-control",
+                      ".form-group.fl-range-slider .range-slider-labels-label"
+                    ],
                     "properties": ["text-decoration"]
                   }
                 ],
@@ -21433,7 +21451,10 @@
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
-                    "selectors": ".form-group .input-group input.form-control",
+                    "selectors": [
+                      ".form-group .input-group input.form-control",
+                      ".form-group.fl-range-slider .range-slider-labels-label"
+                    ],
                     "properties": ["line-height"]
                   }
                 ],
@@ -22138,8 +22159,7 @@
                       ".form-group div.mce-edit-area",
                       ".form-group.fl-date-picker.readonly > .form-control",
                       ".form-group.fl-time-picker.readonly > .form-control",
-                      ".select-proxy-display.readonly",
-                      ".form-group.fl-range-slider.readonly .range-slider"
+                      ".select-proxy-display.readonly"
                     ],
                     "properties": ["background-color"]
                   }

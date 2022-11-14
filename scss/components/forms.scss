@@ -1830,17 +1830,50 @@
       }
     }
 
-    .form-group.fl-range-slider.readonly .range-slider {
-      background-color: map-get($configuration, formReadOnlyBackgroundColor);
+    .form-group.fl-range-slider .range-slider-labels-label {
+      @include fontOnly(
+        (
+          fontFamily: map-get($configuration, formTextInputsFontFamily),
+          fontSize: map-get($configuration, formTextInputsFontSize),
+          fontLineHeight: map-get($configuration, formTextInputsLineHeight),
+          fontWeight: map-get($configuration, formTextInputsFontWeight),
+          fontStyle: map-get($configuration, formTextInputsItalic),
+          fontDecoration: map-get($configuration, formTextInputsUnderline)
+        )
+      );
+
+      color: map-get($configuration, formTextInputsFontColor);
 
       // Styles for tablet
       @include above($tabletBreakpoint) {
-        background-color: map-get($configuration, formReadOnlyBackgroundColorTablet);
+        @include fontOnly(
+          (
+            fontFamily: map-get($configuration, formTextInputsFontFamilyTablet),
+            fontSize: map-get($configuration, formTextInputsFontSizeTablet),
+            fontLineHeight: map-get($configuration, formTextInputsLineHeightTablet),
+            fontWeight: map-get($configuration, formTextInputsFontWeightTablet),
+            fontStyle: map-get($configuration, formTextInputsItalicTablet),
+            fontDecoration: map-get($configuration, formTextInputsUnderlineTablet)
+          )
+        );
+
+        color: map-get($configuration, formTextInputsFontColorTablet);
       }
 
       // Styles for desktop
       @include above($desktopBreakpoint) {
-        background-color: map-get($configuration, formReadOnlyBackgroundColorDesktop);
+        @include fontOnly(
+          (
+            fontFamily: map-get($configuration, formTextInputsFontFamilyDesktop),
+            fontSize: map-get($configuration, formTextInputsFontSizeDesktop),
+            fontLineHeight: map-get($configuration, formTextInputsLineHeightDesktop),
+            fontWeight: map-get($configuration, formTextInputsFontWeightDesktop),
+            fontStyle: map-get($configuration, formTextInputsItalicDesktop),
+            fontDecoration: map-get($configuration, formTextInputsUnderlineDesktop)
+          )
+        );
+
+        color: map-get($configuration, formTextInputsFontColorDesktop);
       }
     }
   }
