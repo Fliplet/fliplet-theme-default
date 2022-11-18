@@ -17064,7 +17064,7 @@
             "fields": [
               {
                 "name": "chatOwnBubbleBackground",
-                "default": "$primaryButtonColor",
+                "default": "#dedfed",
                 "columns": 12,
                 "styles": [
                   {
