@@ -24334,7 +24334,7 @@
               },
               {
                 "name": "interactiveGraphMinHeight",
-                "default": "auto",
+                "default": "200px",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.interactive-map']",
