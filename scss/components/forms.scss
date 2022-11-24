@@ -245,7 +245,19 @@
       formReadOnlyBackgroundColorDesktop: $formReadOnlyBackgroundColorDesktop,
       formReadOnlySelectedFillColor: $formReadOnlySelectedFillColor,
       formReadOnlySelectedFillColorTablet: $formReadOnlySelectedFillColorTablet,
-      formReadOnlySelectedFillColorDesktop: $formReadOnlySelectedFillColorDesktop
+      formReadOnlySelectedFillColorDesktop: $formReadOnlySelectedFillColorDesktop,
+      formSliderTrack: $formSliderTrack,
+      formSliderTrackTablet: $formSliderTrackTablet,
+      formSliderTrackDesktop: $formSliderTrackDesktop,
+      formSliderFill: $formSliderFill,
+      formSliderFillTablet: $formSliderFillTablet,
+      formSliderFillDesktop: $formSliderFillDesktop,
+      formSliderHandle: $formSliderHandle,
+      formSliderHandleTablet: $formSliderHandleTablet,
+      formSliderHandleDesktop: $formSliderHandleDesktop,
+      formSliderValue: $formSliderValue,
+      formSliderValueTablet: $formSliderValueTablet,
+      formSliderValueDesktop: $formSliderValueDesktop
     ),
     $options
   );
@@ -1728,6 +1740,154 @@
       // Styles for desktop
       @include above($desktopBreakpoint) {
         background-color: map-get($configuration, formReadOnlySelectedFillColorTablet) !important;
+      }
+    }
+
+    .form-group.fl-range-slider .range-slider {
+      background-color: map-get($configuration, formSliderTrack);
+
+      // Styles for tablet
+      @include above($tabletBreakpoint) {
+        background-color: map-get($configuration, formSliderTrackTablet);
+      }
+
+      // Styles for desktop
+      @include above($desktopBreakpoint) {
+        background-color: map-get($configuration, formSliderTrackDesktop);
+      }
+    }
+
+    .form-group.fl-range-slider .range-slider-fill {
+      background-color: map-get($configuration, formSliderFill);
+
+      // Styles for tablet
+      @include above($tabletBreakpoint) {
+        background-color: map-get($configuration, formSliderFillTablet);
+      }
+
+      // Styles for desktop
+      @include above($desktopBreakpoint) {
+        background-color: map-get($configuration, formSliderFillDesktop);
+      }
+    }
+
+    .form-group.fl-range-slider .range-slider-handle {
+      background-color: map-get($configuration, formSliderHandle);
+
+      // Styles for tablet
+      @include above($tabletBreakpoint) {
+        background-color: map-get($configuration, formSliderHandleTablet);
+      }
+
+      // Styles for desktop
+      @include above($desktopBreakpoint) {
+        background-color: map-get($configuration, formSliderHandleDesktop);
+      }
+    }
+
+    .form-group.fl-range-slider .range-slider-handle-value {
+      background-color: map-get($configuration, formSliderHandle);
+      color: map-get($configuration, formSliderValue);
+
+      &:before {
+        border-top-color: map-get($configuration, formSliderHandle)
+      }
+
+      // Styles for tablet
+      @include above($tabletBreakpoint) {
+        background-color: map-get($configuration, formSliderHandleTablet);
+        color: map-get($configuration, formSliderValueTablet);
+
+        &:before {
+          border-top-color: map-get($configuration, formSliderHandleTablet)
+        }
+      }
+
+      // Styles for desktop
+      @include above($desktopBreakpoint) {
+        background-color: map-get($configuration, formSliderHandleDesktop);
+        color: map-get($configuration, formSliderValueDesktop);
+
+        &:before {
+          border-top-color: map-get($configuration, formSliderHandleDesktop)
+        }
+      }
+    }
+
+    .form-group.fl-range-slider.readonly .range-slider-handle,
+    .form-group.fl-range-slider.readonly .range-slider-handle-value,
+    .form-group.fl-range-slider.readonly .range-slider-fill {
+      background-color: map-get($configuration, formReadOnlySelectedFillColor);
+
+      // Styles for tablet
+      @include above($tabletBreakpoint) {
+        background-color: map-get($configuration, formReadOnlySelectedFillColorTablet);
+      }
+
+      // Styles for desktop
+      @include above($desktopBreakpoint) {
+        background-color: map-get($configuration, formReadOnlySelectedFillColorDesktop);
+      }
+    }
+
+    .form-group.fl-range-slider.readonly .range-slider-handle-value::before {
+      border-top-color: map-get($configuration, formReadOnlySelectedFillColor);
+
+      // Styles for tablet
+      @include above($tabletBreakpoint) {
+        border-top-color: map-get($configuration, formReadOnlySelectedFillColorTablet);
+      }
+
+      // Styles for desktop
+      @include above($desktopBreakpoint) {
+        border-top-color: map-get($configuration, formReadOnlySelectedFillColorDesktop);
+      }
+    }
+
+    .form-group.fl-range-slider .range-slider-labels-label {
+      @include fontOnly(
+        (
+          fontFamily: map-get($configuration, formTextInputsFontFamily),
+          fontSize: map-get($configuration, formTextInputsFontSize),
+          fontLineHeight: map-get($configuration, formTextInputsLineHeight),
+          fontWeight: map-get($configuration, formTextInputsFontWeight),
+          fontStyle: map-get($configuration, formTextInputsItalic),
+          fontDecoration: map-get($configuration, formTextInputsUnderline)
+        )
+      );
+
+      color: map-get($configuration, formTextInputsFontColor);
+
+      // Styles for tablet
+      @include above($tabletBreakpoint) {
+        @include fontOnly(
+          (
+            fontFamily: map-get($configuration, formTextInputsFontFamilyTablet),
+            fontSize: map-get($configuration, formTextInputsFontSizeTablet),
+            fontLineHeight: map-get($configuration, formTextInputsLineHeightTablet),
+            fontWeight: map-get($configuration, formTextInputsFontWeightTablet),
+            fontStyle: map-get($configuration, formTextInputsItalicTablet),
+            fontDecoration: map-get($configuration, formTextInputsUnderlineTablet)
+          )
+        );
+
+        color: map-get($configuration, formTextInputsFontColorTablet);
+      }
+
+      // Styles for desktop
+      @include above($desktopBreakpoint) {
+        @include fontOnly(
+          (
+            fontFamily: map-get($configuration, formTextInputsFontFamilyDesktop),
+            fontSize: map-get($configuration, formTextInputsFontSizeDesktop),
+            fontLineHeight: map-get($configuration, formTextInputsLineHeightDesktop),
+            fontWeight: map-get($configuration, formTextInputsFontWeightDesktop),
+            fontStyle: map-get($configuration, formTextInputsItalicDesktop),
+            fontDecoration: map-get($configuration, formTextInputsUnderlineDesktop)
+          )
+        );
+
+        color: map-get($configuration, formTextInputsFontColorDesktop);
       }
     }
   }

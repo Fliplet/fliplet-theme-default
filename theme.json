@@ -21133,7 +21133,10 @@
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
-                    "selectors": ".form-group .input-group input.form-control",
+                    "selectors": [
+                      ".form-group .input-group input.form-control",
+                      ".form-group.fl-range-slider .range-slider-labels-label"
+                    ],
                     "properties": ["font-family"]
                   }
                 ],
@@ -21156,7 +21159,10 @@
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
-                    "selectors": ".form-group .input-group input.form-control",
+                    "selectors": [
+                      ".form-group .input-group input.form-control",
+                      ".form-group.fl-range-slider .range-slider-labels-label"
+                    ],
                     "properties": ["font-size"]
                   }
                 ],
@@ -21180,7 +21186,10 @@
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
-                    "selectors": ".form-group .input-group input.form-control",
+                    "selectors": [
+                      ".form-group .input-group input.form-control",
+                      ".form-group.fl-range-slider .range-slider-labels-label"
+                    ],
                     "properties": ["color"]
                   }
                 ],
@@ -21203,7 +21212,10 @@
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
-                    "selectors": ".form-group .input-group input.form-control",
+                    "selectors": [
+                      ".form-group .input-group input.form-control",
+                      ".form-group.fl-range-slider .range-slider-labels-label"
+                    ],
                     "properties": ["font-weight"]
                   }
                 ],
@@ -21226,7 +21238,10 @@
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
-                    "selectors": ".form-group .input-group input.form-control",
+                    "selectors": [
+                      ".form-group .input-group input.form-control",
+                      ".form-group.fl-range-slider .range-slider-labels-label"
+                    ],
                     "properties": ["font-style"]
                   }
                 ],
@@ -21249,7 +21264,10 @@
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
-                    "selectors": ".form-group .input-group input.form-control",
+                    "selectors": [
+                      ".form-group .input-group input.form-control",
+                      ".form-group.fl-range-slider .range-slider-labels-label"
+                    ],
                     "properties": ["text-decoration"]
                   }
                 ],
@@ -21274,7 +21292,10 @@
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
-                    "selectors": ".form-group .input-group input.form-control",
+                    "selectors": [
+                      ".form-group .input-group input.form-control",
+                      ".form-group.fl-range-slider .range-slider-labels-label"
+                    ],
                     "properties": ["line-height"]
                   }
                 ],
@@ -21850,6 +21871,115 @@
             ]
           },
           {
+            "description": "Slider field",
+            "fields": [
+              {
+                "name": "formSliderTrack",
+                "default": "#eeeeee",
+                "columns": 12,
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
+                    "selectors": [".form-group.fl-range-slider .range-slider"],
+                    "properties": ["background-color"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "formSliderTrackTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "formSliderTrackDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "label": "Slider track",
+                "type": "color"
+              },
+              {
+                "name": "formSliderFill",
+                "default": "$secondaryColor",
+                "columns": 12,
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
+                    "selectors": [".form-group.fl-range-slider .range-slider-fill"],
+                    "properties": ["background-color"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "formSliderFillTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "formSliderFillDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "label": "Slider track (filled)",
+                "type": "color"
+              },
+              {
+                "name": "formSliderHandle",
+                "default": "$primaryButtonColor",
+                "columns": 12,
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
+                    "selectors": [
+                      ".form-group.fl-range-slider .range-slider-handle",
+                      ".form-group.fl-range-slider .range-slider-handle-value"
+                    ],
+                    "properties": ["background-color"]
+                  },
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
+                    "selectors": [".form-group.fl-range-slider .range-slider-handle-value:before"],
+                    "properties": ["border-top-color"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "formSliderHandleTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "formSliderHandleDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "label": "Slider handle",
+                "type": "color"
+              },
+              {
+                "name": "formSliderValue",
+                "default": "$primaryButtonTextColor",
+                "columns": 12,
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
+                    "selectors": [".form-group.fl-range-slider .range-slider-handle-value"],
+                    "properties": ["color"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "formSliderValueTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "formSliderValueDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "label": "Slider value",
+                "type": "color"
+              }
+            ]
+          },
+          {
             "description": "Read only field",
             "fields": [
               {
@@ -21896,7 +22026,11 @@
                       ".checkbox.checkbox-icon.readonly input[type='checkbox']:checked+label > span.check",
                       ".radio.radio-icon.readonly input[type='radio']:checked+label > span.check",
                       ".select-proxy-display.readonly>.icon",
-                      ".fileUpload-disabled label"
+                      ".fileUpload-disabled label",
+                      ".form-group.fl-range-slider.readonly .range-slider-handle",
+                      ".form-group.fl-range-slider.readonly .range-slider-handle-value",
+                      ".form-group.fl-range-slider.readonly .range-slider-fill",
+                      ".form-group.fl-range-slider.readonly .range-slider-handle-value::before"
                     ],
                     "properties": ["background-color"]
                   },
