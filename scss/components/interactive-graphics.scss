@@ -7,30 +7,28 @@
     $options
   );
 
-  @if map-get($configuration, menuType) == "none" {
+  @if map-get($configuration, height) == "auto" {
+    height: map-get($configuration, height);
+  } @else if map-get($configuration, menuType) == "none" {
     height: map-get($configuration, height);
     height: calc(
       #{map-get($configuration, height)} - (env(safe-area-inset-bottom) + env(safe-area-inset-top))
     );
-  }
-  @if map-get($configuration, menuType) == "top" {
+  } @else if map-get($configuration, menuType) == "top" {
     height: calc(#{map-get($configuration, height)} - 44px);
     height: calc(
       #{map-get($configuration, height)} -
         (44px + env(safe-area-inset-bottom) + env(safe-area-inset-top))
     );
-  }
-  @if map-get($configuration, menuType) == "bottom" {
+  } @else if map-get($configuration, menuType) == "bottom" {
     height: calc(#{map-get($configuration, height)} - 65px);
     height: calc(
       #{map-get($configuration, height)} -
         (65px + env(safe-area-inset-bottom) + env(safe-area-inset-top))
     );
-  }
-  @if map-get($configuration, menuType) == "top-with-notch" {
+  } @else if map-get($configuration, menuType) == "top-with-notch" {
     height: calc(#{map-get($configuration, height)} - (44px + 34px));
-  }
-  @if map-get($configuration, menuType) == "bottom-with-notch" {
+  } @else if map-get($configuration, menuType) == "bottom-with-notch" {
     height: calc(#{map-get($configuration, height)} - (65px + 34px));
   }
 }
