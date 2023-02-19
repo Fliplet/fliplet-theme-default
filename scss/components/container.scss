@@ -152,6 +152,7 @@
   } @else if $widgetInstanceId != "" {
     $instanceSelector: '#{$instanceSelector}[data-id="#{$widgetInstanceId}"]';
   }
+  $instanceSelector: '#{$instanceSelector} [data-view="html"]';
 
   #{$instanceSelector} {
     @if map-get($configuration, containerBackgroundType) == "Image" {
