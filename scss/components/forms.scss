@@ -612,7 +612,8 @@
         }
       }
 
-      .form-control {
+      .form-control,
+      .select-proxy-display {
         @include borderOnly(
           (
             borderSides: map-get($configuration, formInputBorderErrorSides),
