@@ -2000,19 +2000,11 @@
   @include above($tabletBreakpoint) {
     padding-top: $focusOutlineWidthTablet;
     padding-bottom: $focusOutlineWidthTablet;
-
-    .btn-primary > span {
-      padding-right: $primaryButtonPaddingRightTablet;
-    }
   }
 
   // Styles for desktop
   @include above($desktopBreakpoint) {
     padding-top: $focusOutlineWidthDesktop;
     padding-bottom: $focusOutlineWidthDesktop;
-
-    .btn-primary > span {
-      padding-right: $primaryButtonPaddingRightDesktop;
-    }
   }
 }
