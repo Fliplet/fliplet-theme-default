@@ -20440,7 +20440,10 @@
                       ".select-proxy-display>.icon",
                       ".field-signature canvas",
                       ".form-group .mce-tinymce > .mce-container-body.mce-stack-layout",
-                      ".form-group .tinymce-mobile-outer-container:not(.tinymce-mobile-fullscreen-maximized) .tinymce-mobile-editor-socket"
+                      ".form-group .tinymce-mobile-outer-container:not(.tinymce-mobile-fullscreen-maximized) .tinymce-mobile-editor-socket",
+                      ".fl-matrix table",
+                      ".fl-matrix table td",
+                      ".fl-matrix table th"
                     ],
                     "properties": ["border"],
                     "type": "border",
@@ -21135,7 +21138,8 @@
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
                     "selectors": [
                       ".form-group .input-group input.form-control",
-                      ".form-group.fl-range-slider .range-slider-labels-label"
+                      ".form-group.fl-range-slider .range-slider-labels-label",
+                      ".fl-matrix table th"
                     ],
                     "properties": ["font-family"]
                   }
@@ -21161,7 +21165,8 @@
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
                     "selectors": [
                       ".form-group .input-group input.form-control",
-                      ".form-group.fl-range-slider .range-slider-labels-label"
+                      ".form-group.fl-range-slider .range-slider-labels-label",
+                      ".fl-matrix table th"
                     ],
                     "properties": ["font-size"]
                   }
@@ -21188,7 +21193,8 @@
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
                     "selectors": [
                       ".form-group .input-group input.form-control",
-                      ".form-group.fl-range-slider .range-slider-labels-label"
+                      ".form-group.fl-range-slider .range-slider-labels-label",
+                      ".fl-matrix table th"
                     ],
                     "properties": ["color"]
                   }
@@ -21214,7 +21220,8 @@
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
                     "selectors": [
                       ".form-group .input-group input.form-control",
-                      ".form-group.fl-range-slider .range-slider-labels-label"
+                      ".form-group.fl-range-slider .range-slider-labels-label",
+                      ".fl-matrix table th"
                     ],
                     "properties": ["font-weight"]
                   }
@@ -21240,7 +21247,8 @@
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
                     "selectors": [
                       ".form-group .input-group input.form-control",
-                      ".form-group.fl-range-slider .range-slider-labels-label"
+                      ".form-group.fl-range-slider .range-slider-labels-label",
+                      ".fl-matrix table th"
                     ],
                     "properties": ["font-style"]
                   }
@@ -21266,7 +21274,8 @@
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
                     "selectors": [
                       ".form-group .input-group input.form-control",
-                      ".form-group.fl-range-slider .range-slider-labels-label"
+                      ".form-group.fl-range-slider .range-slider-labels-label",
+                      ".fl-matrix table th"
                     ],
                     "properties": ["text-decoration"]
                   }
@@ -21294,7 +21303,8 @@
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
                     "selectors": [
                       ".form-group .input-group input.form-control",
-                      ".form-group.fl-range-slider .range-slider-labels-label"
+                      ".form-group.fl-range-slider .range-slider-labels-label",
+                      ".fl-matrix table th"
                     ],
                     "properties": ["line-height"]
                   }
