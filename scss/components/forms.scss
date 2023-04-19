@@ -1791,7 +1791,7 @@
       color: map-get($configuration, formSliderValue);
 
       &:before {
-        border-top-color: map-get($configuration, formSliderHandle)
+        border-top-color: map-get($configuration, formSliderHandle);
       }
 
       // Styles for tablet
@@ -1800,7 +1800,7 @@
         color: map-get($configuration, formSliderValueTablet);
 
         &:before {
-          border-top-color: map-get($configuration, formSliderHandleTablet)
+          border-top-color: map-get($configuration, formSliderHandleTablet);
         }
       }
 
