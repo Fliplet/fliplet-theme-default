@@ -257,7 +257,13 @@
       formSliderHandleDesktop: $formSliderHandleDesktop,
       formSliderValue: $formSliderValue,
       formSliderValueTablet: $formSliderValueTablet,
-      formSliderValueDesktop: $formSliderValueDesktop
+      formSliderValueDesktop: $formSliderValueDesktop,
+      formTypeaheadBackgroundColor: $formTypeaheadBackgroundColor,
+      formTypeaheadBackgroundColorTablet: $formTypeaheadBackgroundColorTablet,
+      formTypeaheadBackgroundColorDesktop: $formTypeaheadBackgroundColorDesktop,
+      formTypeaheadTextColor: $formTypeaheadTextColor,
+      formTypeaheadTextColorTablet: $formTypeaheadTextColorTablet,
+      formTypeaheadTextColorDesktop: $formTypeaheadTextColorDesktop
     ),
     $options
   );
@@ -1812,6 +1818,26 @@
         &:before {
           border-top-color: map-get($configuration, formSliderHandleDesktop);
         }
+      }
+    }
+
+    .form-group.fl-typeahead .selectize-input > .item,
+    .form-group.fl-typeahead .selectize-input > .item.active,
+    .form-group.fl-typeahead .selectize-dropdown .option.active,
+    .form-group.fl-typeahead .selectize-dropdown .option.selected.active {
+      background-color: map-get($configuration, formTypeaheadBackgroundColor);
+      color: map-get($configuration, formTypeaheadTextColor);
+
+      // Styles for tablet
+      @include above($tabletBreakpoint) {
+        background-color: map-get($configuration, formTypeaheadBackgroundColorTablet);
+        color: map-get($configuration, formTypeaheadTextColorTablet);
+      }
+
+      // Styles for desktop
+      @include above($desktopBreakpoint) {
+        background-color: map-get($configuration, formTypeaheadBackgroundColorDesktop);
+        color: map-get($configuration, formTypeaheadTextColorDesktop);
       }
     }
 

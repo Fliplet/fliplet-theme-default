@@ -21990,6 +21990,68 @@
             ]
           },
           {
+            "description": "Typeahead (multi-select)",
+            "fields": [
+              {
+                "name": "formTypeaheadBackgroundColor",
+                "default": "#1AA5C7",
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
+                    "selectors": [
+                      ".form-group.fl-typeahead .selectize-input > .item",
+                      ".form-group.fl-typeahead .selectize-input > .item.active",
+                      ".form-group.fl-typeahead .selectize-dropdown .option.active",
+                      ".form-group.fl-typeahead .selectize-dropdown .option.selected.active"
+                    ],
+                    "properties": ["background-color"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "formTypeaheadBackgroundColorTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "formTypeaheadBackgroundColorDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "label": "Selected fill color",
+                "type": "color"
+              },
+              {
+                "name": "formTypeaheadTextColor",
+                "default": "#ffffff",
+                "columns": 12,
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
+                    "selectors": [
+                      ".form-group.fl-typeahead .selectize-input > .item",
+                      ".form-group.fl-typeahead .selectize-input > .item.active",
+                      ".form-group.fl-typeahead .selectize-dropdown .option.active",
+                      ".form-group.fl-typeahead .selectize-dropdown .option.selected.active"
+                    ],
+                    "properties": ["color"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "formTypeaheadTextColorTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "formTypeaheadTextColorDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "label": "Text color",
+                "type": "color"
+              }
+            ]
+          },
+          {
             "description": "Read only field",
             "fields": [
               {
