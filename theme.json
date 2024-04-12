@@ -23233,10 +23233,12 @@
                 "columns": 12,
                 "logic": {
                   "block": {
-                    "show": ["imageMarginAlign"]
+                    "show": ["imageMarginAlign"],
+                    "showMarginAuto": ["imageMarginLeft", "imageMarginRight"]
                   },
                   "inline-block": {
-                    "hide": ["imageMarginAlign"]
+                    "hide": ["imageMarginAlign"],
+                    "hideMarginAuto": ["imageMarginLeft", "imageMarginRight"]
                   }
                 },
                 "styles": [
