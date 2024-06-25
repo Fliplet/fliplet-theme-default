@@ -333,6 +333,32 @@
           );
         }
       }
+
+      .fl-login-form .btn-signup,
+      .btn-secondary {
+        width: map-get($configuration, loginButtonWidth);
+        min-width: map-get($configuration, loginButtonMinWidth);
+        max-width: map-get($configuration, loginButtonMaxWidth);
+        height: map-get($configuration, loginButtonHeight);
+        min-height: map-get($configuration, loginButtonMinHeight);
+        max-height: map-get($configuration, loginButtonMaxHeight);
+        line-height: map-get($configuration, loginButtonLineHeight);
+        text-decoration: map-get($configuration, loginButtonTextDecoration);
+        border-radius: map-get($configuration, loginButtonBorderRadius);
+        font-family: map-get($configuration, loginButtonTextFontFamily);
+        font-size: map-get($configuration, loginButtonTextFontSize);
+        font-weight: map-get($configuration, loginButtonFontWeight);
+        font-style: map-get($configuration, loginButtonFontStyle);
+        margin: map-get($configuration, loginButtonMarginTop)
+          map-get($configuration, loginButtonMarginRight)
+          map-get($configuration, loginButtonMarginBottom)
+          map-get($configuration, loginButtonMarginLeft);
+        padding: map-get($configuration, loginButtonPaddingTop)
+          map-get($configuration, loginButtonPaddingRight)
+          map-get($configuration, loginButtonPaddingBottom)
+          map-get($configuration, loginButtonPaddingLeft);
+      }
+
       // Styles for tablet
       @include above($tabletBreakpoint) {
         padding: map-get($configuration, loginPaddingTopTablet)
