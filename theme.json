@@ -44429,8 +44429,12 @@
                 "columns": 12,
                 "styles": [
                   {
-                    "selectors": ".fl-login-form .fl-email:before, .fl-login-form .fl-password:before",
+                    "selectors": ".fl-login-form label",
                     "properties": ["color", "border-right-color"]
+                  },
+                  {
+                    "selectors": ".fl-login-form .form-group .toggle-password-visibility",
+                    "properties": ["color"]
                   }
                 ],
                 "breakpoints": {
@@ -44835,7 +44839,7 @@
                 "default": "90%",
                 "styles": [
                   {
-                    "selectors": ".btn-login, .btn-primary",
+                    "selectors": ".btn-login, .btn-primary, .btn-signup",
                     "properties": ["width"]
                   }
                 ],
@@ -44858,7 +44862,7 @@
                 "default": "auto",
                 "styles": [
                   {
-                    "selectors": ".btn-login",
+                    "selectors": ".btn-login, .btn-signup",
                     "properties": ["min-width"]
                   }
                 ],
@@ -44881,7 +44885,7 @@
                 "default": "none",
                 "styles": [
                   {
-                    "selectors": ".btn-login",
+                    "selectors": ".btn-login, .btn-signup",
                     "properties": ["max-width"]
                   }
                 ],
@@ -44904,7 +44908,7 @@
                 "default": "48px",
                 "styles": [
                   {
-                    "selectors": ".btn-login",
+                    "selectors": ".btn-login, .btn-signup",
                     "properties": ["height"]
                   }
                 ],
@@ -44927,7 +44931,7 @@
                 "default": "auto",
                 "styles": [
                   {
-                    "selectors": ".btn-login",
+                    "selectors": ".btn-login, .btn-signup",
                     "properties": ["min-height"]
                   }
                 ],
@@ -44950,7 +44954,7 @@
                 "default": "none",
                 "styles": [
                   {
-                    "selectors": ".btn-login",
+                    "selectors": ".btn-login, .btn-signup",
                     "properties": ["max-height"]
                   }
                 ],
@@ -44979,7 +44983,7 @@
                 "columns": 6,
                 "styles": [
                   {
-                    "selectors": ".btn-login, .btn-primary",
+                    "selectors": ".btn-login, .btn-primary, .btn-signup",
                     "properties": ["margin-top"]
                   }
                 ],
@@ -45003,7 +45007,7 @@
                 "columns": 6,
                 "styles": [
                   {
-                    "selectors": ".btn-login",
+                    "selectors": ".btn-login, .btn-signup",
                     "properties": ["margin-right"]
                   }
                 ],
@@ -45027,7 +45031,7 @@
                 "columns": 6,
                 "styles": [
                   {
-                    "selectors": ".btn-login",
+                    "selectors": ".btn-login, .btn-signup",
                     "properties": ["margin-bottom"]
                   }
                 ],
@@ -45051,7 +45055,7 @@
                 "columns": 6,
                 "styles": [
                   {
-                    "selectors": ".btn-login",
+                    "selectors": ".btn-login, .btn-signup",
                     "properties": ["margin-left"]
                   }
                 ],
@@ -45080,7 +45084,7 @@
                 "columns": 6,
                 "styles": [
                   {
-                    "selectors": ".btn-login, .btn-primary",
+                    "selectors": ".btn-login, .btn-primary, .btn-signup",
                     "properties": ["padding-top"]
                   }
                 ],
@@ -45104,7 +45108,7 @@
                 "columns": 6,
                 "styles": [
                   {
-                    "selectors": ".btn-login",
+                    "selectors": ".btn-login, .btn-signup",
                     "properties": ["padding-right"]
                   }
                 ],
@@ -45128,7 +45132,7 @@
                 "columns": 6,
                 "styles": [
                   {
-                    "selectors": ".btn-login",
+                    "selectors": ".btn-login, .btn-signup",
                     "properties": ["padding-bottom"]
                   }
                 ],
@@ -45152,7 +45156,7 @@
                 "columns": 6,
                 "styles": [
                   {
-                    "selectors": ".btn-login",
+                    "selectors": ".btn-login, .btn-signup",
                     "properties": ["padding-left"]
                   }
                 ],
@@ -45180,7 +45184,7 @@
                 "default": "$paragraphFontFamily",
                 "styles": [
                   {
-                    "selectors": ".btn-login, .btn-primary",
+                    "selectors": ".btn-login, .btn-primary, .btn-signup",
                     "properties": ["font-family"]
                   }
                 ],
@@ -45201,7 +45205,7 @@
                 "default": "18px",
                 "styles": [
                   {
-                    "selectors": ".btn-login",
+                    "selectors": ".btn-login, .btn-signup",
                     "properties": ["font-size"]
                   }
                 ],
@@ -45223,7 +45227,7 @@
                 "default": "normal",
                 "styles": [
                   {
-                    "selectors": ".btn-login",
+                    "selectors": ".btn-login, .btn-signup",
                     "properties": ["font-weight"]
                   }
                 ],
@@ -45245,7 +45249,7 @@
                 "default": "normal",
                 "styles": [
                   {
-                    "selectors": ".btn-login",
+                    "selectors": ".btn-login, .btn-signup",
                     "properties": ["font-style"]
                   }
                 ],
@@ -45267,7 +45271,7 @@
                 "default": "24px",
                 "styles": [
                   {
-                    "selectors": ".btn-login",
+                    "selectors": ".btn-login, .btn-signup",
                     "properties": ["line-height"]
                   }
                 ],
@@ -45290,7 +45294,7 @@
                 "default": "none",
                 "styles": [
                   {
-                    "selectors": ".btn-login",
+                    "selectors": ".btn-login, .btn-signup",
                     "properties": ["text-decoration"]
                   }
                 ],
