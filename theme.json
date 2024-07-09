@@ -44429,8 +44429,12 @@
                 "columns": 12,
                 "styles": [
                   {
-                    "selectors": ".fl-login-form .fl-email:before, .fl-login-form .fl-password:before",
+                    "selectors": ".fl-login-form label",
                     "properties": ["color", "border-right-color"]
+                  },
+                  {
+                    "selectors": ".fl-login-form .form-group .toggle-password-visibility",
+                    "properties": ["color"]
                   }
                 ],
                 "breakpoints": {

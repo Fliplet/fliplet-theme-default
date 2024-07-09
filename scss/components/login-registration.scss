@@ -260,10 +260,17 @@
       padding: map-get($configuration, loginPaddingTop) map-get($configuration, loginPaddingRight)
         map-get($configuration, loginPaddingBottom) map-get($configuration, loginPaddingLeft);
 
-      .fl-login-form .fl-email:before,
-      .fl-login-form .fl-password:before {
+      .fl-login-form .form-group label {
         color: map-get($configuration, iconColor);
         border-right-color: map-get($configuration, iconColor);
+      }
+
+      .fl-login-form .form-group .toggle-password-visibility {
+        color: map-get($configuration, iconColor);
+      }
+
+      .fl-login-form .form-group .toggle-password-visibility:focus-visible {
+        outline-color: map-get($configuration, iconColor);
       }
 
       .fl-login-form .btn-login,
@@ -366,10 +373,17 @@
           map-get($configuration, loginPaddingBottomTablet)
           map-get($configuration, loginPaddingLeftTablet);
 
-        .fl-login-form .fl-email:before,
-        .fl-login-form .fl-password:before {
+        .fl-login-form .form-group label {
           color: map-get($configuration, iconColorTablet);
           border-right-color: map-get($configuration, iconColorTablet);
+        }
+
+        .fl-login-form .form-group .toggle-password-visibility {
+          color: map-get($configuration, iconColorTablet);
+        }
+
+        .fl-login-form .form-group .toggle-password-visibility:focus-visible {
+          outline-color: map-get($configuration, iconColorTablet);
         }
 
         .fl-login-form .btn-login {
@@ -447,10 +461,17 @@
           map-get($configuration, loginPaddingBottomDesktop)
           map-get($configuration, loginPaddingLeftDesktop);
 
-        .fl-login-form .fl-email:before,
-        .fl-login-form .fl-password:before {
+        .fl-login-form .form-group label {
           color: map-get($configuration, iconColorDesktop);
           border-right-color: map-get($configuration, iconColorDesktop);
+        }
+
+        .fl-login-form .form-group .toggle-password-visibility {
+          color: map-get($configuration, iconColorDesktop);
+        }
+
+        .fl-login-form .form-group .toggle-password-visibility:focus-visible {
+          outline-color: map-get($configuration, iconColorDesktop);
         }
 
         .fl-login-form .btn-login {
@@ -562,8 +583,7 @@
       }
     }
 
-    .fl-login-form .fl-email:before,
-    .fl-login-form .fl-password:before {
+    .fl-login-form .form-group label {
       color: $chevronSeparator;
       border-right-color: $chevronSeparator;
 
@@ -577,6 +597,34 @@
       @include above($desktopBreakpoint) {
         color: $chevronSeparatorDesktop;
         border-right-color: $chevronSeparatorDesktop;
+      }
+    }
+
+    .fl-login-form .form-group .toggle-password-visibility {
+      color: $chevronSeparator;
+
+      // Styles for tablet
+      @include above($tabletBreakpoint) {
+        color: $chevronSeparatorTablet;
+      }
+
+      // Styles for desktop
+      @include above($desktopBreakpoint) {
+        color: $chevronSeparatorDesktop;
+      }
+    }
+
+    .fl-login-form .form-group .toggle-password-visibility:focus-visible {
+      outline-color: $chevronSeparator;
+
+      // Styles for tablet
+      @include above($tabletBreakpoint) {
+        color: $chevronSeparatorTablet;
+      }
+
+      // Styles for desktop
+      @include above($desktopBreakpoint) {
+        color: $chevronSeparatorDesktop;
       }
     }
 
