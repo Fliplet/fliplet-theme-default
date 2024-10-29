@@ -263,10 +263,7 @@
       formTypeaheadBackgroundColorDesktop: $formTypeaheadBackgroundColorDesktop,
       formTypeaheadTextColor: $formTypeaheadTextColor,
       formTypeaheadTextColorTablet: $formTypeaheadTextColorTablet,
-      formTypeaheadTextColorDesktop: $formTypeaheadTextColorDesktop,
-      formMapFieldHeight: $formMapFieldHeight,
-      formMapFieldHeightTablet: $formMapFieldHeightTablet,
-      formMapFieldHeightDesktop: $formMapFieldHeightDesktop
+      formTypeaheadTextColorDesktop: $formTypeaheadTextColorDesktop
     ),
     $options
   );
@@ -1841,20 +1838,6 @@
       @include above($desktopBreakpoint) {
         background-color: map-get($configuration, formTypeaheadBackgroundColorDesktop);
         color: map-get($configuration, formTypeaheadTextColorDesktop);
-      }
-    }
-
-    .fl-map-field {
-      height: map-get($configuration, formMapFieldHeight);
-
-      // Styles for tablet
-      @include above($tabletBreakpoint) {
-        height: map-get($configuration, formMapFieldHeightTablet);
-      }
-
-      // Styles for desktop
-      @include above($desktopBreakpoint) {
-        height: map-get($configuration, formMapFieldHeightDesktop);
       }
     }
 
