@@ -151,6 +151,18 @@
         }
       }
     }
+
+    .slider {
+      background-color: $formInputBorderColor;
+    }
+
+    input:checked + .slider {
+      background-color: $highlightColor;
+    }
+
+    .notifications-toolbar > div > span {
+      color: $quickTextColor;
+    }
   }
 }
 
