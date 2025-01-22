@@ -1,12 +1,27 @@
+// Touch-aware breakpoint mixins
+// The +0.02 is a hack to make sure the desktop styles are applied on 1024px desktops and mobile styles are applied on 1024px tablets
+
 @mixin above ($breakpoint) {
-  @media only screen and (min-width: $breakpoint) {
-    @content;
+  @if $breakpoint == 1024px {
+    @media only screen and (min-width: $breakpoint) and (min-aspect-ratio: 1/1), (min-width: #{$breakpoint + 0.02}) and (max-aspect-ratio: 1/1) {
+      @content;
+    }
+  } @else {
+    @media only screen and (min-width: $breakpoint) {
+      @content;
+    }
   }
 }
 
 @mixin below ($breakpoint) {
-  @media only screen and (max-width: $breakpoint) {
-    @content;
+  @if $breakpoint == 1024px {
+    @media only screen and (max-width: #{$breakpoint}) and (min-aspect-ratio: 1/1), (max-width: #{$breakpoint + 0.02}) and (max-aspect-ratio: 1/1) {
+      @content;
+    }
+  } @else {
+    @media only screen and (max-width: $breakpoint) {
+      @content;
+    }
   }
 }
 
