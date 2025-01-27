@@ -1,3 +1,32 @@
+@mixin responsiveProperty($property, $configKey) {
+  $value: map-get($configuration, $configKey);
+  $valueTablet: map-get($configuration, #{$configKey}Tablet);
+  $valueDesktop: map-get($configuration, #{$configKey}Desktop);
+
+  #{$property}: $value;
+
+  @if $valueTablet != null {
+    @include above($tabletBreakpoint) {
+      #{$property}: $valueTablet;
+    }
+  }
+
+  @if $valueDesktop != null {
+    @include above($desktopBreakpoint) {
+      #{$property}: $valueDesktop;
+    }
+  }
+}
+
+@mixin responsiveFontProperties($prefix) {
+  @include responsiveProperty('font-family', #{$prefix}FontFamily);
+  @include responsiveProperty('font-size', #{$prefix}FontSize);
+  @include responsiveProperty('line-height', #{$prefix}LineHeight);
+  @include responsiveProperty('font-weight', #{$prefix}FontWeight);
+  @include responsiveProperty('font-style', #{$prefix}Italic);
+  @include responsiveProperty('text-decoration', #{$prefix}Underline);
+}
+
 @mixin newsFeed($options: (), $widgetInstanceId: "", $widgetInstanceUUID: "") {
   $configuration: map-merge(
     (
@@ -352,143 +381,50 @@
   }
 
   #{$layoutSelector} {
-    position: map-get($configuration, newsFeedPosition) !important;
-    z-index: map-get($configuration, newsFeedIndex);
-
-    @if map-get($configuration, newsFeedPosition) == "relative" {
-      @if map-get($configuration, newsFeedVisibility) == "visible" {
-        display: map-get($configuration, newsFeedDisplay) !important;
-      } @else {
-        display: none !important;
-      }
+    @include responsiveProperty('position', 'newsFeedPosition');
+    @include responsiveProperty('z-index', 'newsFeedIndex');
+    @include responsiveProperty('width', 'newsFeedWidth');
+    @include responsiveProperty('max-width', 'newsFeedMaxWidth');
+    
+    // Handle visibility
+    @if map-get($configuration, newsFeedVisibility) == "visible" {
+      @include responsiveProperty('display', 'newsFeedDisplay');
     } @else {
-      @if map-get($configuration, newsFeedVisibility) == "visible" {
-        display: block !important;
-      } @else {
-        display: none !important;
-      }
-
-      top: map-get($configuration, newsFeedPositionTop);
-      right: map-get($configuration, newsFeedPositionRight);
-      bottom: map-get($configuration, newsFeedPositionBottom);
-      left: map-get($configuration, newsFeedPositionLeft);
+      display: none !important;
     }
 
-    width: map-get($configuration, newsFeedWidth);
-    max-width: map-get($configuration, newsFeedMaxWidth);
-    margin: map-get($configuration, newsFeedMarginTop) map-get($configuration, newsFeedMarginRight)
-      map-get($configuration, newsFeedMarginBottom) map-get($configuration, newsFeedMarginLeft);
-
-    padding: map-get($configuration, newsFeedPaddingTop)
-      map-get($configuration, newsFeedPaddingRight) map-get($configuration, newsFeedPaddingBottom)
-      map-get($configuration, newsFeedPaddingLeft);
-
-    // Styles for tablet
-    @include above($tabletBreakpoint) {
-      position: map-get($configuration, newsFeedPositionTablet) !important;
-      z-index: map-get($configuration, newsFeedIndexTablet);
-
-      @if map-get($configuration, newsFeedPositionTablet) == "relative" {
-        @if map-get($configuration, newsFeedVisibilityTablet) == "visible" {
-          display: map-get($configuration, newsFeedDisplayTablet) !important;
-        } @else {
-          display: none !important;
-        }
-      } @else {
-        @if map-get($configuration, newsFeedVisibilityTablet) == "visible" {
-          display: block !important;
-        } @else {
-          display: none !important;
-        }
-
-        top: map-get($configuration, newsFeedPositionTopTablet);
-        right: map-get($configuration, newsFeedPositionRightTablet);
-        bottom: map-get($configuration, newsFeedPositionBottomTablet);
-        left: map-get($configuration, newsFeedPositionLeftTablet);
-      }
-
-      width: map-get($configuration, newsFeedWidthTablet);
-      max-width: map-get($configuration, newsFeedMaxWidthTablet);
-      margin: map-get($configuration, newsFeedMarginTopTablet)
-        map-get($configuration, newsFeedMarginRightTablet)
-        map-get($configuration, newsFeedMarginBottomTablet)
-        map-get($configuration, newsFeedMarginLeftTablet);
-
-      padding: map-get($configuration, newsFeedPaddingTopTablet)
-        map-get($configuration, newsFeedPaddingRightTablet)
-        map-get($configuration, newsFeedPaddingBottomTablet)
-        map-get($configuration, newsFeedPaddingLeftTablet);
+    // Handle position-based properties
+    @if map-get($configuration, newsFeedPosition) != "relative" {
+      @include responsiveProperty('top', 'newsFeedPositionTop');
+      @include responsiveProperty('right', 'newsFeedPositionRight');
+      @include responsiveProperty('bottom', 'newsFeedPositionBottom');
+      @include responsiveProperty('left', 'newsFeedPositionLeft');
     }
 
-    // Styles for desktop
-    @include above($desktopBreakpoint) {
-      position: map-get($configuration, newsFeedPositionDesktop) !important;
-      z-index: map-get($configuration, newsFeedIndexDesktop);
+    // Handle margins
+    @include responsiveProperty('margin-left', 'newsFeedMarginLeft');
+    @include responsiveProperty('margin-right', 'newsFeedMarginRight');
+    @include responsiveProperty('margin-bottom', 'newsFeedMarginBottom');
+    @include responsiveProperty('margin-top', 'newsFeedMarginTop');
 
-      @if map-get($configuration, newsFeedPositionDesktop) == "relative" {
-        @if map-get($configuration, newsFeedVisibilityDesktop) == "visible" {
-          display: map-get($configuration, newsFeedDisplayDesktop) !important;
-        } @else {
-          display: none !important;
-        }
-      } @else {
-        @if map-get($configuration, newsFeedVisibilityDesktop) == "visible" {
-          display: block !important;
-        } @else {
-          display: none !important;
-        }
-
-        top: map-get($configuration, newsFeedPositionTopDesktop);
-        right: map-get($configuration, newsFeedPositionRightDesktop);
-        bottom: map-get($configuration, newsFeedPositionBottomDesktop);
-        left: map-get($configuration, newsFeedPositionLeftDesktop);
-      }
-
-      width: map-get($configuration, newsFeedWidthDesktop);
-      max-width: map-get($configuration, newsFeedMaxWidthDesktop);
-      margin: map-get($configuration, newsFeedMarginTopDesktop)
-        map-get($configuration, newsFeedMarginRightDesktop)
-        map-get($configuration, newsFeedMarginBottomDesktop)
-        map-get($configuration, newsFeedMarginLeftDesktop);
-
-      padding: map-get($configuration, newsFeedPaddingTopDesktop)
-        map-get($configuration, newsFeedPaddingRightDesktop)
-        map-get($configuration, newsFeedPaddingBottomDesktop)
-        map-get($configuration, newsFeedPaddingLeftDesktop);
-    }
+    // Handle padding
+    @include responsiveProperty('padding-top', 'newsFeedPaddingTop');
+    @include responsiveProperty('padding-right', 'newsFeedPaddingRight');
+    @include responsiveProperty('padding-bottom', 'newsFeedPaddingBottom');
+    @include responsiveProperty('padding-left', 'newsFeedPaddingLeft');
 
     .dynamic-list-add-item {
-      background-color: map-get($configuration, newsFeedAddButtonBackground);
+      @include responsiveProperty('background-color', 'newsFeedAddButtonBackground');
 
       .fa-plus {
-        color: map-get($configuration, newsFeedAddButtonIcon);
-      }
-    }
-
-    @include above($tabletBreakpoint) {
-      .dynamic-list-add-item {
-        background-color: map-get($configuration, newsFeedAddButtonBackgroundTablet);
-
-        .fa-plus {
-          color: map-get($configuration, newsFeedAddButtonIconTablet);
-        }
-      }
-    }
-
-    @include above($desktopBreakpoint) {
-      .dynamic-list-add-item {
-        background-color: map-get($configuration, newsFeedAddButtonBackgroundDesktop);
-
-        .fa-plus {
-          color: map-get($configuration, newsFeedAddButtonIconDesktop);
-        }
+        @include responsiveProperty('color', 'newsFeedAddButtonIcon');
       }
     }
 
     /* COMMENTS */
     .news-feed-comment-panel,
     .new-news-feed-comment-panel {
-      background: map-get($configuration, lfdCommentsBackgroundColor);
+      @include responsiveProperty('background', 'lfdCommentsBackgroundColor');
 
       .loading-holder {
         color: rgba(map-get($configuration, lfdCommentsFontColor), 0.4);
@@ -496,16 +432,16 @@
 
       .comments-offline {
         background-color: rgba(map-get($configuration, lfdCommentsFontColor), 0.4);
-        color: map-get($configuration, lfdCommentsFontColor);
+        @include responsiveProperty('color', 'lfdCommentsFontColor');
       }
 
       .news-feed-comment-panel-header {
-        background-color: map-get($configuration, lfdCommentsBackgroundColor);
-        color: map-get($configuration, lfdCommentsFontColor);
+        @include responsiveProperty('background-color', 'lfdCommentsBackgroundColor');
+        @include responsiveProperty('color', 'lfdCommentsFontColor');
       }
 
       .news-feed-comment-input-holder {
-        background: map-get($configuration, lfdCommentsBackgroundColor);
+        @include responsiveProperty('background', 'lfdCommentsBackgroundColor');
         border-color: rgba(map-get($configuration, lfdCommentsFontColor), 0.1);
 
         .cancel {
@@ -530,13 +466,13 @@
           .btn.save {
             border-color: $highlightColor;
             background-color: $highlightColor;
-            color: $primaryButtonTextColor;
+            @include responsiveProperty('color', 'primaryButtonTextColor');
           }
         }
       }
 
       .top-comment-holder {
-        background-color: map-get($configuration, lfdCommentsBackgroundColor);
+        @include responsiveProperty('background-color', 'lfdCommentsBackgroundColor');
       }
 
       .fl-individual-comment.editing .top-comment-holder {
@@ -549,186 +485,32 @@
 
       textarea[data-comment-body] {
         background-color: transparent;
-        color: map-get($configuration, lfdCommentsFontColor);
+        @include responsiveProperty('color', 'lfdCommentsFontColor');
 
         ~ .typeahead.dropdown-menu {
           border-color: rgba(map-get($configuration, lfdCommentsFontColor), 0.1);
 
           > .active > a {
             background-color: $highlightColor;
-            color: $primaryButtonTextColor;
+            @include responsiveProperty('color', 'primaryButtonTextColor');
           }
         }
       }
 
       .active .mention_username {
-        color: $primaryButtonTextColor;
-      }
-
-      // Styles for tablet
-      @include above($tabletBreakpoint) {
-        background: map-get($configuration, lfdCommentsBackgroundColorTablet);
-
-        .loading-holder {
-          color: rgba(map-get($configuration, lfdCommentsFontColorTablet), 0.4);
-        }
-
-        .comments-offline {
-          background-color: rgba(map-get($configuration, lfdCommentsFontColorTablet), 0.4);
-          color: map-get($configuration, lfdCommentsFontColorTablet);
-        }
-
-        .news-feed-comment-panel-header {
-          background-color: map-get($configuration, lfdCommentsBackgroundColorTablet);
-          color: map-get($configuration, lfdCommentsFontColorTablet);
-        }
-
-        .news-feed-comment-input-holder {
-          background: map-get($configuration, lfdCommentsBackgroundColorTablet);
-          border-color: rgba(map-get($configuration, lfdCommentsFontColorTablet), 0.1);
-
-          .cancel {
-            color: rgba(map-get($configuration, lfdCommentsFontColorTablet), 0.7);
-
-            &:hover,
-            &:focus,
-            &:active:hover,
-            &:active:focus {
-              color: rgba(map-get($configuration, lfdCommentsFontColorTablet), 0.7);
-            }
-          }
-
-          .btn.comment,
-          .btn.save {
-            border-color: rgba(map-get($configuration, lfdCommentsFontColorTablet), 0.3);
-            color: rgba(map-get($configuration, lfdCommentsFontColorTablet), 0.3);
-          }
-
-          &.ready {
-            .btn.comment,
-            .btn.save {
-              color: $primaryButtonTextColorTablet;
-            }
-          }
-        }
-
-        .top-comment-holder {
-          background-color: map-get($configuration, lfdCommentsBackgroundColorTablet);
-        }
-
-        .fl-individual-comment.editing .top-comment-holder {
-          background-color: rgba(map-get($configuration, lfdCommentsFontColorTablet), 0.08);
-        }
-
-        .fl-comment-thumb {
-          background-color: rgba(map-get($configuration, lfdCommentsFontColorTablet), 0.04);
-        }
-
-        textarea[data-comment-body] {
-          background-color: transparent;
-          color: map-get($configuration, lfdCommentsFontColorTablet);
-
-          ~ .typeahead.dropdown-menu {
-            border-color: rgba(map-get($configuration, lfdCommentsFontColorTablet), 0.1);
-
-            > .active > a {
-              color: $primaryButtonTextColorTablet;
-            }
-          }
-        }
-
-        .active .mention_username {
-          color: $primaryButtonTextColorTablet;
-        }
-      }
-
-      // Styles for desktop
-      @include above($desktopBreakpoint) {
-        background: map-get($configuration, lfdCommentsBackgroundColorDesktop);
-
-        .loading-holder {
-          color: rgba(map-get($configuration, lfdCommentsFontColorDesktop), 0.4);
-        }
-
-        .comments-offline {
-          background-color: rgba(map-get($configuration, lfdCommentsFontColorDesktop), 0.4);
-          color: map-get($configuration, lfdCommentsFontColorDesktop);
-        }
-
-        .news-feed-comment-panel-header {
-          background-color: map-get($configuration, lfdCommentsBackgroundColorDesktop);
-          color: map-get($configuration, lfdCommentsFontColorDesktop);
-        }
-
-        .news-feed-comment-input-holder {
-          background: map-get($configuration, lfdCommentsBackgroundColorDesktop);
-          border-color: rgba(map-get($configuration, lfdCommentsFontColorDesktop), 0.1);
-
-          .cancel {
-            color: rgba(map-get($configuration, lfdCommentsFontColorDesktop), 0.7);
-
-            &:hover,
-            &:focus,
-            &:active:hover,
-            &:active:focus {
-              color: rgba(map-get($configuration, lfdCommentsFontColorDesktop), 0.7);
-            }
-          }
-
-          .btn.comment,
-          .btn.save {
-            border-color: rgba(map-get($configuration, lfdCommentsFontColorDesktop), 0.3);
-            color: rgba(map-get($configuration, lfdCommentsFontColorDesktop), 0.3);
-          }
-
-          &.ready {
-            .btn.comment,
-            .btn.save {
-              color: $primaryButtonTextColorDesktop;
-            }
-          }
-        }
-
-        .top-comment-holder {
-          background-color: map-get($configuration, lfdCommentsBackgroundColorDesktop);
-        }
-
-        .fl-individual-comment.editing .top-comment-holder {
-          background-color: rgba(map-get($configuration, lfdCommentsFontColorDesktop), 0.08);
-        }
-
-        .fl-comment-thumb {
-          background-color: rgba(map-get($configuration, lfdCommentsFontColorDesktop), 0.04);
-        }
-
-        textarea[data-comment-body] {
-          background-color: transparent;
-          color: map-get($configuration, lfdCommentsFontColorDesktop);
-
-          ~ .typeahead.dropdown-menu {
-            border-color: rgba(map-get($configuration, lfdCommentsFontColorDesktop), 0.1);
-
-            > .active > a {
-              color: $primaryButtonTextColorDesktop;
-            }
-          }
-        }
-
-        .active .mention_username {
-          color: $primaryButtonTextColorDesktop;
-        }
+        @include responsiveProperty('color', 'primaryButtonTextColor');
       }
     }
 
     .new-news-feed-list-container .news-feed-search-filter-overlay {
       .news-feed-overlay-wrapper {
-        background-color: map-get($configuration, newsFeedFiltersOverlayBackground);
-        color: map-get($configuration, newsFeedOverlayFontColor);
+        @include responsiveProperty('background-color', 'newsFeedFiltersOverlayBackground');
+        @include responsiveProperty('color', 'newsFeedOverlayFontColor');
       }
 
       .news-feed-overlay-header {
-        background-color: map-get($configuration, newsFeedFiltersOverlayBackground);
-        color: map-get($configuration, newsFeedOverlayFontColor);
+        @include responsiveProperty('background-color', 'newsFeedFiltersOverlayBackground');
+        @include responsiveProperty('color', 'newsFeedOverlayFontColor');
       }
 
       .hidden-filter-controls-filter {
@@ -749,68 +531,54 @@
           }
         }
       }
+    }
 
-      // Styles for tablet
-      @include above($tabletBreakpoint) {
-        .news-feed-overlay-wrapper {
-          background-color: map-get($configuration, newsFeedFiltersOverlayBackgroundTablet);
-          color: map-get($configuration, newsFeedOverlayFontColorTablet);
-        }
-
-        .news-feed-overlay-header {
-          background-color: map-get($configuration, newsFeedFiltersOverlayBackgroundTablet);
-          color: map-get($configuration, newsFeedOverlayFontColorTablet);
-        }
-
-        .hidden-filter-controls-filter {
-          border-color: rgba(map-get($configuration, newsFeedOverlayFontColorTablet), 0.8);
-
-          &:hover,
-          &:focus {
-            color: rgba(map-get($configuration, newsFeedOverlayFontColorTablet), 0.7);
-          }
-
-          &.fl-date-picker {
-            > .fa:first-child {
-              border-color: rgba(map-get($configuration, newsFeedOverlayFontColorTablet), 0.8);
-            }
-
-            &.mixitup-control-active > .fa:first-child {
-              border-color: map-get($configuration, newsFeedFiltersOverlayBackgroundTablet);
-            }
-          }
-        }
+    .filter-holder {
+      .panel .panel-collapse {
+        @include responsiveProperty('background-color', 'newsFeedFiltersOverlayBackground');
       }
 
-      // Styles for desktop
-      @include above($desktopBreakpoint) {
-        .news-feed-overlay-wrapper {
-          background-color: map-get($configuration, newsFeedFiltersOverlayBackgroundDesktop);
-          color: map-get($configuration, newsFeedOverlayFontColorDesktop);
-        }
+      .panel-default > .panel-heading {
+        @include responsiveProperty('color', 'newsFeedOverlayFontColor');
+        @include responsiveProperty('background-color', 'newsFeedFiltersOverlayBackground');
+        border-bottom: 1px solid rgba(map-get($configuration, newsFeedOverlayFontColor), 0.2);
+      }
+    }
 
-        .news-feed-overlay-header {
-          background-color: map-get($configuration, newsFeedFiltersOverlayBackgroundDesktop);
-          color: map-get($configuration, newsFeedOverlayFontColorDesktop);
-        }
+    .section-top-wrapper {
+      .list-sort .fa {
+        @include responsiveProperty('color', 'highlightColor');
+      }
 
-        .hidden-filter-controls-filter {
-          border-color: rgba(map-get($configuration, newsFeedOverlayFontColorDesktop), 0.8);
+      .search-holder {
+        input[type="search"] {
+          @include responsiveProperty('border-color', 'newsFeedSearchFieldBorderColor');
 
-          &:hover,
           &:focus {
-            color: rgba(map-get($configuration, newsFeedOverlayFontColorDesktop), 0.7);
+            @include responsiveProperty('border-color', 'newsFeedSearchFieldBorderActiveColor');
+          }
+        }
+
+        .search-feed {
+          @include responsiveProperty('background-color', 'newsFeedSearchFieldBackgroundColor');
+          @include responsiveProperty('color', 'newsFeedSearchFieldTextColor');
+
+          &::placeholder {
+            @include responsiveProperty('color', 'newsFeedSearchFieldTextColor', 0.8);
+            opacity: 1;
           }
 
-          &.fl-date-picker {
-            > .fa:first-child {
-              border-color: rgba(map-get($configuration, newsFeedOverlayFontColorDesktop), 0.8);
-            }
-
-            &.mixitup-control-active > .fa:first-child {
-              border-color: map-get($configuration, newsFeedFiltersOverlayBackgroundDesktop);
-            }
+          &:-ms-input-placeholder {
+            @include responsiveProperty('color', 'newsFeedSearchFieldTextColor', 0.8);
           }
+
+          &::-ms-input-placeholder {
+            @include responsiveProperty('color', 'newsFeedSearchFieldTextColor', 0.8);
+          }
+        }
+
+        .fa {
+          @include responsiveProperty('color', 'newsFeedSearchIconColor');
         }
       }
     }
@@ -819,29 +587,16 @@
     .news-feed-list-container {
       .slide-over {
         .news-feed-item-inner-content {
-          background-color: map-get($configuration, newsFeedListItemBackground);
+          @include responsiveProperty('background-color', 'newsFeedListItemBackground');
 
           h2.news-feed-item-title {
-            @include fontOnly(
-              (
-                fontFamily: map-get($configuration, newsFeedTitleFontFamily),
-                fontSize: map-get($configuration, newsFeedTitleFontSize),
-                fontLineHeight: map-get($configuration, newsFeedTitleLineHeight),
-                fontWeight: map-get($configuration, newsFeedTitleFontWeight),
-                fontStyle: map-get($configuration, newsFeedTitleItalic),
-                fontDecoration: map-get($configuration, newsFeedTitleUnderline)
-              )
-            );
-
-            margin-top: map-get($configuration, newsFeedTitleMarginTop);
-            margin-bottom: map-get($configuration, newsFeedTitleMarginBottom);
-            color: map-get($configuration, newsFeedTitleFontColor);
+            @include responsiveFontProperties('newsFeedTitle');
+            @include responsiveProperty('margin-top', 'newsFeedTitleMarginTop');
+            @include responsiveProperty('margin-bottom', 'newsFeedTitleMarginBottom');
+            @include responsiveProperty('color', 'newsFeedTitleFontColor');
 
             &:after {
-              background-color: map-get(
-                $configuration,
-                newsFeedListDetailOverlayLineUnderTitleColor
-              );
+              @include responsiveProperty('background-color', 'newsFeedListDetailOverlayLineUnderTitleColor');
             }
           }
         }
@@ -856,7 +611,7 @@
             borderColor: map-get($configuration, newsFeedListItemBorder)
           )
         );
-        border-radius: map-get($configuration, newsFeedListItemBorderRadius);
+        @include responsiveProperty('border-radius', 'newsFeedListItemBorderRadius');
 
         @include shadowOnly(
           (
@@ -871,323 +626,48 @@
       }
 
       .news-feed-item-content {
-        border-radius: map-get($configuration, newsFeedListItemBorderRadius);
+        @include responsiveProperty('border-radius', 'newsFeedListItemBorderRadius');
 
         .slide-under {
-          border-top-left-radius: map-get($configuration, newsFeedListItemBorderRadius);
-          border-top-right-radius: map-get($configuration, newsFeedListItemBorderRadius);
+          @include responsiveProperty('border-top-left-radius', 'newsFeedListItemBorderRadius');
+          @include responsiveProperty('border-top-right-radius', 'newsFeedListItemBorderRadius');
         }
 
         .slide-over {
-          border-bottom-left-radius: map-get($configuration, newsFeedListItemBorderRadius);
-          border-bottom-right-radius: map-get($configuration, newsFeedListItemBorderRadius);
+          @include responsiveProperty('border-bottom-left-radius', 'newsFeedListItemBorderRadius');
+          @include responsiveProperty('border-bottom-right-radius', 'newsFeedListItemBorderRadius');
         }
 
         .news-feed-item-description {
-          @include fontOnly(
-            (
-              fontFamily: map-get($configuration, newsFeedDescriptionFontFamily),
-              fontSize: map-get($configuration, newsFeedDescriptionFontSize),
-              fontLineHeight: map-get($configuration, newsFeedDescriptionLineHeight),
-              fontWeight: map-get($configuration, newsFeedDescriptionFontWeight),
-              fontStyle: map-get($configuration, newsFeedDescriptionItalic),
-              fontDecoration: map-get($configuration, newsFeedDescriptionUnderline)
-            )
-          );
-
-          margin-top: map-get($configuration, newsFeedDescriptionMarginTop);
-          margin-bottom: map-get($configuration, newsFeedDescriptionMarginBottom);
-          color: map-get($configuration, newsFeedDescriptionFontColor);
+          @include responsiveFontProperties('newsFeedDescription');
+          @include responsiveProperty('margin-top', 'newsFeedDescriptionMarginTop');
+          @include responsiveProperty('margin-bottom', 'newsFeedDescriptionMarginBottom');
+          @include responsiveProperty('color', 'newsFeedDescriptionFontColor');
         }
 
         .news-feed-info-holder .news-feed-date-category {
-          @include fontOnly(
-            (
-              fontFamily: map-get($configuration, newsFeedSecondDescriptionFontFamily),
-              fontSize: map-get($configuration, newsFeedSecondDescriptionFontSize),
-              fontLineHeight: map-get($configuration, newsFeedSecondDescriptionLineHeight),
-              fontWeight: map-get($configuration, newsFeedSecondDescriptionFontWeight),
-              fontStyle: map-get($configuration, newsFeedSecondDescriptionItalic),
-              fontDecoration: map-get($configuration, newsFeedSecondDescriptionUnderline)
-            )
-          );
-
-          color: map-get($configuration, newsFeedSecondDescriptionFontColor);
+          @include responsiveFontProperties('newsFeedSecondDescription');
+          @include responsiveProperty('color', 'newsFeedSecondDescriptionFontColor');
         }
 
         .news-feed-like-holder .news-feed-like-wrapper .fa {
-          color: map-get($configuration, newsFeedLikeIconColor);
+          @include responsiveProperty('color', 'newsFeedLikeIconColor');
         }
 
         .news-feed-like-holder .news-feed-like-wrapper .fa.animated {
-          color: map-get($configuration, newsFeedLikeIconActiveColor);
-        }
-
-        .news-feed-like-holder .news-feed-like-wrapper.btn-like > span.count {
-          color: map-get($configuration, newsFeedLikeIconColor);
-        }
-
-        .news-feed-like-holder .news-feed-like-wrapper.btn-liked > span.count {
-          color: map-get($configuration, newsFeedLikeIconActiveColor);
+          @include responsiveProperty('color', 'newsFeedLikeIconActiveColor');
         }
 
         .news-feed-bookmark-holder .news-feed-bookmark-wrapper .fa {
-          color: map-get($configuration, newsFeedBookmarkIconColor);
+          @include responsiveProperty('color', 'newsFeedBookmarkIconColor');
         }
 
         .news-feed-bookmark-holder .news-feed-bookmark-wrapper .fa.animated {
-          color: map-get($configuration, newsFeedBookmarkIconActiveColor);
+          @include responsiveProperty('color', 'newsFeedBookmarkIconActiveColor');
         }
 
         .slide-under {
-          background-color: map-get($configuration, newsFeedImageBackground);
-        }
-      }
-
-      // Styles for tablet
-      @include above($tabletBreakpoint) {
-        .slide-over {
-          .news-feed-item-inner-content {
-            background-color: map-get($configuration, newsFeedListItemBackgroundTablet);
-
-            h2.news-feed-item-title {
-              @include fontOnly(
-                (
-                  fontFamily: map-get($configuration, newsFeedTitleFontFamilyTablet),
-                  fontSize: map-get($configuration, newsFeedTitleFontSizeTablet),
-                  fontLineHeight: map-get($configuration, newsFeedTitleLineHeightTablet),
-                  fontWeight: map-get($configuration, newsFeedTitleFontWeightTablet),
-                  fontStyle: map-get($configuration, newsFeedTitleItalicTablet),
-                  fontDecoration: map-get($configuration, newsFeedTitleUnderlineTablet)
-                )
-              );
-
-              margin-top: map-get($configuration, newsFeedTitleMarginTopTablet);
-              margin-bottom: map-get($configuration, newsFeedTitleMarginBottomTablet);
-              color: map-get($configuration, newsFeedTitleFontColorTablet);
-
-              &:after {
-                background-color: map-get(
-                  $configuration,
-                  newsFeedListDetailOverlayLineUnderTitleColorTablet
-                );
-              }
-            }
-          }
-        }
-
-        .news-feed-list-wrapper .news-feed-list-item {
-          @include borderOnly(
-            (
-              borderSides: map-get($configuration, newsFeedListItemBorderSidesTablet),
-              borderWidth: map-get($configuration, newsFeedListItemBorderWidthTablet),
-              borderStyle: map-get($configuration, newsFeedListItemBorderStyleTablet),
-              borderColor: map-get($configuration, newsFeedListItemBorderTablet)
-            )
-          );
-          border-radius: map-get($configuration, newsFeedListItemBorderRadiusTablet);
-
-          @include shadowOnly(
-            (
-              shadowStyle: map-get($configuration, newsFeedListItemShadowStyleTablet),
-              shadowXOffset: map-get($configuration, newsFeedListItemShadowXoffsetTablet),
-              shadowYOffset: map-get($configuration, newsFeedListItemShadowYoffsetTablet),
-              shadowBlur: map-get($configuration, newsFeedListItemShadowBlurTablet),
-              shadowSpread: map-get($configuration, newsFeedListItemShadowSpreadTablet),
-              shadowColor: map-get($configuration, newsFeedListItemShadowColorTablet)
-            )
-          );
-        }
-
-        .news-feed-item-content {
-          border-radius: map-get($configuration, newsFeedListItemBorderRadiusTablet);
-
-          .slide-under {
-            border-top-left-radius: map-get($configuration, newsFeedListItemBorderRadiusTablet);
-            border-top-right-radius: map-get($configuration, newsFeedListItemBorderRadiusTablet);
-          }
-
-          .slide-over {
-            border-bottom-left-radius: map-get($configuration, newsFeedListItemBorderRadiusTablet);
-            border-bottom-right-radius: map-get($configuration, newsFeedListItemBorderRadiusTablet);
-          }
-
-          .news-feed-item-description {
-            @include fontOnly(
-              (
-                fontFamily: map-get($configuration, newsFeedDescriptionFontFamilyTablet),
-                fontSize: map-get($configuration, newsFeedDescriptionFontSizeTablet),
-                fontLineHeight: map-get($configuration, newsFeedDescriptionLineHeightTablet),
-                fontWeight: map-get($configuration, newsFeedDescriptionFontWeightTablet),
-                fontStyle: map-get($configuration, newsFeedDescriptionItalicTablet),
-                fontDecoration: map-get($configuration, newsFeedDescriptionUnderlineTablet)
-              )
-            );
-
-            margin-top: map-get($configuration, newsFeedDescriptionMarginTopTablet);
-            margin-bottom: map-get($configuration, newsFeedDescriptionMarginBottomTablet);
-            color: map-get($configuration, newsFeedDescriptionFontColorTablet);
-          }
-
-          .news-feed-info-holder .news-feed-date-category {
-            @include fontOnly(
-              (
-                fontFamily: map-get($configuration, newsFeedSecondDescriptionFontFamilyTablet),
-                fontSize: map-get($configuration, newsFeedSecondDescriptionFontSizeTablet),
-                fontLineHeight: map-get($configuration, newsFeedSecondDescriptionLineHeightTablet),
-                fontWeight: map-get($configuration, newsFeedSecondDescriptionFontWeightTablet),
-                fontStyle: map-get($configuration, newsFeedSecondDescriptionItalicTablet),
-                fontDecoration: map-get($configuration, newsFeedSecondDescriptionUnderlineTablet)
-              )
-            );
-
-            color: map-get($configuration, newsFeedSecondDescriptionFontColorTablet);
-          }
-
-          .news-feed-like-holder .news-feed-like-wrapper .fa {
-            color: map-get($configuration, newsFeedLikeIconColorTablet);
-          }
-
-          .news-feed-like-holder .news-feed-like-wrapper .fa.animated {
-            color: map-get($configuration, newsFeedLikeIconActiveColorTablet);
-          }
-
-          .news-feed-bookmark-holder .news-feed-bookmark-wrapper .fa {
-            color: map-get($configuration, newsFeedBookmarkIconColorTablet);
-          }
-
-          .news-feed-bookmark-holder .news-feed-bookmark-wrapper .fa.animated {
-            color: map-get($configuration, newsFeedBookmarkIconActiveColorTablet);
-          }
-
-          .slide-under {
-            background-color: map-get($configuration, newsFeedImageBackgroundTablet);
-          }
-        }
-      }
-
-      // Styles for desktop
-      @include above($desktopBreakpoint) {
-        .slide-over {
-          .news-feed-item-inner-content {
-            background-color: map-get($configuration, newsFeedListItemBackgroundDesktop);
-
-            h2.news-feed-item-title {
-              @include fontOnly(
-                (
-                  fontFamily: map-get($configuration, newsFeedTitleFontFamilyDesktop),
-                  fontSize: map-get($configuration, newsFeedTitleFontSizeDesktop),
-                  fontLineHeight: map-get($configuration, newsFeedTitleLineHeightDesktop),
-                  fontWeight: map-get($configuration, newsFeedTitleFontWeightDesktop),
-                  fontStyle: map-get($configuration, newsFeedTitleItalicDesktop),
-                  fontDecoration: map-get($configuration, newsFeedTitleUnderlineDesktop)
-                )
-              );
-
-              margin-top: map-get($configuration, newsFeedTitleMarginTopDesktop);
-              margin-bottom: map-get($configuration, newsFeedTitleMarginBottomDesktop);
-              color: map-get($configuration, newsFeedTitleFontColorDesktop);
-
-              &:after {
-                background-color: map-get(
-                  $configuration,
-                  newsFeedListDetailOverlayLineUnderTitleColorDesktop
-                );
-              }
-            }
-          }
-        }
-
-        .news-feed-list-wrapper .news-feed-list-item {
-          @include borderOnly(
-            (
-              borderSides: map-get($configuration, newsFeedListItemBorderSidesDesktop),
-              borderWidth: map-get($configuration, newsFeedListItemBorderWidthDesktop),
-              borderStyle: map-get($configuration, newsFeedListItemBorderStyleDesktop),
-              borderColor: map-get($configuration, newsFeedListItemBorderDesktop)
-            )
-          );
-          border-radius: map-get($configuration, newsFeedListItemBorderRadiusDesktop);
-
-          @include shadowOnly(
-            (
-              shadowStyle: map-get($configuration, newsFeedListItemShadowStyleDesktop),
-              shadowXOffset: map-get($configuration, newsFeedListItemShadowXoffsetDesktop),
-              shadowYOffset: map-get($configuration, newsFeedListItemShadowYoffsetDesktop),
-              shadowBlur: map-get($configuration, newsFeedListItemShadowBlurDesktop),
-              shadowSpread: map-get($configuration, newsFeedListItemShadowSpreadDesktop),
-              shadowColor: map-get($configuration, newsFeedListItemShadowColorDesktop)
-            )
-          );
-        }
-
-        .news-feed-item-content {
-          border-radius: map-get($configuration, newsFeedListItemBorderRadiusDesktop);
-
-          .slide-under {
-            border-top-left-radius: map-get($configuration, newsFeedListItemBorderRadiusDesktop);
-            border-top-right-radius: map-get($configuration, newsFeedListItemBorderRadiusDesktop);
-          }
-
-          .slide-over {
-            border-bottom-left-radius: map-get($configuration, newsFeedListItemBorderRadiusDesktop);
-            border-bottom-right-radius: map-get(
-              $configuration,
-              newsFeedListItemBorderRadiusDesktop
-            );
-          }
-
-          .news-feed-item-description {
-            @include fontOnly(
-              (
-                fontFamily: map-get($configuration, newsFeedDesсriptionFontFamilyDesktop),
-                fontSize: map-get($configuration, newsFeedDesсriptionFontSizeDesktop),
-                fontLineHeight: map-get($configuration, newsFeedDesсriptionLineHeightDesktop),
-                fontWeight: map-get($configuration, newsFeedDesсriptionFontWeightDesktop),
-                fontStyle: map-get($configuration, newsFeedDesсriptionItalicDesktop),
-                fontDecoration: map-get($configuration, newsFeedDesсriptionUnderlineDesktop)
-              )
-            );
-
-            margin-top: map-get($configuration, newsFeedDesсriptionMarginTopDesktop);
-            margin-bottom: map-get($configuration, newsFeedDesсriptionMarginBottomDesktop);
-            color: map-get($configuration, newsFeedDesсriptionFontColorDesktop);
-          }
-
-          .news-feed-info-holder .news-feed-date-category {
-            @include fontOnly(
-              (
-                fontFamily: map-get($configuration, newsFeedSecondDescriptionFontFamilyDesktop),
-                fontSize: map-get($configuration, newsFeedSecondDescriptionFontSizeDesktop),
-                fontLineHeight: map-get($configuration, newsFeedSecondDescriptionLineHeightDesktop),
-                fontWeight: map-get($configuration, newsFeedSecondDescriptionFontWeightDesktop),
-                fontStyle: map-get($configuration, newsFeedSecondDescriptionItalicDesktop),
-                fontDecoration: map-get($configuration, newsFeedSecondDescriptionUnderlineDesktop)
-              )
-            );
-
-            color: map-get($configuration, newsFeedSecondDescriptionFontColorDesktop);
-          }
-
-          .news-feed-like-holder .news-feed-like-wrapper .fa {
-            color: map-get($configuration, newsFeedLikeIconColorDesktop);
-          }
-
-          .news-feed-like-holder .news-feed-like-wrapper .fa.animated {
-            color: map-get($configuration, newsFeedLikeIconActiveColorDesktop);
-          }
-
-          .news-feed-bookmark-holder .news-feed-bookmark-wrapper .fa {
-            color: map-get($configuration, newsFeedBookmarkIconColorDesktop);
-          }
-
-          .news-feed-bookmark-holder .news-feed-bookmark-wrapper .fa.animated {
-            color: map-get($configuration, newsFeedBookmarkIconActiveColorDesktop);
-          }
-
-          .slide-under {
-            background-color: map-get($configuration, newsFeedImageBackgroundDesktop);
-          }
+          @include responsiveProperty('background-color', 'newsFeedImageBackground');
         }
       }
     }
@@ -1198,26 +678,13 @@
           background-color: map-get($configuration, newsFeedListDetailOverlayBackground);
 
           h2.news-feed-item-title {
-            @include fontOnly(
-              (
-                fontFamily: map-get($configuration, newsFeedDetailTitleFontFamily),
-                fontSize: map-get($configuration, newsFeedDetailTitleFontSize),
-                fontLineHeight: map-get($configuration, newsFeedDetailTitleLineHeight),
-                fontWeight: map-get($configuration, newsFeedDetailTitleFontWeight),
-                fontStyle: map-get($configuration, newsFeedDetailTitleItalic),
-                fontDecoration: map-get($configuration, newsFeedDetailTitleUnderline)
-              )
-            );
-
-            margin-top: map-get($configuration, newsFeedDetailTitleMarginTop);
-            margin-bottom: map-get($configuration, newsFeedDetailTitleMarginBottom);
-            color: map-get($configuration, newsFeedDetailTitleFontColor);
+            @include responsiveFontProperties('newsFeedDetailTitle');
+            @include responsiveProperty('margin-top', 'newsFeedDetailTitleMarginTop');
+            @include responsiveProperty('margin-bottom', 'newsFeedDetailTitleMarginBottom');
+            @include responsiveProperty('color', 'newsFeedDetailTitleFontColor');
 
             &:after {
-              background-color: map-get(
-                $configuration,
-                newsFeedListDetailOverlayLineUnderTitleColor
-              );
+              @include responsiveProperty('background-color', 'newsFeedListDetailOverlayLineUnderTitleColor');
             }
           }
 
@@ -1297,230 +764,6 @@
         .news-feed-detail-overlay-close {
           color: map-get($configuration, newsFeedDetailTitleFontColor);
         }
-
-        // Styles for tablet
-        @include above($tabletBreakpoint) {
-          .news-feed-item-inner-content {
-            background-color: map-get($configuration, newsFeedListDetailOverlayBackgroundTablet);
-
-            h2.news-feed-item-title {
-              @include fontOnly(
-                (
-                  fontFamily: map-get($configuration, newsFeedDetailTitleFontFamilyTablet),
-                  fontSize: map-get($configuration, newsFeedDetailTitleFontSizeTablet),
-                  fontLineHeight: map-get($configuration, newsFeedDetailTitleLineHeightTablet),
-                  fontWeight: map-get($configuration, newsFeedDetailTitleFontWeightTablet),
-                  fontStyle: map-get($configuration, newsFeedDetailTitleItalicTablet),
-                  fontDecoration: map-get($configuration, newsFeedDetailTitleUnderlineTablet)
-                )
-              );
-
-              margin-top: map-get($configuration, newsFeedDetailTitleMarginTopTablet);
-              margin-bottom: map-get($configuration, newsFeedDetailTitleMarginBottomTablet);
-              color: map-get($configuration, newsFeedDetailTitleFontColorTablet);
-
-              &:after {
-                background-color: map-get(
-                  $configuration,
-                  newsFeedListDetailOverlayLineUnderTitleColorTablet
-                );
-              }
-            }
-
-            .news-feed-item-description {
-              @include fontOnly(
-                (
-                  fontFamily: map-get($configuration, newsFeedDetailDescriptionFontFamilyTablet),
-                  fontSize: map-get($configuration, newsFeedDetailDescriptionFontSizeTablet),
-                  fontLineHeight: map-get($configuration, newsFeedDetailDescriptionLineHeightTablet),
-                  fontWeight: map-get($configuration, newsFeedDetailDescriptionFontWeightTablet),
-                  fontStyle: map-get($configuration, newsFeedDetailDescriptionItalicTablet),
-                  fontDecoration: map-get($configuration, newsFeedDetailDescriptionUnderlineTablet)
-                )
-              );
-
-              margin-top: map-get($configuration, newsFeedDetailDescriptionMarginTopTablet);
-              margin-bottom: map-get($configuration, newsFeedDetailDescriptionMarginBottomTablet);
-              color: map-get($configuration, newsFeedDetailDescriptionFontColorTablet);
-            }
-
-            .news-feed-item-description > p {
-              @include fontOnly(
-                (
-                  fontFamily: map-get($configuration, newsFeedDetailTextFontFamilyTablet),
-                  fontSize: map-get($configuration, newsFeedDetailTextFontSizeTablet),
-                  fontLineHeight: map-get($configuration, newsFeedDetailTextLineHeightTablet),
-                  fontWeight: map-get($configuration, newsFeedDetailTextFontWeightTablet),
-                  fontStyle: map-get($configuration, newsFeedDetailTextItalicTablet),
-                  fontDecoration: map-get($configuration, newsFeedDetailTextUnderlineTablet)
-                )
-              );
-
-              margin-top: map-get($configuration, newsFeedDetailTextMarginTopTablet);
-              margin-bottom: map-get($configuration, newsFeedDetailTextMarginBottomTablet);
-              color: map-get($configuration, newsFeedDetailTextFontColorTablet);
-            }
-
-            .news-feed-info-holder {
-              .news-feed-date-category {
-                @include fontOnly(
-                  (
-                    fontFamily:
-                      map-get($configuration, newsFeedDetailSecondDescriptionFontFamilyTablet),
-                    fontSize: map-get($configuration, newsFeedDetailSecondDescriptionFontSizeTablet),
-                    fontLineHeight:
-                      map-get($configuration, newsFeedDetailSecondDescriptionLineHeightTablet),
-                    fontWeight:
-                      map-get($configuration, newsFeedDetailSecondDescriptionFontWeightTablet),
-                    fontStyle: map-get($configuration, newsFeedDetailSecondDescriptionItalicTablet),
-                    fontDecoration:
-                      map-get($configuration, newsFeedDetailSecondDescriptionUnderlineTablet)
-                  )
-                );
-
-                color: map-get($configuration, newsFeedDetailSecondDescriptionFontColorTablet);
-              }
-
-              .news-feed-like-holder .news-feed-like-wrapper .fa {
-                color: map-get($configuration, newsFeedLikeIconColorTablet);
-              }
-
-              .news-feed-like-holder .news-feed-like-wrapper .fa.animated {
-                color: map-get($configuration, newsFeedLikeIconActiveColorTablet);
-              }
-
-              .news-feed-bookmark-holder .news-feed-bookmark-wrapper .fa {
-                color: map-get($configuration, newsFeedBookmarkIconColorTablet);
-              }
-
-              .news-feed-bookmark-holder .news-feed-bookmark-wrapper .fa.animated {
-                color: map-get($configuration, newsFeedBookmarkIconActiveColorTablet);
-              }
-            }
-          }
-
-          .news-feed-list-detail-image-wrapper {
-            color: rgba(map-get($configuration, newsFeedDetailTitleFontColorTablet), 0.1);
-            background-color: map-get($configuration, newsFeedImageBackgroundTablet);
-          }
-
-          .news-feed-detail-overlay-close {
-            color: map-get($configuration, newsFeedDetailTitleFontColorTablet);
-          }
-        }
-
-        // Styles for desktop
-        @include above($desktopBreakpoint) {
-          .news-feed-item-inner-content {
-            background-color: map-get($configuration, newsFeedListDetailOverlayBackgroundDesktop);
-
-            h2.news-feed-item-title {
-              @include fontOnly(
-                (
-                  fontFamily: map-get($configuration, newsFeedDetailTitleFontFamilyDesktop),
-                  fontSize: map-get($configuration, newsFeedDetailTitleFontSizeDesktop),
-                  fontLineHeight: map-get($configuration, newsFeedDetailTitleLineHeightDesktop),
-                  fontWeight: map-get($configuration, newsFeedDetailTitleFontWeightDesktop),
-                  fontStyle: map-get($configuration, newsFeedDetailTitleItalicDesktop),
-                  fontDecoration: map-get($configuration, newsFeedDetailTitleUnderlineDesktop)
-                )
-              );
-
-              margin-top: map-get($configuration, newsFeedDetailTitleMarginTopDesktop);
-              margin-bottom: map-get($configuration, newsFeedDetailTitleMarginBottomDesktop);
-              color: map-get($configuration, newsFeedDetailTitleFontColorDesktop);
-
-              &:after {
-                background-color: map-get(
-                  $configuration,
-                  newsFeedListDetailOverlayLineUnderTitleColorDesktop
-                );
-              }
-            }
-
-            .news-feed-item-description {
-              @include fontOnly(
-                (
-                  fontFamily: map-get($configuration, newsFeedDetailDescriptionFontFamilyDesktop),
-                  fontSize: map-get($configuration, newsFeedDetailDescriptionFontSizeDesktop),
-                  fontLineHeight:
-                    map-get($configuration, newsFeedDetailDescriptionLineHeightDesktop),
-                  fontWeight: map-get($configuration, newsFeedDetailDescriptionFontWeightDesktop),
-                  fontStyle: map-get($configuration, newsFeedDetailDescriptionItalicDesktop),
-                  fontDecoration: map-get($configuration, newsFeedDetailDescriptionUnderlineDesktop)
-                )
-              );
-
-              margin-top: map-get($configuration, newsFeedDetailDescriptionMarginTopDesktop);
-              margin-bottom: map-get($configuration, newsFeedDetailDescriptionMarginBottomDesktop);
-              color: map-get($configuration, newsFeedDetailDescriptionFontColorDesktop);
-            }
-
-            .news-feed-item-description > p {
-              @include fontOnly(
-                (
-                  fontFamily: map-get($configuration, newsFeedDetailTextFontFamilyDesktop),
-                  fontSize: map-get($configuration, newsFeedDetailTextFontSizeDesktop),
-                  fontLineHeight: map-get($configuration, newsFeedDetailTextLineHeightDesktop),
-                  fontWeight: map-get($configuration, newsFeedDetailTextFontWeightDesktop),
-                  fontStyle: map-get($configuration, newsFeedDetailTextItalicDesktop),
-                  fontDecoration: map-get($configuration, newsFeedDetailTextUnderlineDesktop)
-                )
-              );
-
-              margin-top: map-get($configuration, newsFeedDetailTextMarginTopDesktop);
-              margin-bottom: map-get($configuration, newsFeedDetailTextMarginBottomDesktop);
-              color: map-get($configuration, newsFeedDetailTextFontColorDesktop);
-            }
-
-            .news-feed-info-holder {
-              .news-feed-date-category {
-                @include fontOnly(
-                  (
-                    fontFamily:
-                      map-get($configuration, newsFeedDetailSecondDescriptionFontFamilyDesktop),
-                    fontSize:
-                      map-get($configuration, newsFeedDetailSecondDescriptionFontSizeDesktop),
-                    fontLineHeight:
-                      map-get($configuration, newsFeedDetailSecondDescriptionLineHeightDesktop),
-                    fontWeight:
-                      map-get($configuration, newsFeedDetailSecondDescriptionFontWeightDesktop),
-                    fontStyle: map-get($configuration, newsFeedDetailSecondDescriptionItalicDesktop),
-                    fontDecoration:
-                      map-get($configuration, newsFeedDetailSecondDescriptionUnderlineDesktop)
-                  )
-                );
-
-                color: map-get($configuration, newsFeedDetailSecondDescriptionFontColorDesktop);
-              }
-
-              .news-feed-like-holder .news-feed-like-wrapper .fa {
-                color: map-get($configuration, newsFeedLikeIconColorDesktop);
-              }
-
-              .news-feed-like-holder .news-feed-like-wrapper .fa.animated {
-                color: map-get($configuration, newsFeedLikeIconActiveColorDesktop);
-              }
-
-              .news-feed-bookmark-holder .news-feed-bookmark-wrapper .fa {
-                color: map-get($configuration, newsFeedBookmarkIconColorDesktop);
-              }
-
-              .news-feed-bookmark-holder .news-feed-bookmark-wrapper .fa.animated {
-                color: map-get($configuration, newsFeedBookmarkIconActiveColorDesktop);
-              }
-            }
-          }
-
-          .news-feed-list-detail-image-wrapper {
-            color: rgba(map-get($configuration, newsFeedDetailTitleFontColorDesktop), 0.1);
-            background-color: map-get($configuration, newsFeedImageBackgroundDesktop);
-          }
-
-          .news-feed-detail-overlay-close {
-            color: map-get($configuration, newsFeedDetailTitleFontColorDesktop);
-          }
-        }
       }
     }
 
@@ -1530,28 +773,22 @@
       .news-feed-search-filter-overlay {
         .apply-filters,
         .hidden-filter-controls-filter.mixitup-control-active {
-          background-color: $highlightColor;
-          color: $primaryButtonTextColor;
-          border-color: $highlightColor;
+          @include responsiveProperty('background-color', 'highlightColor');
+          @include responsiveProperty('color', 'primaryButtonTextColor');
+          @include responsiveProperty('border-color', 'highlightColor');
         }
       }
 
       .filter-holder {
         .panel .panel-collapse {
-          background-color: map-get($configuration, newsFeedFiltersOverlayBackground);
-        }
-
-        .panel-default > .panel-heading {
-          color: map-get($configuration, newsFeedOverlayFontColor);
-          background-color: map-get($configuration, newsFeedFiltersOverlayBackground);
-          border-bottom: 1px solid rgba(map-get($configuration, newsFeedOverlayFontColor), 0.2);
+          @include responsiveProperty('background-color', 'newsFeedFiltersOverlayBackground');
         }
       }
 
       .section-top-wrapper {
         .list-sort {
           .fa {
-            color: $highlightColor;
+            @include responsiveProperty('color', 'highlightColor');
           }
         }
 
@@ -1581,408 +818,104 @@
               color: rgba(map-get($configuration, newsFeedSearchFieldTextColor), 0.8);
             }
           }
-
-          .fa {
-            color: map-get($configuration, newsFeedSearchIconColor);
-          }
         }
 
-        .form-control {
-          background-color: $bodyBackground;
-          color: $bodyTextColor;
-
-          &:focus {
-            border-color: $highlightColor;
-          }
-        }
-
-        .btn.search-btn {
-          border: none;
-          color: map-get($configuration, newsFeedSearchFieldTextColor);
-          background-color: rgba(map-get($configuration, newsFeedSearchFieldTextColor), 0.1);
-
-          &:hover,
-          &:active,
-          &:active:hover {
-            border: none;
-          }
-        }
-
-        .search-feed:focus ~ .btn.search-btn {
-          border: none;
-        }
-
-        .list-search-icon {
-          .fa-sliders,
-          .list-search-cancel .fa-times {
-            color: map-get($configuration, newsFeedFilterIconColor) !important;
-          }
-
-          &.active .fa-sliders,
-          .list-search-cancel .fa-times {
-            color: map-get($configuration, newsFeedFilterIconActiveColor) !important;
-          }
-
-          .toggle-bookmarks {
-            &.mixitup-control-active .fa {
-              color: map-get($configuration, newsFeedBookmarkIconActiveColor) !important;
-            }
-
-            .fa {
-              color: map-get($configuration, newsFeedBookmarkIconColor) !important;
-            }
-          }
-
-          .sort-group .fa-sort-amount-desc {
-            color: map-get($configuration, newsFeedSortIconColor) !important;
-          }
+        .fa {
+          color: map-get($configuration, newsFeedSearchIconColor);
         }
       }
 
-      .hidden-search-controls .current-query-wrapper {
-        background-color: $primaryButtonColor;
-        color: $primaryButtonTextColor;
-        border-color: $primaryButtonColor;
+      .form-control {
+        @include responsiveProperty('background-color', 'bodyBackground');
+        @include responsiveProperty('color', 'bodyTextColor');
+
+        &:focus {
+          border-color: map-get($configuration, highlightColor);
+        }
+      }
+
+      .btn.search-btn {
+        border: none;
+        @include responsiveProperty('color', 'newsFeedSearchFieldTextColor');
+        background-color: rgba(map-get($configuration, newsFeedSearchFieldTextColor), 0.1);
+
+        &:hover,
+        &:active,
+        &:active:hover {
+          border: none;
+        }
+      }
+    }
+
+    .list-search-icon {
+      .fa-sliders,
+      .list-search-cancel .fa-times {
+        @include responsiveProperty('color', 'newsFeedFilterIconColor');
+      }
+
+      &.active .fa-sliders,
+      .list-search-cancel .fa-times {
+        @include responsiveProperty('color', 'newsFeedFilterIconActiveColor');
+      }
+
+      .toggle-bookmarks {
+        &.mixitup-control-active .fa {
+          @include responsiveProperty('color', 'newsFeedBookmarkIconActiveColor');
+        }
+
+        .fa {
+          @include responsiveProperty('color', 'newsFeedBookmarkIconColor');
+        }
+      }
+
+      .sort-group .fa-sort-amount-desc {
+        @include responsiveProperty('color', 'newsFeedSortIconColor');
+      }
+    }
+
+    .hidden-search-controls .current-query-wrapper {
+      @include responsiveProperty('background-color', 'primaryButtonColor');
+      @include responsiveProperty('color', 'primaryButtonTextColor');
+      @include responsiveProperty('border-color', 'primaryButtonColor');
+
+      &:hover,
+      &:focus {
+        color: rgba(map-get($configuration, primaryButtonTextColor), 0.7);
+      }
+    }
+
+    .hidden-filter-controls-label,
+    .search-query-holder,
+    .no-results-holder {
+      color: rgba(map-get($configuration, bodyTextColor), 0.5);
+    }
+
+    .hidden-filter-controls-filter {
+      border-color: rgba(map-get($configuration, bodyTextColor), 0.8);
+
+      &:hover,
+      &:focus {
+        color: rgba(map-get($configuration, bodyTextColor), 0.7);
+      }
+
+      &.mixitup-control-active {
+        @include responsiveProperty('border-color', 'highlightColor');
+        @include responsiveProperty('background-color', 'highlightColor');
+        @include responsiveProperty('color', 'primaryButtonTextColor');
 
         &:hover,
         &:focus {
-          color: rgba($primaryButtonTextColor, 0.7);
+          color: rgba(map-get($configuration, primaryButtonTextColor), 0.7);
         }
       }
 
-      .hidden-filter-controls-label,
-      .search-query-holder,
-      .no-results-holder {
-        color: rgba($bodyTextColor, 0.5);
-      }
-
-      .hidden-filter-controls-filter {
-        border-color: rgba($bodyTextColor, 0.8);
-
-        &:hover,
-        &:focus {
-          color: rgba($bodyTextColor, 0.7);
+      &.fl-date-picker {
+        > .fa:first-child {
+          border-color: rgba(map-get($configuration, bodyTextColor), 0.8);
         }
 
-        &.mixitup-control-active {
-          border-color: $highlightColor;
-          background-color: $highlightColor;
-          color: $primaryButtonTextColor;
-
-          &:hover,
-          &:focus {
-            color: rgba($primaryButtonTextColor, 0.7);
-          }
-        }
-
-        &.fl-date-picker {
-          > .fa:first-child {
-            border-color: rgba($bodyTextColor, 0.8);
-          }
-
-          &.mixitup-control-active > .fa:first-child {
-            border-color: $primaryButtonTextColor;
-          }
-        }
-      }
-
-      // Styles for tablet
-      @include above($tabletBreakpoint) {
-        .news-feed-search-filter-overlay {
-          .apply-filters,
-          .hidden-filter-controls-filter.mixitup-control-active {
-            color: $primaryButtonTextColorTablet;
-          }
-        }
-
-        .filter-holder {
-          .panel .panel-collapse {
-            background-color: map-get($configuration, newsFeedFiltersOverlayBackgroundTablet);
-          }
-
-          .panel-default > .panel-heading {
-            color: map-get($configuration, newsFeedOverlayFontColorTablet);
-            background-color: map-get($configuration, newsFeedFiltersOverlayBackgroundTablet);
-            border-bottom: 1px solid
-              rgba(map-get($configuration, newsFeedOverlayFontColorTablet), 0.2);
-          }
-        }
-
-        .section-top-wrapper {
-          .search-holder {
-            input[type="search"] {
-              border-color: map-get($configuration, newsFeedSearchFieldBorderColorTablet);
-
-              &:focus {
-                border-color: map-get($configuration, newsFeedSearchFieldBorderActiveColorTablet);
-              }
-            }
-
-            .search-feed {
-              background-color: rgba(
-                map-get($configuration, newsFeedSearchFieldBackgroundColorTablet),
-                1
-              );
-              color: map-get($configuration, newsFeedSearchFieldTextColorTablet);
-
-              &::placeholder {
-                color: rgba(map-get($configuration, newsFeedSearchFieldTextColorTablet), 0.8);
-                opacity: 1;
-              }
-
-              &:-ms-input-placeholder {
-                color: rgba(map-get($configuration, newsFeedSearchFieldTextColorTablet), 0.8);
-              }
-
-              &::-ms-input-placeholder {
-                color: rgba(map-get($configuration, newsFeedSearchFieldTextColorTablet), 0.8);
-              }
-            }
-
-            .fa {
-              color: map-get($configuration, newsFeedSearchIconColorTablet);
-            }
-
-            .btn.search-btn {
-              border: none;
-              color: map-get($configuration, newsFeedSearchFieldTextColorTablet);
-              background-color: rgba(
-                map-get($configuration, newsFeedSearchFieldTextColorTablet),
-                0.1
-              );
-
-              &:hover,
-              &:active,
-              &:active:hover {
-                border: none;
-              }
-            }
-
-            .search-feed:focus ~ .btn.search-btn {
-              border: none;
-            }
-
-            .list-search-icon {
-              .fa-sliders,
-              .list-search-cancel .fa-times {
-                color: map-get($configuration, newsFeedFilterIconColorTablet) !important;
-              }
-
-              &.active .fa-sliders,
-              .list-search-cancel .fa-times {
-                color: map-get($configuration, newsFeedFilterIconActiveColorTablet) !important;
-              }
-
-              .toggle-bookmarks {
-                &.mixitup-control-active .fa {
-                  color: map-get($configuration, newsFeedBookmarkIconActiveColorTablet) !important;
-                }
-
-                .fa {
-                  color: map-get($configuration, newsFeedBookmarkIconColorTablet) !important;
-                }
-              }
-
-              .sort-group .fa-sort-amount-desc {
-                color: map-get($configuration, newsFeedSortIconColorTablet) !important;
-              }
-            }
-          }
-        }
-
-        .hidden-search-controls .current-query-wrapper {
-          background-color: $primaryButtonColorTablet;
-          color: $primaryButtonTextColorTablet;
-          border-color: $primaryButtonColorTablet;
-
-          &:hover,
-          &:focus {
-            color: rgba($primaryButtonTextColorTablet, 0.7);
-          }
-        }
-
-        .hidden-filter-controls-label,
-        .search-query-holder,
-        .no-results-holder {
-          color: rgba($bodyTextColorTablet, 0.5);
-        }
-
-        .hidden-filter-controls-filter {
-          border-color: rgba($bodyTextColorTablet, 0.8);
-
-          &:hover,
-          &:focus {
-            color: rgba($bodyTextColorTablet, 0.7);
-          }
-
-          &.mixitup-control-active {
-            color: $primaryButtonTextColorTablet;
-
-            &:hover,
-            &:focus {
-              color: rgba($primaryButtonTextColorTablet, 0.7);
-            }
-          }
-
-          &.fl-date-picker {
-            > .fa:first-child {
-              border-color: rgba($bodyTextColorTablet, 0.8);
-            }
-
-            &.mixitup-control-active > .fa:first-child {
-              border-color: $primaryButtonTextColorTablet;
-            }
-          }
-        }
-      }
-
-      // Styles for desktop
-      @include above($desktopBreakpoint) {
-        .news-feed-search-filter-overlay {
-          .apply-filters,
-          .hidden-filter-controls-filter.mixitup-control-active {
-            color: $primaryButtonTextColorDesktop;
-          }
-        }
-
-        .filter-holder {
-          .panel .panel-collapse {
-            background-color: map-get($configuration, newsFeedFiltersOverlayBackgroundDesktop);
-          }
-
-          .panel-default > .panel-heading {
-            color: map-get($configuration, newsFeedOverlayFontColorDesktop);
-            background-color: map-get($configuration, newsFeedFiltersOverlayBackgroundDesktop);
-            border-bottom: 1px solid
-              rgba(map-get($configuration, newsFeedOverlayFontColorDesktop), 0.2);
-          }
-        }
-
-        .section-top-wrapper {
-          .search-holder {
-            input[type="search"] {
-              border-color: map-get($configuration, newsFeedSearchFieldBorderColorDesktop);
-
-              &:focus {
-                border-color: map-get($configuration, newsFeedSearchFieldBorderActiveColorDesktop);
-              }
-            }
-
-            .search-feed {
-              background-color: rgba(
-                map-get($configuration, newsFeedSearchFieldBackgroundColorDesktop),
-                1
-              );
-              color: map-get($configuration, newsFeedSearchFieldTextColorDesktop);
-
-              &::placeholder {
-                color: rgba(map-get($configuration, newsFeedSearchFieldTextColorDesktop), 0.8);
-                opacity: 1;
-              }
-
-              &:-ms-input-placeholder {
-                color: rgba(map-get($configuration, newsFeedSearchFieldTextColorDesktop), 0.8);
-              }
-
-              &::-ms-input-placeholder {
-                color: rgba(map-get($configuration, newsFeedSearchFieldTextColorDesktop), 0.8);
-              }
-            }
-
-            .fa {
-              color: map-get($configuration, newsFeedSearchIconColorDesktop);
-            }
-
-            .btn.search-btn {
-              border: none;
-              color: map-get($configuration, newsFeedSearchFieldTextColorDesktop);
-              background-color: rgba(
-                map-get($configuration, newsFeedSearchFieldTextColorDesktop),
-                0.1
-              );
-
-              &:hover,
-              &:active,
-              &:active:hover {
-                border: none;
-              }
-            }
-
-            .search-feed:focus ~ .btn.search-btn {
-              border: none;
-            }
-
-            .list-search-icon {
-              .fa-sliders,
-              .list-search-cancel .fa-times {
-                color: map-get($configuration, newsFeedFilterIconColorDesktop) !important;
-              }
-
-              &.active .fa-sliders,
-              .list-search-cancel .fa-times {
-                color: map-get($configuration, newsFeedFilterIconActiveColorDesktop) !important;
-              }
-
-              .toggle-bookmarks {
-                &.mixitup-control-active .fa {
-                  color: map-get($configuration, newsFeedBookmarkIconActiveColorDesktop) !important;
-                }
-
-                .fa {
-                  color: map-get($configuration, newsFeedBookmarkIconColorDesktop) !important;
-                }
-              }
-
-              .sort-group .fa-sort-amount-desc {
-                color: map-get($configuration, newsFeedSortIconColorDesktop) !important;
-              }
-            }
-          }
-        }
-
-        .hidden-search-controls .current-query-wrapper {
-          background-color: $primaryButtonColorDesktop;
-          color: $primaryButtonTextColorDesktop;
-          border-color: $primaryButtonColorDesktop;
-
-          &:hover,
-          &:focus {
-            color: rgba($primaryButtonTextColorDesktop, 0.7);
-          }
-        }
-
-        .hidden-filter-controls-label,
-        .search-query-holder,
-        .no-results-holder {
-          color: rgba($bodyTextColorDesktop, 0.5);
-        }
-
-        .hidden-filter-controls-filter {
-          border-color: rgba($bodyTextColorDesktop, 0.8);
-
-          &:hover,
-          &:focus {
-            color: rgba($bodyTextColorDesktop, 0.7);
-          }
-
-          &.mixitup-control-active {
-            color: $primaryButtonTextColorDesktop;
-
-            &:hover,
-            &:focus {
-              color: rgba($primaryButtonTextColorDesktop, 0.7);
-            }
-          }
-
-          &.fl-date-picker {
-            > .fa:first-child {
-              border-color: rgba($bodyTextColorDesktop, 0.8);
-            }
-
-            &.mixitup-control-active > .fa:first-child {
-              border-color: $primaryButtonTextColorDesktop;
-            }
-          }
+        &.mixitup-control-active > .fa:first-child {
+          @include responsiveProperty('border-color', 'primaryButtonTextColor');
         }
       }
     }
