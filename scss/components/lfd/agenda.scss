@@ -403,24 +403,75 @@
   }
 
   #{$layoutSelector} {
-    @include responsiveProperty('position', 'agendaPosition', $configuration);
+    // Handle position and basic properties
+    position: map-get($configuration, agendaPosition) !important;
     @include responsiveProperty('z-index', 'agendaIndex', $configuration);
     @include responsiveProperty('width', 'agendaWidth', $configuration);
     @include responsiveProperty('max-width', 'agendaMaxWidth', $configuration);
     
-    // Handle visibility
-    @if map-get($configuration, agendaVisibility) == "visible" {
-      @include responsiveProperty('display', 'agendaDisplay', $configuration);
+    // Handle visibility and display based on position
+    @if map-get($configuration, agendaPosition) == "relative" {
+      @if map-get($configuration, agendaVisibility) == "visible" {
+        display: map-get($configuration, agendaDisplay) !important;
+      } @else {
+        display: none !important;
+      }
     } @else {
-      display: none !important;
+      @if map-get($configuration, agendaVisibility) == "visible" {
+        display: block !important;
+      } @else {
+        display: none !important;
+      }
+      top: map-get($configuration, agendaPositionTop);
+      right: map-get($configuration, agendaPositionRight);
+      bottom: map-get($configuration, agendaPositionBottom);
+      left: map-get($configuration, agendaPositionLeft);
     }
 
-    // Handle position-based properties
-    @if map-get($configuration, agendaPosition) != "relative" {
-      @include responsiveProperty('top', 'agendaPositionTop', $configuration);
-      @include responsiveProperty('right', 'agendaPositionRight', $configuration);
-      @include responsiveProperty('bottom', 'agendaPositionBottom', $configuration);
-      @include responsiveProperty('left', 'agendaPositionLeft', $configuration);
+    // Handle tablet breakpoint position and display
+    @include above($tabletBreakpoint) {
+      position: map-get($configuration, agendaPositionTablet) !important;
+
+      @if map-get($configuration, agendaPositionTablet) == "relative" {
+        @if map-get($configuration, agendaVisibilityTablet) == "visible" {
+          display: map-get($configuration, agendaDisplayTablet) !important;
+        } @else {
+          display: none !important;
+        }
+      } @else {
+        @if map-get($configuration, agendaVisibilityTablet) == "visible" {
+          display: block !important;
+        } @else {
+          display: none !important;
+        }
+        top: map-get($configuration, agendaPositionTopTablet);
+        right: map-get($configuration, agendaPositionRightTablet);
+        bottom: map-get($configuration, agendaPositionBottomTablet);
+        left: map-get($configuration, agendaPositionLeftTablet);
+      }
+    }
+
+    // Handle desktop breakpoint position and display
+    @include above($desktopBreakpoint) {
+      position: map-get($configuration, agendaPositionDesktop) !important;
+
+      @if map-get($configuration, agendaPositionDesktop) == "relative" {
+        @if map-get($configuration, agendaVisibilityDesktop) == "visible" {
+          display: map-get($configuration, agendaDisplayDesktop) !important;
+        } @else {
+          display: none !important;
+        }
+      } @else {
+        @if map-get($configuration, agendaVisibilityDesktop) == "visible" {
+          display: block !important;
+        } @else {
+          display: none !important;
+        }
+        top: map-get($configuration, agendaPositionTopDesktop);
+        right: map-get($configuration, agendaPositionRightDesktop);
+        bottom: map-get($configuration, agendaPositionBottomDesktop);
+        left: map-get($configuration, agendaPositionLeftDesktop);
+      }
     }
 
     // Handle margins
@@ -444,8 +495,18 @@
     }
 
     .agenda-detail-overlay {
-      .agenda-detail-overlay-wrapper .agenda-detail-overlay-content {
+      .agenda-detail-overlay-wrapper {
         @include responsiveProperty('background-color', 'agendaListDetailOverlayBackground', $configuration);
+        @include responsiveProperty('color', 'agendaOverlayFontColor', $configuration);
+
+        .agenda-detail-overlay-content {
+          @include responsiveProperty('background-color', 'agendaListDetailOverlayBackground', $configuration);
+        }
+      }
+
+      .agenda-detail-overlay-header {
+        @include responsiveProperty('background-color', 'agendaListDetailOverlayBackground', $configuration);
+        @include responsiveProperty('color', 'agendaOverlayFontColor', $configuration);
       }
 
       .agenda-detail-overlay-panel {
@@ -480,7 +541,18 @@
             @include responsiveProperty('color', 'agendaDetailTitleFontColor', $configuration);
 
             &:after {
+              content: '';
+              display: block;
+              width: 100%;
+              height: 1px;
+              margin-top: 10px;
               @include responsiveProperty('background-color', 'agendaListDetailOverlayLineUnderTitleColor', $configuration);
+            }
+          }
+
+          .agenda-item-icons {
+            .fa {
+              @include responsiveProperty('color', 'agendaListDetailOverlayIconsColor', $configuration);
             }
           }
 
@@ -498,80 +570,37 @@
     }
 
     .new-agenda-list-container {
+      .search-holder {
+        .search-wrapper {
+          input {
+            @include responsiveProperty('border-color', 'agendaSearchFieldBorderColor', $configuration);
+            @include responsiveProperty('color', 'agendaSearchFieldTextColor', $configuration);
+            @include responsiveProperty('background-color', 'agendaSearchFieldBackgroundColor', $configuration);
+
+            &:hover {
+              @include responsiveProperty('border-color', 'agendaSearchFieldBorderActiveColor', $configuration);
+            }
+
+            &:focus {
+              @include responsiveProperty('border-color', 'agendaSearchFieldBorderActiveColor', $configuration);
+              outline: none;
+            }
+          }
+
+          .fa-search {
+            @include responsiveProperty('color', 'agendaSearchIconColor', $configuration);
+          }
+        }
+      }
+
       .filter-holder {
-        .panel .panel-collapse {
-          @include responsiveProperty('background-color', 'agendaFiltersOverlayBackground', $configuration);
-        }
-
-        .panel-default > .panel-heading {
-          @include responsiveProperty('color', 'agendaOverlayFontColor', $configuration);
-          @include responsiveProperty('background-color', 'agendaFiltersOverlayBackground', $configuration);
-          @include responsiveRgba('border-bottom-color', 'agendaOverlayFontColor', $configuration, 0.2);
-        }
-      }
-
-      .search-query .current-query-wrapper {
-        @include responsiveProperty('background-color', 'primaryButtonColor', $configuration);
-        @include responsiveProperty('color', 'primaryButtonTextColor', $configuration);
-        @include responsiveProperty('border-color', 'primaryButtonColor', $configuration);
-      }
-
-      .new-agenda-search-filter-overlay {
-        .agenda-overlay-wrapper {
-          @include responsiveProperty('background-color', 'agendaFiltersOverlayBackground', $configuration);
-          @include responsiveProperty('color', 'agendaOverlayFontColor', $configuration);
-        }
-
-        .agenda-overlay-header {
-          @include responsiveProperty('background-color', 'agendaFiltersOverlayBackground', $configuration);
-          @include responsiveProperty('color', 'agendaOverlayFontColor', $configuration);
-        }
-
-        .apply-filters,
-        .hidden-filter-controls-filter.mixitup-control-active {
-          @include responsiveProperty('background-color', 'highlightColor', $configuration);
-          @include responsiveProperty('color', 'primaryButtonTextColor', $configuration);
-          @include responsiveProperty('border-color', 'highlightColor', $configuration);
-        }
-
-        .hidden-filter-controls-filter {
-          @include responsiveRgba('border-color', 'agendaOverlayFontColor', $configuration, 0.8);
-
-          &:hover,
-          &:focus {
-            @include responsiveRgba('color', 'agendaOverlayFontColor', $configuration, 0.7);
+        .filter-wrapper {
+          .fa-filter {
+            @include responsiveProperty('color', 'agendaFilterIconColor', $configuration);
           }
 
-          &.fl-date-picker {
-            > .fa:first-child {
-              @include responsiveRgba('border-color', 'agendaOverlayFontColor', $configuration, 0.8);
-            }
-
-            &.mixitup-control-active > .fa:first-child {
-              @include responsiveProperty('border-color', 'agendaFiltersOverlayBackground', $configuration);
-            }
-          }
-        }
-      }
-
-      .agenda-date-selector {
-        @include responsiveProperty('background-color', 'lfdAgendaTopBackgroundColor', $configuration);
-
-        ul {
-          li:not(.active):not(.placeholder) {
-            @include responsiveRgba('color', 'lfdAgendaTopTextColor', $configuration, 0.5);
-
-            .day {
-              @include responsiveProperty('color', 'lfdAgendaTopTextColor', $configuration);
-            }
-          }
-
-          li.active {
-            @include responsiveRgba('color', 'lfdAgendaTopTextActiveColor', $configuration, 0.5);
-
-            .day {
-              @include responsiveProperty('color', 'lfdAgendaTopTextActiveColor', $configuration);
-            }
+          &.mixitup-control-active .fa-filter {
+            @include responsiveProperty('color', 'agendaFilterIconActiveColor', $configuration);
           }
         }
       }
@@ -585,6 +614,26 @@
             borderColor: map-get($configuration, agendaListItemBorder)
           )
         );
+        @include above($tabletBreakpoint) {
+          @include borderOnly(
+            (
+              borderSides: map-get($configuration, agendaListItemBorderSidesTablet),
+              borderWidth: map-get($configuration, agendaListItemBorderWidthTablet),
+              borderStyle: map-get($configuration, agendaListItemBorderStyleTablet),
+              borderColor: map-get($configuration, agendaListItemBorderTablet)
+            )
+          );
+        }
+        @include above($desktopBreakpoint) {
+          @include borderOnly(
+            (
+              borderSides: map-get($configuration, agendaListItemBorderSidesDesktop),
+              borderWidth: map-get($configuration, agendaListItemBorderWidthDesktop),
+              borderStyle: map-get($configuration, agendaListItemBorderStyleDesktop),
+              borderColor: map-get($configuration, agendaListItemBorderDesktop)
+            )
+          );
+        }
         @include responsiveProperty('border-radius', 'agendaListItemBorderRadius', $configuration);
 
         @include shadowOnly(
@@ -597,6 +646,32 @@
             shadowColor: map-get($configuration, agendaListItemShadowColor)
           )
         );
+
+        @include above($tabletBreakpoint) {
+          @include shadowOnly(
+            (
+              shadowStyle: map-get($configuration, agendaListItemShadowStyleTablet),
+              shadowXOffset: map-get($configuration, agendaListItemShadowXoffsetTablet),
+              shadowYOffset: map-get($configuration, agendaListItemShadowYoffsetTablet),
+              shadowBlur: map-get($configuration, agendaListItemShadowBlurTablet),
+              shadowSpread: map-get($configuration, agendaListItemShadowSpreadTablet),
+              shadowColor: map-get($configuration, agendaListItemShadowColorTablet)
+            )
+          );
+        }
+
+        @include above($desktopBreakpoint) {
+          @include shadowOnly(
+            (
+              shadowStyle: map-get($configuration, agendaListItemShadowStyleDesktop),
+              shadowXOffset: map-get($configuration, agendaListItemShadowXoffsetDesktop),
+              shadowYOffset: map-get($configuration, agendaListItemShadowYoffsetDesktop),
+              shadowBlur: map-get($configuration, agendaListItemShadowBlurDesktop),
+              shadowSpread: map-get($configuration, agendaListItemShadowSpreadDesktop),
+              shadowColor: map-get($configuration, agendaListItemShadowColorDesktop)
+            )
+          );
+        }
 
         .slide-over {
           .agenda-item-inner-content {
@@ -700,6 +775,26 @@
         @include responsiveProperty('background-color', 'primaryButtonColor', $configuration);
         @include responsiveProperty('color', 'primaryButtonTextColor', $configuration);
         @include responsiveProperty('border-color', 'primaryButtonColor', $configuration);
+      }
+    }
+
+    .agenda-list-controls {
+      @include responsiveProperty('background-color', 'lfdAgendaDatesBackgroundColor', $configuration);
+
+      .toggle-agenda {
+        .fa.fa-bookmark-o {
+          @include responsiveRgba('color', 'bodyTextColor', $configuration, 0.5);
+        }
+
+        &.mixitup-control-active .fa {
+          @include responsiveProperty('color', 'lfdAgendaDatesFontColor', $configuration);
+          @include responsiveProperty('background-color', 'lfdAgendaDatesBackgroundColor', $configuration);
+        }
+      }
+
+      .agenda-list-label {
+        @include responsiveProperty('color', 'lfdAgendaDatesFontColor', $configuration);
+        @include responsiveProperty('background-color', 'lfdAgendaDatesBackgroundColor', $configuration);
       }
     }
   }
