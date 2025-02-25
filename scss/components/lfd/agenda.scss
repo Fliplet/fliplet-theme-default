@@ -594,6 +594,16 @@
       }
 
       .list-search-icon {
+        .toggle-bookmarks {
+          .fa-bookmark-o {
+            @include responsiveProperty('color', 'agendaBookmarkIconColor', $configuration);
+          }
+
+          .fa-bookmark {
+            @include responsiveProperty('color', 'agendaBookmarkIconActiveColor', $configuration);
+          }
+        }
+
         .fa-sliders {
           @include responsiveProperty('color', 'agendaFilterIconColor', $configuration);
         }
