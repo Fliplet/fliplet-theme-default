@@ -593,13 +593,15 @@
         }
       }
 
-      .list-search-icon {
-        .fa-sliders {
-          @include responsiveProperty('color', 'agendaFilterIconColor', $configuration);
-        }
+      .filter-holder {
+        .filter-wrapper {
+          .fa-filter {
+            @include responsiveProperty('color', 'agendaFilterIconColor', $configuration);
+          }
 
-        &.mixitup-control-active .fa-filter {
-          @include responsiveProperty('color', 'agendaFilterIconActiveColor', $configuration);
+          &.mixitup-control-active .fa-filter {
+            @include responsiveProperty('color', 'agendaFilterIconActiveColor', $configuration);
+          }
         }
       }
 
