@@ -41,12 +41,12 @@
 }
 
 @mixin responsiveFontProperties($prefix, $configuration) {
-  @include responsiveProperty('font-family', #{$prefix}FontFamily, $configuration);
-  @include responsiveProperty('font-size', #{$prefix}FontSize, $configuration);
-  @include responsiveProperty('line-height', #{$prefix}LineHeight, $configuration);
-  @include responsiveProperty('font-weight', #{$prefix}FontWeight, $configuration);
-  @include responsiveProperty('font-style', #{$prefix}Italic, $configuration);
-  @include responsiveProperty('text-decoration', #{$prefix}Underline, $configuration);
+  @include responsiveProperty("font-family", #{$prefix}FontFamily, $configuration);
+  @include responsiveProperty("font-size", #{$prefix}FontSize, $configuration);
+  @include responsiveProperty("line-height", #{$prefix}LineHeight, $configuration);
+  @include responsiveProperty("font-weight", #{$prefix}FontWeight, $configuration);
+  @include responsiveProperty("font-style", #{$prefix}Italic, $configuration);
+  @include responsiveProperty("text-decoration", #{$prefix}Underline, $configuration);
 }
 
 @mixin agenda($options: (), $widgetInstanceId: "", $widgetInstanceUUID: "") {
@@ -405,10 +405,10 @@
   #{$layoutSelector} {
     // Handle position and basic properties
     position: map-get($configuration, agendaPosition) !important;
-    @include responsiveProperty('z-index', 'agendaIndex', $configuration);
-    @include responsiveProperty('width', 'agendaWidth', $configuration);
-    @include responsiveProperty('max-width', 'agendaMaxWidth', $configuration);
-    
+    @include responsiveProperty("z-index", "agendaIndex", $configuration);
+    @include responsiveProperty("width", "agendaWidth", $configuration);
+    @include responsiveProperty("max-width", "agendaMaxWidth", $configuration);
+
     // Handle visibility and display based on position
     @if map-get($configuration, agendaPosition) == "relative" {
       @if map-get($configuration, agendaVisibility) == "visible" {
@@ -475,94 +475,146 @@
     }
 
     // Handle margins
-    @include responsiveProperty('margin-left', 'agendaMarginLeft', $configuration);
-    @include responsiveProperty('margin-right', 'agendaMarginRight', $configuration);
-    @include responsiveProperty('margin-bottom', 'agendaMarginBottom', $configuration);
-    @include responsiveProperty('margin-top', 'agendaMarginTop', $configuration);
+    @include responsiveProperty("margin-left", "agendaMarginLeft", $configuration);
+    @include responsiveProperty("margin-right", "agendaMarginRight", $configuration);
+    @include responsiveProperty("margin-bottom", "agendaMarginBottom", $configuration);
+    @include responsiveProperty("margin-top", "agendaMarginTop", $configuration);
 
     // Handle padding
-    @include responsiveProperty('padding-top', 'agendaPaddingTop', $configuration);
-    @include responsiveProperty('padding-right', 'agendaPaddingRight', $configuration);
-    @include responsiveProperty('padding-bottom', 'agendaPaddingBottom', $configuration);
-    @include responsiveProperty('padding-left', 'agendaPaddingLeft', $configuration);
+    @include responsiveProperty("padding-top", "agendaPaddingTop", $configuration);
+    @include responsiveProperty("padding-right", "agendaPaddingRight", $configuration);
+    @include responsiveProperty("padding-bottom", "agendaPaddingBottom", $configuration);
+    @include responsiveProperty("padding-left", "agendaPaddingLeft", $configuration);
 
     .dynamic-list-add-item {
-      @include responsiveProperty('background-color', 'agendaAddButtonBackground', $configuration);
+      @include responsiveProperty("background-color", "agendaAddButtonBackground", $configuration);
 
       .fa-plus {
-        @include responsiveProperty('color', 'agendaAddButtonIcon', $configuration);
+        @include responsiveProperty("color", "agendaAddButtonIcon", $configuration);
       }
     }
 
     .agenda-detail-overlay {
       .agenda-detail-overlay-wrapper {
-        @include responsiveProperty('background-color', 'agendaListDetailOverlayBackground', $configuration);
-        @include responsiveProperty('color', 'agendaOverlayFontColor', $configuration);
+        @include responsiveProperty(
+          "background-color",
+          "agendaListDetailOverlayBackground",
+          $configuration
+        );
+        @include responsiveProperty("color", "agendaOverlayFontColor", $configuration);
 
         .agenda-detail-overlay-content {
-          @include responsiveProperty('background-color', 'agendaListDetailOverlayBackground', $configuration);
+          @include responsiveProperty(
+            "background-color",
+            "agendaListDetailOverlayBackground",
+            $configuration
+          );
         }
       }
 
       .agenda-detail-overlay-header {
-        @include responsiveProperty('background-color', 'agendaListDetailOverlayBackground', $configuration);
-        @include responsiveProperty('color', 'agendaOverlayFontColor', $configuration);
+        @include responsiveProperty(
+          "background-color",
+          "agendaListDetailOverlayBackground",
+          $configuration
+        );
+        @include responsiveProperty("color", "agendaOverlayFontColor", $configuration);
       }
 
       .agenda-detail-overlay-panel {
-        @include responsiveProperty('background-color', 'agendaDetailBackgroundColor', $configuration);
+        @include responsiveProperty(
+          "background-color",
+          "agendaDetailBackgroundColor",
+          $configuration
+        );
 
         .agenda-item-content-holder {
           .agenda-item-description .agenda-item-detail-body-text > p {
-            @include responsiveFontProperties('agendaDetailText', $configuration);
-            @include responsiveProperty('margin-top', 'agendaDetailTextMarginTop', $configuration);
-            @include responsiveProperty('margin-bottom', 'agendaDetailTextMarginBottom', $configuration);
-            @include responsiveProperty('color', 'agendaDetailTextFontColor', $configuration);
+            @include responsiveFontProperties("agendaDetailText", $configuration);
+            @include responsiveProperty("margin-top", "agendaDetailTextMarginTop", $configuration);
+            @include responsiveProperty(
+              "margin-bottom",
+              "agendaDetailTextMarginBottom",
+              $configuration
+            );
+            @include responsiveProperty("color", "agendaDetailTextFontColor", $configuration);
           }
 
           .agenda-item-session-location {
             .agenda-item-start-date-time {
-              @include responsiveFontProperties('agendaDetailSecondDescription', $configuration);
-              @include responsiveProperty('margin-top', 'agendaDetailSecondDescriptionMarginTop', $configuration);
-              @include responsiveProperty('margin-bottom', 'agendaDetailSecondDescriptionMarginBottom', $configuration);
-              @include responsiveProperty('color', 'agendaDetailSecondDescriptionFontColor', $configuration);
+              @include responsiveFontProperties("agendaDetailSecondDescription", $configuration);
+              @include responsiveProperty(
+                "margin-top",
+                "agendaDetailSecondDescriptionMarginTop",
+                $configuration
+              );
+              @include responsiveProperty(
+                "margin-bottom",
+                "agendaDetailSecondDescriptionMarginBottom",
+                $configuration
+              );
+              @include responsiveProperty(
+                "color",
+                "agendaDetailSecondDescriptionFontColor",
+                $configuration
+              );
             }
 
             .agenda-item-location {
-              @include responsiveFontProperties('agendaDetailDescription', $configuration);
-              @include responsiveProperty('margin-top', 'agendaDetailDescriptionMarginTop', $configuration);
-              @include responsiveProperty('margin-bottom', 'agendaDetailDescriptionMarginBottom', $configuration);
-              @include responsiveProperty('color', 'agendaDetailDescriptionFontColor', $configuration);
+              @include responsiveFontProperties("agendaDetailDescription", $configuration);
+              @include responsiveProperty(
+                "margin-top",
+                "agendaDetailDescriptionMarginTop",
+                $configuration
+              );
+              @include responsiveProperty(
+                "margin-bottom",
+                "agendaDetailDescriptionMarginBottom",
+                $configuration
+              );
+              @include responsiveProperty(
+                "color",
+                "agendaDetailDescriptionFontColor",
+                $configuration
+              );
             }
           }
 
           h2.agenda-item-title {
-            @include responsiveFontProperties('agendaDetailTitle', $configuration);
-            @include responsiveProperty('color', 'agendaDetailTitleFontColor', $configuration);
+            @include responsiveFontProperties("agendaDetailTitle", $configuration);
+            @include responsiveProperty("color", "agendaDetailTitleFontColor", $configuration);
 
             &:after {
-              content: '';
+              content: "";
               display: block;
               width: 100%;
               height: 1px;
               margin-top: 10px;
-              @include responsiveProperty('background-color', 'agendaListDetailOverlayLineUnderTitleColor', $configuration);
+              @include responsiveProperty(
+                "background-color",
+                "agendaListDetailOverlayLineUnderTitleColor",
+                $configuration
+              );
             }
           }
 
           .agenda-item-icons {
             .fa {
-              @include responsiveProperty('color', 'agendaListDetailOverlayIconsColor', $configuration);
+              @include responsiveProperty(
+                "color",
+                "agendaListDetailOverlayIconsColor",
+                $configuration
+              );
             }
           }
 
           .agenda-item-bookmark-holder {
             .bookmark-wrapper.btn-bookmark .fa {
-              @include responsiveProperty('color', 'agendaBookmarkIconColor', $configuration);
+              @include responsiveProperty("color", "agendaBookmarkIconColor", $configuration);
             }
 
             .bookmark-wrapper.btn-bookmarked .fa {
-              @include responsiveProperty('color', 'agendaBookmarkIconActiveColor', $configuration);
+              @include responsiveProperty("color", "agendaBookmarkIconActiveColor", $configuration);
             }
           }
         }
@@ -573,22 +625,38 @@
       .search-holder {
         .search-wrapper {
           input {
-            @include responsiveProperty('border-color', 'agendaSearchFieldBorderColor', $configuration);
-            @include responsiveProperty('color', 'agendaSearchFieldTextColor', $configuration);
-            @include responsiveProperty('background-color', 'agendaSearchFieldBackgroundColor', $configuration);
+            @include responsiveProperty(
+              "border-color",
+              "agendaSearchFieldBorderColor",
+              $configuration
+            );
+            @include responsiveProperty("color", "agendaSearchFieldTextColor", $configuration);
+            @include responsiveProperty(
+              "background-color",
+              "agendaSearchFieldBackgroundColor",
+              $configuration
+            );
 
             &:hover {
-              @include responsiveProperty('border-color', 'agendaSearchFieldBorderActiveColor', $configuration);
+              @include responsiveProperty(
+                "border-color",
+                "agendaSearchFieldBorderActiveColor",
+                $configuration
+              );
             }
 
             &:focus {
-              @include responsiveProperty('border-color', 'agendaSearchFieldBorderActiveColor', $configuration);
+              @include responsiveProperty(
+                "border-color",
+                "agendaSearchFieldBorderActiveColor",
+                $configuration
+              );
               outline: none;
             }
           }
 
           .fa-search {
-            @include responsiveProperty('color', 'agendaSearchIconColor', $configuration);
+            @include responsiveProperty("color", "agendaSearchIconColor", $configuration);
           }
         }
       }
@@ -596,20 +664,20 @@
       .list-search-icon {
         .toggle-bookmarks {
           .fa-bookmark-o {
-            @include responsiveProperty('color', 'agendaBookmarkIconColor', $configuration);
+            @include responsiveProperty("color", "agendaBookmarkIconColor", $configuration);
           }
 
           .fa-bookmark {
-            @include responsiveProperty('color', 'agendaBookmarkIconActiveColor', $configuration);
+            @include responsiveProperty("color", "agendaBookmarkIconActiveColor", $configuration);
           }
         }
 
         .fa-sliders {
-          @include responsiveProperty('color', 'agendaFilterIconColor', $configuration);
+          @include responsiveProperty("color", "agendaFilterIconColor", $configuration);
         }
 
         &.mixitup-control-active .fa-filter {
-          @include responsiveProperty('color', 'agendaFilterIconActiveColor', $configuration);
+          @include responsiveProperty("color", "agendaFilterIconActiveColor", $configuration);
         }
       }
 
@@ -642,7 +710,7 @@
             )
           );
         }
-        @include responsiveProperty('border-radius', 'agendaListItemBorderRadius', $configuration);
+        @include responsiveProperty("border-radius", "agendaListItemBorderRadius", $configuration);
 
         @include shadowOnly(
           (
@@ -683,44 +751,64 @@
 
         .slide-over {
           .agenda-item-inner-content {
-            @include responsiveProperty('background-color', 'agendaListItemBackground', $configuration);
+            @include responsiveProperty(
+              "background-color",
+              "agendaListItemBackground",
+              $configuration
+            );
 
             .agenda-item-time:not(.line) {
-              @include responsiveFontProperties('agendaItemTime', $configuration);
-              @include responsiveProperty('color', 'agendaItemTimeFontColor', $configuration);
+              @include responsiveFontProperties("agendaItemTime", $configuration);
+              @include responsiveProperty("color", "agendaItemTimeFontColor", $configuration);
             }
 
             .agenda-item-session-location .agenda-item-location {
-              @include responsiveFontProperties('agendaDescription', $configuration);
-              @include responsiveProperty('margin-top', 'agendaDescriptionMarginTop', $configuration);
-              @include responsiveProperty('margin-bottom', 'agendaDescriptionMarginBottom', $configuration);
-              @include responsiveProperty('color', 'agendaDescriptionFontColor', $configuration);
+              @include responsiveFontProperties("agendaDescription", $configuration);
+              @include responsiveProperty(
+                "margin-top",
+                "agendaDescriptionMarginTop",
+                $configuration
+              );
+              @include responsiveProperty(
+                "margin-bottom",
+                "agendaDescriptionMarginBottom",
+                $configuration
+              );
+              @include responsiveProperty("color", "agendaDescriptionFontColor", $configuration);
             }
 
             h2.agenda-item-title {
-              @include responsiveFontProperties('agendaTitle', $configuration);
-              @include responsiveProperty('margin-top', 'agendaTitleMarginTop', $configuration);
-              @include responsiveProperty('margin-bottom', 'agendaTitleMarginBottom', $configuration);
-              @include responsiveProperty('color', 'agendaTitleFontColor', $configuration);
+              @include responsiveFontProperties("agendaTitle", $configuration);
+              @include responsiveProperty("margin-top", "agendaTitleMarginTop", $configuration);
+              @include responsiveProperty(
+                "margin-bottom",
+                "agendaTitleMarginBottom",
+                $configuration
+              );
+              @include responsiveProperty("color", "agendaTitleFontColor", $configuration);
             }
           }
         }
       }
 
       .agenda-list-item-content {
-        @include responsiveProperty('border-radius', 'agendaListItemBorderRadius', $configuration);
+        @include responsiveProperty("border-radius", "agendaListItemBorderRadius", $configuration);
 
         .slide-over {
-          @include responsiveProperty('background-color', 'agendaDetailBackgroundColor', $configuration);
+          @include responsiveProperty(
+            "background-color",
+            "agendaDetailBackgroundColor",
+            $configuration
+          );
         }
 
         .agenda-item-bookmark-holder {
           .bookmark-wrapper.btn-bookmark .fa {
-            @include responsiveProperty('color', 'agendaBookmarkIconColor', $configuration);
+            @include responsiveProperty("color", "agendaBookmarkIconColor", $configuration);
           }
 
           .bookmark-wrapper.btn-bookmarked .fa {
-            @include responsiveProperty('color', 'agendaBookmarkIconActiveColor', $configuration);
+            @include responsiveProperty("color", "agendaBookmarkIconActiveColor", $configuration);
           }
         }
       }
@@ -728,46 +816,48 @@
       .hidden-filter-controls-label,
       .search-query-holder,
       .no-results-holder {
-        @include responsiveRgba('color', 'bodyTextColor', $configuration, 0.5);
+        @include responsiveRgba("color", "bodyTextColor", $configuration, 0.5);
       }
 
       .hidden-filter-controls-filter {
-        @include responsiveRgba('border-color', 'bodyTextColor', $configuration, 0.8);
+        @include responsiveRgba("border-color", "bodyTextColor", $configuration, 0.8);
 
         &:hover,
         &:focus {
-          @include responsiveRgba('color', 'bodyTextColor', $configuration, 0.7);
+          @include responsiveRgba("color", "bodyTextColor", $configuration, 0.7);
         }
 
         &.mixitup-control-active {
-          @include responsiveProperty('border-color', 'highlightColor', $configuration);
-          @include responsiveProperty('background-color', 'highlightColor', $configuration);
-          @include responsiveProperty('color', 'primaryButtonTextColor', $configuration);
+          @include responsiveProperty("border-color", "highlightColor", $configuration);
+          @include responsiveProperty("background-color", "highlightColor", $configuration);
+          @include responsiveProperty("color", "primaryButtonTextColor", $configuration);
 
           &:hover,
           &:focus {
-            @include responsiveRgba('color', 'primaryButtonTextColor', $configuration, 0.7);
+            @include responsiveRgba("color", "primaryButtonTextColor", $configuration, 0.7);
           }
         }
 
         &.fl-date-picker {
           > .fa:first-child {
-            @include responsiveRgba('border-color', 'bodyTextColor', $configuration, 0.8);
+            @include responsiveRgba("border-color", "bodyTextColor", $configuration, 0.8);
           }
 
           &.mixitup-control-active > .fa:first-child {
-            @include responsiveProperty('border-color', 'primaryButtonTextColor', $configuration);
+            @include responsiveProperty("border-color", "primaryButtonTextColor", $configuration);
           }
         }
       }
 
       .agenda-list-controls .toggle-agenda {
+        @include responsiveProperty("color", "lfdAgendaTopTextColor", $configuration);
+
         .fa {
-          @include responsiveProperty('color', 'agendaBookmarkIconColor', $configuration);
+          @include responsiveProperty("color", "agendaBookmarkIconColor", $configuration);
         }
 
         &.mixitup-control-active .fa {
-          @include responsiveProperty('color', 'agendaBookmarkIconActiveColor', $configuration);
+          @include responsiveProperty("color", "agendaBookmarkIconActiveColor", $configuration);
         }
       }
 
@@ -776,33 +866,73 @@
       .agenda-list-item-content .container-fluid,
       .search-results,
       .agenda-detail-overlay-panel {
-        @include responsiveProperty('max-width', 'agendaMaxWidth', $configuration);
+        @include responsiveProperty("max-width", "agendaMaxWidth", $configuration);
       }
 
       .search-query .current-query-wrapper {
-        @include responsiveProperty('background-color', 'primaryButtonColor', $configuration);
-        @include responsiveProperty('color', 'primaryButtonTextColor', $configuration);
-        @include responsiveProperty('border-color', 'primaryButtonColor', $configuration);
+        @include responsiveProperty("background-color", "primaryButtonColor", $configuration);
+        @include responsiveProperty("color", "primaryButtonTextColor", $configuration);
+        @include responsiveProperty("border-color", "primaryButtonColor", $configuration);
       }
     }
 
     .agenda-list-controls {
-      @include responsiveProperty('background-color', 'lfdAgendaDatesBackgroundColor', $configuration);
+      @include responsiveProperty(
+        "background-color",
+        "lfdAgendaDatesBackgroundColor",
+        $configuration
+      );
 
       .toggle-agenda {
         .fa.fa-bookmark-o {
-          @include responsiveRgba('color', 'bodyTextColor', $configuration, 0.5);
+          @include responsiveRgba("color", "bodyTextColor", $configuration, 0.5);
         }
 
         &.mixitup-control-active .fa {
-          @include responsiveProperty('color', 'lfdAgendaDatesFontColor', $configuration);
-          @include responsiveProperty('background-color', 'lfdAgendaDatesBackgroundColor', $configuration);
+          @include responsiveProperty("color", "lfdAgendaDatesFontColor", $configuration);
+          @include responsiveProperty(
+            "background-color",
+            "lfdAgendaDatesBackgroundColor",
+            $configuration
+          );
         }
       }
 
       .agenda-list-label {
-        @include responsiveProperty('color', 'lfdAgendaDatesFontColor', $configuration);
-        @include responsiveProperty('background-color', 'lfdAgendaDatesBackgroundColor', $configuration);
+        @include responsiveProperty("color", "lfdAgendaDatesFontColor", $configuration);
+        @include responsiveProperty(
+          "background-color",
+          "lfdAgendaDatesBackgroundColor",
+          $configuration
+        );
+      }
+    }
+
+    .agenda-date-selector {
+      @include responsiveProperty(
+        "background-color",
+        "lfdAgendaTopBackgroundColor",
+        $configuration
+      );
+
+      ul {
+        li {
+          &:not(.active):not(.placeholder) {
+            @include responsiveProperty("color", "lfdAgendaTopTextColor", $configuration);
+
+            .day {
+              @include responsiveProperty("color", "lfdAgendaTopTextColor", $configuration);
+            }
+          }
+
+          &.focus-outline.active {
+            @include responsiveProperty("color", "lfdAgendaTopTextActiveColor", $configuration);
+
+            .day {
+              @include responsiveProperty("color", "lfdAgendaTopTextActiveColor", $configuration);
+            }
+          }
+        }
       }
     }
   }
