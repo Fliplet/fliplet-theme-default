@@ -1359,7 +1359,7 @@
           }
 
           .search-feed {
-            background-color: rgba(map-get($configuration, smallCardSearchFieldBackgroundColor), 1);
+            background-color: map-get($configuration, smallCardSearchFieldBackgroundColor);
             color: map-get($configuration, smallCardSearchFieldTextColor);
 
             &::placeholder {
@@ -1498,10 +1498,7 @@
             }
 
             .search-feed {
-              background-color: rgba(
-                map-get($configuration, smallCardSearchFieldBackgroundColorTablet),
-                1
-              );
+              background-color: map-get($configuration, smallCardSearchFieldBackgroundColorTablet);
               color: map-get($configuration, smallCardSearchFieldTextColorTablet);
 
               &::placeholder {
@@ -1651,10 +1648,7 @@
             }
 
             .search-feed {
-              background-color: rgba(
-                map-get($configuration, smallCardSearchFieldBackgroundColorDesktop),
-                1
-              );
+              background-color: map-get($configuration, smallCardSearchFieldBackgroundColorDesktop);
               color: map-get($configuration, smallCardSearchFieldTextColorDesktop);
 
               &::placeholder {
