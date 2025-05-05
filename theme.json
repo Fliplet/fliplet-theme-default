@@ -21128,6 +21128,388 @@
             ]
           },
           {
+            "description": "Options Text (Single & Multiple Choice)",
+            "fields": [
+              {
+                "name": "formOptionsInputsFontFamily",
+                "default": "$bodyFontFamily",
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
+                    "selectors": [
+                      ".form-group .checkbox.checkbox-icon .option-item",
+                      ".form-group .radio.radio-icon .option-item"
+                    ],
+                    "properties": ["font-family"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "formOptionsInputsFontFamilyTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "formOptionsInputsFontFamilyDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "type": "font",
+                "label": "Font"
+              },
+              {
+                "name": "formOptionsInputsFontSize",
+                "default": "14px",
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
+                    "selectors": [
+                      ".form-group .checkbox.checkbox-icon .option-item",
+                      ".form-group .radio.radio-icon .option-item"
+                    ],
+                    "properties": ["font-size"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "formOptionsInputsFontSizeTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "formOptionsInputsFontSizeDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "type": "size",
+                "subType": "font",
+                "label": "Font size"
+              },
+              {
+                "name": "formOptionsInputsFontColor",
+                "default": "rgb(85, 85, 85)",
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
+                    "selectors": [
+                      ".form-group .checkbox.checkbox-icon .option-item",
+                      ".form-group .radio.radio-icon .option-item"
+                    ],
+                    "properties": ["color"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "formOptionsInputsFontColorTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "formOptionsInputsFontColorDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "type": "color",
+                "label": "Font color"
+              },
+              {
+                "name": "formOptionsInputsFontWeight",
+                "default": "normal",
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
+                    "selectors": [
+                      ".form-group .checkbox.checkbox-icon .option-item",
+                      ".form-group .radio.radio-icon .option-item"
+                    ],
+                    "properties": ["font-weight"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "formOptionsInputsFontWeightTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "formOptionsInputsFontWeightDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "type": "font-style",
+                "properties": "weight"
+              },
+              {
+                "name": "formOptionsInputsItalic",
+                "default": "normal",
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
+                    "selectors": [
+                      ".form-group .checkbox.checkbox-icon .option-item",
+                      ".form-group .radio.radio-icon .option-item"
+                    ],
+                    "properties": ["font-style"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "formOptionsInputsItalicTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "formOptionsInputsItalicDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "type": "font-style",
+                "properties": "italic"
+              },
+              {
+                "name": "formOptionsInputsUnderline",
+                "default": "none",
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
+                    "selectors": [
+                      ".form-group .checkbox.checkbox-icon .option-item",
+                      ".form-group .radio.radio-icon .option-item"
+                    ],
+                    "properties": ["text-decoration"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "formOptionsInputsUnderlineTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "formOptionsInputsUnderlineDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "type": "font-style",
+                "subType": "decoration",
+                "properties": "underline"
+              },
+              {
+                "name": "formOptionsInputsLineHeight",
+                "default": "20px",
+                "columns": 12,
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
+                    "selectors": [
+                      ".form-group .checkbox.checkbox-icon .option-item",
+                      ".form-group .radio.radio-icon .option-item"
+                    ],
+                    "properties": ["line-height"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "formOptionsInputsLineHeightTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "formOptionsInputsLineHeightDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "type": "size",
+                "subtype": "line-height",
+                "label": "Line height"
+              }
+            ]
+          },
+          {
+            "description": "Options Description (Single & Multiple Choice)",
+            "fields": [
+              {
+                "name": "formOptionsInputsDescriptionFontFamily",
+                "default": "$bodyFontFamily",
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
+                    "selectors": [
+                      ".form-group .checkbox.checkbox-icon .option-item-description",
+                      ".form-group .radio.radio-icon .option-item-description"
+                    ],
+                    "properties": ["font-family"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "formOptionsInputsDescriptionFontFamilyTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "formOptionsInputsDescriptionFontFamilyDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "type": "font",
+                "label": "Font"
+              },
+              {
+                "name": "formOptionsInputsDescriptionFontSize",
+                "default": "14px",
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
+                    "selectors": [
+                      ".form-group .checkbox.checkbox-icon .option-item-description",
+                      ".form-group .radio.radio-icon .option-item-description"
+                    ],
+                    "properties": ["font-size"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "formOptionsInputsDescriptionFontSizeTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "formOptionsInputsDescriptionFontSizeDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "type": "size",
+                "subType": "font",
+                "label": "Font size"
+              },
+              {
+                "name": "formOptionsInputsDescriptionFontColor",
+                "default": "rgb(85, 85, 85)",
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
+                    "selectors": [
+                      ".form-group .checkbox.checkbox-icon .option-item-description",
+                      ".form-group .radio.radio-icon .option-item-description"
+                    ],
+                    "properties": ["color"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "formOptionsInputsDescriptionFontColorTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "formOptionsInputsDescriptionFontColorDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "type": "color",
+                "label": "Font color"
+              },
+              {
+                "name": "formOptionsInputsDescriptionFontWeight",
+                "default": "normal",
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
+                    "selectors": [
+                      ".form-group .checkbox.checkbox-icon .option-item-description",
+                      ".form-group .radio.radio-icon .option-item-description"
+                    ],
+                    "properties": ["font-weight"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "formOptionsInputsDescriptionFontWeightTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "formOptionsInputsDescriptionFontWeightDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "type": "font-style",
+                "properties": "weight"
+              },
+              {
+                "name": "formOptionsInputsDescriptionItalic",
+                "default": "normal",
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
+                    "selectors": [
+                      ".form-group .checkbox.checkbox-icon .option-item-description",
+                      ".form-group .radio.radio-icon .option-item-description"
+                    ],
+                    "properties": ["font-style"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "formOptionsInputsDescriptionItalicTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "formOptionsInputsDescriptionItalicDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "type": "font-style",
+                "properties": "italic"
+              },
+              {
+                "name": "formOptionsInputsDescriptionUnderline",
+                "default": "none",
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
+                    "selectors": [
+                      ".form-group .checkbox.checkbox-icon .option-item-description",
+                      ".form-group .radio.radio-icon .option-item-description"
+                    ],
+                    "properties": ["text-decoration"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "formOptionsInputsDescriptionUnderlineTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "formOptionsInputsDescriptionUnderlineDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "type": "font-style",
+                "subType": "decoration",
+                "properties": "underline"
+              },
+              {
+                "name": "formOptionsInputsDescriptionLineHeight",
+                "default": "20px",
+                "columns": 12,
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
+                    "selectors": [
+                      ".form-group .checkbox.checkbox-icon .option-item-description",
+                      ".form-group .radio.radio-icon .option-item-description"
+                    ],
+                    "properties": ["line-height"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "formOptionsInputsDescriptionLineHeightTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "formOptionsInputsDescriptionLineHeightDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "type": "size",
+                "subtype": "line-height",
+                "label": "Line height"
+              }
+            ]
+          },
+          {
             "description": "Text inputs",
             "fields": [
               {

@@ -45,6 +45,20 @@
       formInputPaddingRight: $formInputPaddingRight,
       formInputPaddingBottom: $formInputPaddingBottom,
       formInputPaddingLeft: $formInputPaddingLeft,
+      formOptionsInputsFontFamily: $formOptionsInputsFontFamily,
+      formOptionsInputsFontSize: $formOptionsInputsFontSize,
+      formOptionsInputsFontColor: $formOptionsInputsFontColor,
+      formOptionsInputsFontWeight: $formOptionsInputsFontWeight,
+      formOptionsInputsItalic: $formOptionsInputsItalic,
+      formOptionsInputsUnderline: $formOptionsInputsUnderline,
+      formOptionsInputsLineHeight: $formOptionsInputsLineHeight,
+      formOptionsInputsDescriptionFontFamily: $formOptionsInputsDescriptionFontFamily,
+      formOptionsInputsDescriptionFontSize: $formOptionsInputsDescriptionFontSize,
+      formOptionsInputsDescriptionFontColor: $formOptionsInputsDescriptionFontColor,
+      formOptionsInputsDescriptionFontWeight: $formOptionsInputsDescriptionFontWeight,
+      formOptionsInputsDescriptionItalic: $formOptionsInputsDescriptionItalic,
+      formOptionsInputsDescriptionUnderline: $formOptionsInputsDescriptionUnderline,
+      formOptionsInputsDescriptionLineHeight: $formOptionsInputsDescriptionLineHeight,
       formTextInputsFontFamily: $formTextInputsFontFamily,
       formTextInputsFontSize: $formTextInputsFontSize,
       formTextInputsFontColor: $formTextInputsFontColor,
@@ -124,6 +138,20 @@
       formInputPaddingRightTablet: $formInputPaddingRightTablet,
       formInputPaddingBottomTablet: $formInputPaddingBottomTablet,
       formInputPaddingLeftTablet: $formInputPaddingLeftTablet,
+      formOptionsInputsFontFamilyTablet: $formOptionsInputsFontFamilyTablet,
+      formOptionsInputsFontSizeTablet: $formOptionsInputsFontSizeTablet,
+      formOptionsInputsFontColorTablet: $formOptionsInputsFontColorTablet,
+      formOptionsInputsFontWeightTablet: $formOptionsInputsFontWeightTablet,
+      formOptionsInputsItalicTablet: $formOptionsInputsItalicTablet,
+      formOptionsInputsUnderlineTablet: $formOptionsInputsUnderlineTablet,
+      formOptionsInputsLineHeightTablet: $formOptionsInputsLineHeightTablet,
+      formOptionsInputsDescriptionFontFamilyTablet: $formOptionsInputsDescriptionFontFamilyTablet,
+      formOptionsInputsDescriptionFontSizeTablet: $formOptionsInputsDescriptionFontSizeTablet,
+      formOptionsInputsDescriptionFontColorTablet: $formOptionsInputsDescriptionFontColorTablet,
+      formOptionsInputsDescriptionFontWeightTablet: $formOptionsInputsDescriptionFontWeightTablet,
+      formOptionsInputsDescriptionItalicTablet: $formOptionsInputsDescriptionItalicTablet,
+      formOptionsInputsDescriptionUnderlineTablet: $formOptionsInputsDescriptionUnderlineTablet,
+      formOptionsInputsDescriptionLineHeightTablet: $formOptionsInputsDescriptionLineHeightTablet,
       formTextInputsFontFamilyTablet: $formTextInputsFontFamilyTablet,
       formTextInputsFontSizeTablet: $formTextInputsFontSizeTablet,
       formTextInputsFontColorTablet: $formTextInputsFontColorTablet,
@@ -203,6 +231,20 @@
       formInputPaddingRightDesktop: $formInputPaddingRightDesktop,
       formInputPaddingBottomDesktop: $formInputPaddingBottomDesktop,
       formInputPaddingLeftDesktop: $formInputPaddingLeftDesktop,
+      formOptionsInputsFontFamilyDesktop: $formOptionsInputsFontFamilyDesktop,
+      formOptionsInputsFontSizeDesktop: $formOptionsInputsFontSizeDesktop,
+      formOptionsInputsFontColorDesktop: $formOptionsInputsFontColorDesktop,
+      formOptionsInputsFontWeightDesktop: $formOptionsInputsFontWeightDesktop,
+      formOptionsInputsItalicDesktop: $formOptionsInputsItalicDesktop,
+      formOptionsInputsUnderlineDesktop: $formOptionsInputsUnderlineDesktop,
+      formOptionsInputsLineHeightDesktop: $formOptionsInputsLineHeightDesktop,
+      formOptionsInputsDescriptionFontFamilyDesktop: $formOptionsInputsDescriptionFontFamilyDesktop,
+      formOptionsInputsDescriptionFontSizeDesktop: $formOptionsInputsDescriptionFontSizeDesktop,
+      formOptionsInputsDescriptionFontColorDesktop: $formOptionsInputsDescriptionFontColorDesktop,
+      formOptionsInputsDescriptionFontWeightDesktop: $formOptionsInputsDescriptionFontWeightDesktop,
+      formOptionsInputsDescriptionItalicDesktop: $formOptionsInputsDescriptionItalicDesktop,
+      formOptionsInputsDescriptionUnderlineDesktop: $formOptionsInputsDescriptionUnderlineDesktop,
+      formOptionsInputsDescriptionLineHeightDesktop: $formOptionsInputsDescriptionLineHeightDesktop,
       formTextInputsFontFamilyDesktop: $formTextInputsFontFamilyDesktop,
       formTextInputsFontSizeDesktop: $formTextInputsFontSizeDesktop,
       formTextInputsFontColorDesktop: $formTextInputsFontColorDesktop,
@@ -571,6 +613,102 @@
             border-bottom-left-radius: map-get($configuration, formInputBorderRadiusDesktop);
             padding-left: calc(45px + #{map-get($configuration, formInputPaddingLeftDesktop)});
           }
+        }
+      }
+
+      .checkbox.checkbox-icon .option-item,
+      .radio.radio-icon .option-item {
+        @include fontOnly(
+          (
+            fontFamily: map-get($configuration, formOptionsInputsFontFamily),
+            fontSize: map-get($configuration, formOptionsInputsFontSize),
+            fontLineHeight: map-get($configuration, formOptionsInputsLineHeight),
+            fontWeight: map-get($configuration, formOptionsInputsFontWeight),
+            fontStyle: map-get($configuration, formOptionsInputsItalic),
+            fontDecoration: map-get($configuration, formOptionsInputsUnderline)
+          )
+        );
+
+        color: map-get($configuration, formOptionsInputsFontColor);
+
+        // Styles for tablet
+        @include above($tabletBreakpoint) {
+          @include fontOnly(
+            (
+              fontFamily: map-get($configuration, formOptionsInputsFontFamilyTablet),
+              fontSize: map-get($configuration, formOptionsInputsFontSizeTablet),
+              fontLineHeight: map-get($configuration, formOptionsInputsLineHeightTablet),
+              fontWeight: map-get($configuration, formOptionsInputsFontWeightTablet),
+              fontStyle: map-get($configuration, formOptionsInputsItalicTablet),
+              fontDecoration: map-get($configuration, formOptionsInputsUnderlineTablet)
+            )
+          );
+
+          color: map-get($configuration, formOptionsInputsFontColorTablet);
+        }
+
+        // Styles for desktop
+        @include above($desktopBreakpoint) {
+          @include fontOnly(
+            (
+              fontFamily: map-get($configuration, formOptionsInputsFontFamilyDesktop),
+              fontSize: map-get($configuration, formOptionsInputsFontSizeDesktop),
+              fontLineHeight: map-get($configuration, formOptionsInputsLineHeightDesktop),
+              fontWeight: map-get($configuration, formOptionsInputsFontWeightDesktop),
+              fontStyle: map-get($configuration, formOptionsInputsItalicDesktop),
+              fontDecoration: map-get($configuration, formOptionsInputsUnderlineDesktop)
+            )
+          );
+
+          color: map-get($configuration, formOptionsInputsFontColorDesktop);
+        }
+      }
+
+      .checkbox.checkbox-icon .option-item-description,
+      .radio.radio-icon .option-item-description {
+        @include fontOnly(
+          (
+            fontFamily: map-get($configuration, formOptionsInputsDescriptionFontFamily),
+            fontSize: map-get($configuration, formOptionsInputsDescriptionFontSize),
+            fontLineHeight: map-get($configuration, formOptionsInputsDescriptionLineHeight),
+            fontWeight: map-get($configuration, formOptionsInputsDescriptionFontWeight),
+            fontStyle: map-get($configuration, formOptionsInputsDescriptionItalic),
+            fontDecoration: map-get($configuration, formOptionsInputsDescriptionUnderline)
+          )
+        );
+
+        color: map-get($configuration, formOptionsInputsDescriptionFontColor);
+
+        // Styles for tablet
+        @include above($tabletBreakpoint) {
+          @include fontOnly(
+            (
+              fontFamily: map-get($configuration, formOptionsInputsDescriptionFontFamilyTablet),
+              fontSize: map-get($configuration, formOptionsInputsDescriptionFontSizeTablet),
+              fontLineHeight: map-get($configuration, formOptionsInputsDescriptionLineHeightTablet),
+              fontWeight: map-get($configuration, formOptionsInputsDescriptionFontWeightTablet),
+              fontStyle: map-get($configuration, formOptionsInputsDescriptionItalicTablet),
+              fontDecoration: map-get($configuration, formOptionsInputsDescriptionUnderlineTablet)
+            )
+          );
+
+          color: map-get($configuration, formOptionsInputsDescriptionFontColorTablet);
+        }
+
+        // Styles for desktop
+        @include above($desktopBreakpoint) {
+          @include fontOnly(
+            (
+              fontFamily: map-get($configuration, formOptionsInputsDescriptionFontFamilyDesktop),
+              fontSize: map-get($configuration, formOptionsInputsDescriptionFontSizeDesktop),
+              fontLineHeight: map-get($configuration, formOptionsInputsDescriptionLineHeightDesktop),
+              fontWeight: map-get($configuration, formOptionsInputsDescriptionFontWeightDesktop),
+              fontStyle: map-get($configuration, formOptionsInputsDescriptionItalicDesktop),
+              fontDecoration: map-get($configuration, formOptionsInputsDescriptionUnderlineDesktop)
+            )
+          );
+
+          color: map-get($configuration, formOptionsInputsDescriptionFontColorDesktop);
         }
       }
     }
