@@ -623,41 +623,39 @@
 
     .new-agenda-list-container {
       .search-holder {
-        .search-wrapper {
-          input {
+        input {
+          @include responsiveProperty(
+            "border-color",
+            "agendaSearchFieldBorderColor",
+            $configuration
+          );
+          @include responsiveProperty("color", "agendaSearchFieldTextColor", $configuration);
+          @include responsiveProperty(
+            "background-color",
+            "agendaSearchFieldBackgroundColor",
+            $configuration
+          );
+
+          &:hover {
             @include responsiveProperty(
               "border-color",
-              "agendaSearchFieldBorderColor",
+              "agendaSearchFieldBorderActiveColor",
               $configuration
             );
-            @include responsiveProperty("color", "agendaSearchFieldTextColor", $configuration);
+          }
+
+          &:focus {
             @include responsiveProperty(
-              "background-color",
-              "agendaSearchFieldBackgroundColor",
+              "border-color",
+              "agendaSearchFieldBorderActiveColor",
               $configuration
             );
-
-            &:hover {
-              @include responsiveProperty(
-                "border-color",
-                "agendaSearchFieldBorderActiveColor",
-                $configuration
-              );
-            }
-
-            &:focus {
-              @include responsiveProperty(
-                "border-color",
-                "agendaSearchFieldBorderActiveColor",
-                $configuration
-              );
-              outline: none;
-            }
+            outline: none;
           }
+        }
 
-          .fa-search {
-            @include responsiveProperty("color", "agendaSearchIconColor", $configuration);
-          }
+        .fa-search {
+          @include responsiveProperty("color", "agendaSearchIconColor", $configuration);
         }
       }
 
