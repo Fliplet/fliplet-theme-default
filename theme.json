@@ -4845,7 +4845,7 @@
               },
               {
                 "name": "containerMinHeight",
-                "default": "20px",
+                "default": "50px",
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.container']",
