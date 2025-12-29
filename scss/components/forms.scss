@@ -880,6 +880,134 @@
       }
     }
 
+    .form-group.fl-typeahead,
+    .form-group.fl-rich-text {
+      .form-control {
+        @include borderOnly(
+          (
+            borderSides: map-get($configuration, formInputBorderSides),
+            borderWidth: map-get($configuration, formInputBorderWidth),
+            borderStyle: map-get($configuration, formInputBorderStyle),
+            borderColor: map-get($configuration, formInputBorderColor)
+          )
+        );
+        border-radius: map-get($configuration, formInputBorderRadius);
+        &:focus-within,
+        &:focus,
+        &.focus {
+          @include borderOnly(
+            (
+              borderSides: map-get($configuration, formInputBorderFocusSides),
+              borderWidth: map-get($configuration, formInputBorderFocusWidth),
+              borderStyle: map-get($configuration, formInputBorderFocusStyle),
+              borderColor: map-get($configuration, formInputBorderFocusColor)
+            )
+          );
+          // Force override against editor defaults
+          border-radius: map-get($configuration, formInputBorderFocusRadius);
+          border: 0 !important;
+          @if map-get($configuration, formInputBorderFocusSides) == "top" {
+            border-top: map-get($configuration, formInputBorderFocusWidth)
+              map-get($configuration, formInputBorderFocusStyle)
+              map-get($configuration, formInputBorderFocusColor) !important;
+          } @else if map-get($configuration, formInputBorderFocusSides) == "right" {
+            border-right: map-get($configuration, formInputBorderFocusWidth)
+              map-get($configuration, formInputBorderFocusStyle)
+              map-get($configuration, formInputBorderFocusColor) !important;
+          } @else if map-get($configuration, formInputBorderFocusSides) == "bottom" {
+            border-bottom: map-get($configuration, formInputBorderFocusWidth)
+              map-get($configuration, formInputBorderFocusStyle)
+              map-get($configuration, formInputBorderFocusColor) !important;
+          } @else if map-get($configuration, formInputBorderFocusSides) == "left" {
+            border-left: map-get($configuration, formInputBorderFocusWidth)
+              map-get($configuration, formInputBorderFocusStyle)
+              map-get($configuration, formInputBorderFocusColor) !important;
+          } @else if map-get($configuration, formInputBorderFocusSides) == "all" {
+            border: map-get($configuration, formInputBorderFocusWidth)
+              map-get($configuration, formInputBorderFocusStyle)
+              map-get($configuration, formInputBorderFocusColor) !important;
+          }
+        }
+
+        // Styles for tablet
+        @include above($tabletBreakpoint) {
+          @include borderOnly(
+            (
+              borderSides: map-get($configuration, formInputBorderSidesTablet),
+              borderWidth: map-get($configuration, formInputBorderWidthTablet),
+              borderStyle: map-get($configuration, formInputBorderStyleTablet),
+              borderColor: map-get($configuration, formInputBorderColorTablet)
+            )
+          );
+          border-radius: map-get($configuration, formInputBorderRadiusTablet);
+
+          &.focus {
+            @include borderOnly(
+              (
+                borderSides: map-get($configuration, formInputBorderFocusSidesTablet),
+                borderWidth: map-get($configuration, formInputBorderFocusWidthTablet),
+                borderStyle: map-get($configuration, formInputBorderFocusStyleTablet),
+                borderColor: map-get($configuration, formInputBorderFocusColorTablet)
+              )
+            );
+            border-radius: map-get($configuration, formInputBorderFocusRadiusTablet);
+          }
+        }
+
+        // Styles for desktop
+        @include above($desktopBreakpoint) {
+          @include borderOnly(
+            (
+              borderSides: map-get($configuration, formInputBorderSidesDesktop),
+              borderWidth: map-get($configuration, formInputBorderWidthDesktop),
+              borderStyle: map-get($configuration, formInputBorderStyleDesktop),
+              borderColor: map-get($configuration, formInputBorderColorDesktop)
+            )
+          );
+          border-radius: map-get($configuration, formInputBorderRadiusDesktop);
+
+          &.focus {
+            @include borderOnly(
+              (
+                borderSides: map-get($configuration, formInputBorderFocusSidesDesktop),
+                borderWidth: map-get($configuration, formInputBorderFocusWidthDesktop),
+                borderStyle: map-get($configuration, formInputBorderFocusStyleDesktop),
+                borderColor: map-get($configuration, formInputBorderFocusColorDesktop)
+              )
+            );
+            border-radius: map-get($configuration, formInputBorderFocusRadiusDesktop);
+          }
+        }
+      }
+    }
+
+    .form-group.fl-typeahead.has-error .selectize-input.form-control,
+    .form-group.fl-typeahead.has-error .selectize-input.form-control.focus {
+      @include borderOnly(
+        (
+          borderSides: map-get($configuration, formInputBorderErrorSides),
+          borderWidth: map-get($configuration, formInputBorderErrorWidth),
+          borderStyle: map-get($configuration, formInputBorderErrorStyle),
+          borderColor: map-get($configuration, formInputBorderErrorColor)
+        )
+      );
+      border-radius: map-get($configuration, formInputBorderErrorRadius);
+    }
+
+    // Rich text error styles (focus lives inside iframe → use :focus-within)
+    .form-group.fl-rich-text.has-error .tox.tox-tinymce.form-control,
+    .form-group.fl-rich-text.has-error .tox.tox-tinymce.form-control:focus-within {
+      @include borderOnly(
+        (
+          borderSides: map-get($configuration, formInputBorderErrorFocusSides),
+          borderWidth: map-get($configuration, formInputBorderErrorFocusWidth),
+          borderStyle: map-get($configuration, formInputBorderErrorFocusStyle),
+          borderColor: map-get($configuration, formInputBorderErrorFocusColor)
+        )
+      );
+      border-radius: map-get($configuration, formInputBorderErrorFocusRadius);
+    }
+
     .form-group.fl-date-picker,
     .form-group.fl-time-picker {
       > .form-control {
