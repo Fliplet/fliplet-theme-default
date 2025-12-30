@@ -21334,7 +21334,10 @@
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
-                    "selectors": ".form-group input::placeholder",
+                    "selectors": [
+                      ".form-group input::placeholder",
+                      ".form-group textarea::placeholder"
+                    ],
                     "properties": ["font-family"]
                   }
                 ],
@@ -21357,7 +21360,10 @@
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
-                    "selectors": ".form-group input::placeholder",
+                    "selectors": [
+                      ".form-group input::placeholder",
+                      ".form-group textarea::placeholder"
+                    ],
                     "properties": ["font-size"]
                   }
                 ],
@@ -21381,7 +21387,10 @@
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
-                    "selectors": ".form-group input::placeholder",
+                    "selectors": [
+                      ".form-group input::placeholder",
+                      ".form-group textarea::placeholder"
+                    ],
                     "properties": ["color"]
                   }
                 ],
@@ -21404,7 +21413,10 @@
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
-                    "selectors": ".form-group input::placeholder",
+                    "selectors": [
+                      ".form-group input::placeholder",
+                      ".form-group textarea::placeholder"
+                    ],
                     "properties": ["font-weight"]
                   }
                 ],
@@ -21427,7 +21439,10 @@
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
-                    "selectors": ".form-group input::placeholder",
+                    "selectors": [
+                      ".form-group input::placeholder",
+                      ".form-group textarea::placeholder"
+                    ],
                     "properties": ["font-style"]
                   }
                 ],
@@ -21450,7 +21465,10 @@
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
-                    "selectors": ".form-group input::placeholder",
+                    "selectors": [
+                      ".form-group input::placeholder",
+                      ".form-group textarea::placeholder"
+                    ],
                     "properties": ["text-decoration"]
                   }
                 ],
@@ -21475,7 +21493,10 @@
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
-                    "selectors": ".form-group input::placeholder",
+                    "selectors": [
+                      ".form-group input::placeholder",
+                      ".form-group textarea::placeholder"
+                    ],
                     "properties": ["line-height"]
                   }
                 ],
