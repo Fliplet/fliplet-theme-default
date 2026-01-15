@@ -205,7 +205,7 @@
     min-width: map-get($configuration, containerMinWidth);
     max-width: map-get($configuration, containerMaxWidth);
     height: map-get($configuration, containerHeight) !important;
-    min-height: map-get($configuration, containerMinHeight);
+    min-height: map-get($configuration, containerMinHeight) !important;
     max-height: map-get($configuration, containerMaxHeight);
     overflow-x: map-get($configuration, containerOverflowX);
     overflow-y: map-get($configuration, containerOverflowY);
@@ -288,7 +288,7 @@
       min-width: map-get($configuration, containerMinWidthTablet);
       max-width: map-get($configuration, containerMaxWidthTablet);
       height: map-get($configuration, containerHeightTablet) !important;
-      min-height: map-get($configuration, containerMinHeightTablet);
+      min-height: map-get($configuration, containerMinHeightTablet) !important;
       max-height: map-get($configuration, containerMaxHeightTablet);
       overflow-x: map-get($configuration, containerOverflowXTablet);
       overflow-y: map-get($configuration, containerOverflowYTablet);
@@ -374,7 +374,7 @@
       min-width: map-get($configuration, containerMinWidthDesktop);
       max-width: map-get($configuration, containerMaxWidthDesktop);
       height: map-get($configuration, containerHeightDesktop) !important;
-      min-height: map-get($configuration, containerMinHeightDesktop);
+      min-height: map-get($configuration, containerMinHeightDesktop) !important;
       max-height: map-get($configuration, containerMaxHeightDesktop);
       overflow-x: map-get($configuration, containerOverflowXDesktop);
       overflow-y: map-get($configuration, containerOverflowYDesktop);
