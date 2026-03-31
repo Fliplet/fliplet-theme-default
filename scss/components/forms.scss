@@ -385,6 +385,55 @@
         map-get($configuration, formPaddingLeftDesktop);
     }
 
+    .list-group {
+      .list-group-item {
+        @include borderOnly(
+          (
+            borderSides: map-get($configuration, formInputBorderSides),
+            borderWidth: map-get($configuration, formInputBorderWidth),
+            borderStyle: map-get($configuration, formInputBorderStyle),
+            borderColor: map-get($configuration, formInputBorderColor)
+          )
+        );
+        border-radius: map-get($configuration, formInputBorderRadius);
+
+        &:hover {
+          background-color: map-get($configuration, formReadOnlyBackgroundColor);
+          border: 1px solid map-get($configuration, formReadOnlySelectedFillColor);
+        }
+
+        & .dots {
+          color: map-get($configuration, formInputBorderColor);
+        }
+
+        & .arrows {
+          color: map-get($configuration, formInputBorderFocusColor);
+        }
+
+        &.readonly {
+          background-color: map-get($configuration, formReadOnlyBackgroundColor);
+          border: 1px solid map-get($configuration, formReadOnlySelectedFillColor);
+        }
+
+        &.chosen-class {
+          @include borderOnly(
+            (
+              borderSides: map-get($configuration, formInputBorderFocusSides),
+              borderWidth: map-get($configuration, formInputBorderFocusWidth),
+              borderStyle: map-get($configuration, formInputBorderFocusStyle),
+              borderColor: map-get($configuration, formInputBorderFocusColor)
+            )
+          );
+
+          border-radius: map-get($configuration, formInputBorderFocusRadius);
+
+          .dots {
+            color: map-get($configuration, formInputBorderFocusColor);
+          }
+        }
+      }
+    }
+
     .form-group {
       input.form-control {
         @include fontOnly(
