@@ -615,6 +615,14 @@
                 "agendaListDetailOverlayIconsColor",
                 $configuration
               );
+
+              .fa {
+                @include responsiveProperty(
+                  "color",
+                  "agendaListDetailOverlayIconsColor",
+                  $configuration
+                );
+              }
             }
           }
 
