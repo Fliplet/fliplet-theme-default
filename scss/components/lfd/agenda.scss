@@ -608,6 +608,24 @@
             }
           }
 
+          .agenda-item-bookmark {
+            .session-button {
+              @include responsiveProperty(
+                "color",
+                "agendaListDetailOverlayIconsColor",
+                $configuration
+              );
+
+              .fa {
+                @include responsiveProperty(
+                  "color",
+                  "agendaListDetailOverlayIconsColor",
+                  $configuration
+                );
+              }
+            }
+          }
+
           .agenda-item-bookmark-holder {
             .bookmark-wrapper.btn-bookmark .fa {
               @include responsiveProperty("color", "agendaBookmarkIconColor", $configuration);
