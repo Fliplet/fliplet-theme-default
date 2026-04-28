@@ -20443,7 +20443,8 @@
                       ".form-group .tinymce-mobile-outer-container:not(.tinymce-mobile-fullscreen-maximized) .tinymce-mobile-editor-socket",
                       ".fl-matrix table",
                       ".fl-matrix table td",
-                      ".fl-matrix table th"
+                      ".fl-matrix table th",
+                      ".list-group-item"
                     ],
                     "properties": ["border"],
                     "type": "border",
@@ -20480,7 +20481,11 @@
                       ".select-proxy-display>.icon",
                       ".field-signature canvas",
                       ".form-group .mce-tinymce > .mce-container-body.mce-stack-layout",
-                      ".form-group .tinymce-mobile-outer-container:not(.tinymce-mobile-fullscreen-maximized) .tinymce-mobile-editor-socket"
+                      ".form-group .tinymce-mobile-outer-container:not(.tinymce-mobile-fullscreen-maximized) .tinymce-mobile-editor-socket",
+                      ".fl-matrix table",
+                      ".fl-matrix table td",
+                      ".fl-matrix table th",
+                      ".list-group-item"
                     ],
                     "properties": ["border"],
                     "type": "border",
@@ -20516,7 +20521,11 @@
                       ".select-proxy-display>.icon",
                       ".field-signature canvas",
                       ".form-group .mce-tinymce > .mce-container-body.mce-stack-layout",
-                      ".form-group .tinymce-mobile-outer-container:not(.tinymce-mobile-fullscreen-maximized) .tinymce-mobile-editor-socket"
+                      ".form-group .tinymce-mobile-outer-container:not(.tinymce-mobile-fullscreen-maximized) .tinymce-mobile-editor-socket",
+                      ".fl-matrix table",
+                      ".fl-matrix table td",
+                      ".fl-matrix table th",
+                      ".list-group-item"
                     ],
                     "properties": ["border"],
                     "type": "border",
@@ -20553,7 +20562,11 @@
                       ".select-proxy-display>.icon",
                       ".field-signature canvas",
                       ".form-group .mce-tinymce > .mce-container-body.mce-stack-layout",
-                      ".form-group .tinymce-mobile-outer-container:not(.tinymce-mobile-fullscreen-maximized) .tinymce-mobile-editor-socket"
+                      ".form-group .tinymce-mobile-outer-container:not(.tinymce-mobile-fullscreen-maximized) .tinymce-mobile-editor-socket",
+                      ".fl-matrix table",
+                      ".fl-matrix table td",
+                      ".fl-matrix table th",
+                      ".list-group-item"
                     ],
                     "properties": ["border"],
                     "type": "border",
@@ -21138,6 +21151,7 @@
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
                     "selectors": [
                       ".form-group .input-group input.form-control",
+                      ".form-group .input-group textarea.form-control",
                       ".form-group.fl-range-slider .range-slider-labels-label",
                       ".fl-matrix table th"
                     ],
@@ -21165,6 +21179,7 @@
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
                     "selectors": [
                       ".form-group .input-group input.form-control",
+                      ".form-group .input-group textarea.form-control",
                       ".form-group.fl-range-slider .range-slider-labels-label",
                       ".fl-matrix table th"
                     ],
@@ -21193,6 +21208,7 @@
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
                     "selectors": [
                       ".form-group .input-group input.form-control",
+                      ".form-group .input-group textarea.form-control",
                       ".form-group.fl-range-slider .range-slider-labels-label",
                       ".fl-matrix table th"
                     ],
@@ -21220,6 +21236,7 @@
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
                     "selectors": [
                       ".form-group .input-group input.form-control",
+                      ".form-group .input-group textarea.form-control",
                       ".form-group.fl-range-slider .range-slider-labels-label",
                       ".fl-matrix table th"
                     ],
@@ -21247,6 +21264,7 @@
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
                     "selectors": [
                       ".form-group .input-group input.form-control",
+                      ".form-group .input-group textarea.form-control",
                       ".form-group.fl-range-slider .range-slider-labels-label",
                       ".fl-matrix table th"
                     ],
@@ -21274,6 +21292,7 @@
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
                     "selectors": [
                       ".form-group .input-group input.form-control",
+                      ".form-group .input-group textarea.form-control",
                       ".form-group.fl-range-slider .range-slider-labels-label",
                       ".fl-matrix table th"
                     ],
@@ -21303,6 +21322,7 @@
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
                     "selectors": [
                       ".form-group .input-group input.form-control",
+                      ".form-group .input-group textarea.form-control",
                       ".form-group.fl-range-slider .range-slider-labels-label",
                       ".fl-matrix table th"
                     ],
@@ -21334,7 +21354,7 @@
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
-                    "selectors": ".form-group input::placeholder",
+                    "selectors": [".form-group input::placeholder", ".form-group textarea::placeholder"],
                     "properties": ["font-family"]
                   }
                 ],
@@ -21357,7 +21377,7 @@
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
-                    "selectors": ".form-group input::placeholder",
+                    "selectors": [".form-group input::placeholder", ".form-group textarea::placeholder"],
                     "properties": ["font-size"]
                   }
                 ],
@@ -21381,7 +21401,7 @@
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
-                    "selectors": ".form-group input::placeholder",
+                    "selectors": [".form-group input::placeholder", ".form-group textarea::placeholder"],
                     "properties": ["color"]
                   }
                 ],
@@ -21404,7 +21424,7 @@
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
-                    "selectors": ".form-group input::placeholder",
+                    "selectors": [".form-group input::placeholder", ".form-group textarea::placeholder"],
                     "properties": ["font-weight"]
                   }
                 ],
@@ -21427,7 +21447,7 @@
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
-                    "selectors": ".form-group input::placeholder",
+                    "selectors": [".form-group input::placeholder", ".form-group textarea::placeholder"],
                     "properties": ["font-style"]
                   }
                 ],
@@ -21450,7 +21470,7 @@
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
-                    "selectors": ".form-group input::placeholder",
+                    "selectors": [".form-group input::placeholder", ".form-group textarea::placeholder"],
                     "properties": ["text-decoration"]
                   }
                 ],
@@ -21475,7 +21495,7 @@
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.form-builder']",
-                    "selectors": ".form-group input::placeholder",
+                    "selectors": [".form-group input::placeholder", ".form-group textarea::placeholder"],
                     "properties": ["line-height"]
                   }
                 ],
