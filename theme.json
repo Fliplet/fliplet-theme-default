@@ -37206,9 +37206,10 @@
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'][data-settings-layout='agenda']",
                     "selectors": [
-                      ".new-agenda-list-container .new-agenda-search-filter-overlay .news-feed-overlay-wrapper",
-                      ".new-agenda-list-container .new-agenda-search-filter-overlay .news-feed-overlay-header",
+                      ".new-agenda-list-container .new-agenda-search-filter-overlay .agenda-overlay-wrapper",
+                      ".new-agenda-list-container .new-agenda-search-filter-overlay .agenda-overlay-header",
                       ".new-agenda-list-container .filter-holder .panel-default > .panel-heading",
+                      ".new-agenda-list-container .filter-holder .panel-group .panel",
                       ".new-agenda-list-container .filter-holder .panel .panel-collapse"
                     ],
                     "properties": ["background-color"]
@@ -37235,8 +37236,8 @@
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'][data-settings-layout='agenda']",
                     "selectors": [
-                      ".new-agenda-list-container .new-agenda-search-filter-overlay .news-feed-overlay-wrapper",
-                      ".new-agenda-list-container .new-agenda-search-filter-overlay .news-feed-overlay-header",
+                      ".new-agenda-list-container .new-agenda-search-filter-overlay .agenda-overlay-wrapper",
+                      ".new-agenda-list-container .new-agenda-search-filter-overlay .agenda-overlay-header",
                       ".new-agenda-list-container .filter-holder .panel-default > .panel-heading"
                     ],
                     "properties": ["color"]
