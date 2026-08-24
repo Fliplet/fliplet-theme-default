@@ -501,6 +501,13 @@
           "agendaListDetailOverlayBackground",
           $configuration
         );
+        // Kept deliberately. This is the only `color` covering detail-overlay text that
+        // has no rule of its own: agendaDetailTextFontColor is scoped to
+        // `.agenda-item-detail-body-text > p`, but only html-type fields render a <p> —
+        // text/url/tel/mail/number/date render bare, and .agenda-item-detail-label,
+        // .file-title/.file-info and the bookmark label have no rule at all. Removing
+        // this would drop them to the page body colour (PS-2125). The mislabelling of
+        // this setting as "Filters overlay text" needs its own ticket.
         @include responsiveProperty("color", "agendaOverlayFontColor", $configuration);
 
         .agenda-detail-overlay-content {
@@ -598,13 +605,25 @@
             }
           }
 
-          .agenda-item-icons {
-            .fa {
+          // `.agenda-item-icons` was targeted here for agendaListDetailOverlayIconsColor
+          // but has never existed in com.fliplet.dynamic-lists' markup, so the rule was
+          // dead. PS-1706 added the working `.session-button` rule below but left the
+          // dead selector behind; removing it now (PS-2125).
+          .agenda-item-bookmark {
+            .session-button {
               @include responsiveProperty(
                 "color",
                 "agendaListDetailOverlayIconsColor",
                 $configuration
               );
+
+              .fa {
+                @include responsiveProperty(
+                  "color",
+                  "agendaListDetailOverlayIconsColor",
+                  $configuration
+                );
+              }
             }
           }
 
@@ -622,6 +641,78 @@
     }
 
     .new-agenda-list-container {
+      // Filters overlay. This block was dropped by e5968e5 (PS-475) while the news-feed
+      // and simple-list equivalents survived, so "Filters overlay background" compiled to
+      // no rule at all and the widget's hardcoded #232b3f won instead (PS-2125).
+      .new-agenda-search-filter-overlay {
+        .agenda-overlay-wrapper,
+        .agenda-overlay-header {
+          @include responsiveProperty(
+            "background-color",
+            "agendaFiltersOverlayBackground",
+            $configuration
+          );
+          @include responsiveProperty("color", "agendaOverlayFontColor", $configuration);
+        }
+
+        .hidden-filter-controls-filter {
+          @include responsiveRgba("border-color", "agendaOverlayFontColor", $configuration, 0.8);
+
+          &:hover,
+          &:focus {
+            @include responsiveRgba("color", "agendaOverlayFontColor", $configuration, 0.7);
+          }
+
+          &.fl-date-picker {
+            > .fa:first-child {
+              @include responsiveRgba(
+                "border-color",
+                "agendaOverlayFontColor",
+                $configuration,
+                0.8
+              );
+            }
+
+            // news-feed uses a bare map-get here, which drops tablet/desktop overrides.
+            &.mixitup-control-active > .fa:first-child {
+              @include responsiveProperty(
+                "border-color",
+                "agendaFiltersOverlayBackground",
+                $configuration
+              );
+            }
+          }
+        }
+      }
+
+      // Agenda paints the filter panel body on `.panel-group .panel` rather than on
+      // `.panel-collapse` the way news-feed does, so cover both to beat the default.
+      .filter-holder {
+        .panel-group .panel,
+        .panel .panel-collapse {
+          @include responsiveProperty(
+            "background-color",
+            "agendaFiltersOverlayBackground",
+            $configuration
+          );
+        }
+
+        .panel-default > .panel-heading {
+          @include responsiveProperty(
+            "background-color",
+            "agendaFiltersOverlayBackground",
+            $configuration
+          );
+          @include responsiveProperty("color", "agendaOverlayFontColor", $configuration);
+          @include responsiveRgba(
+            "border-bottom-color",
+            "agendaOverlayFontColor",
+            $configuration,
+            0.2
+          );
+        }
+      }
+
       .search-holder {
         input {
           @include responsiveProperty(
